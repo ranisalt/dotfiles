@@ -1,0 +1,32 @@
+set autoindent
+set background=dark
+set cursorline
+set expandtab
+set ignorecase
+set incsearch
+set mouse=a
+set nocompatible
+set nohlsearch
+set number
+set ruler
+set smartcase
+set smarttab
+set shiftwidth=2
+set showcmd
+set showmatch
+set softtabstop=2
+set tabstop=2
+syntax on
+
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'scrooloose/syntastic'
+call vundle#end()
+
+filetype plugin indent on
+
+colorscheme molokai
