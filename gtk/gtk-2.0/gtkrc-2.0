@@ -1,5 +1,7 @@
-include "$XDG_CONFIG_DATA/themes/Numix/gtk-2.0/gtkrc"
-
-gtk-theme-name = "Numix"
-gtk-icon-theme-name = "Numix"
-gtk-font-name = "Open Sans 10"
+gtk-theme-name="Numix"
+gtk-icon-theme-name="Numix"
+gtk-font-name="Open Sans 10"
+gtk-xft-antialias=1
+gtk-xft-hinting=1
+gtk-xft-hintstyle="hintfull"
+gtk-xft-rgba="rgb"
