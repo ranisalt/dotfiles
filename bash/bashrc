@@ -1,0 +1,69 @@
+# Source global definitions
+[ -f /etc/bashrc ] && . /etc/bashrc
+
+export PS1="\[\e[0;36m\][\$(date +%R)] \[\e[0;32m\]\u\[\e[1;31m\]@\[\e[0;32m\]\h\[\e[1;31m\]:\[\e[0;36m\]\w\[\e[1;31m\]\\$\[\e[0m\] "
+export PS2="\[\e[1;31m\]>>>\[\e[0m\] "
+export HISTCONTROL=ignoreboth
+
+# User specific aliases and functions
+alias cd="pushd"
+alias free="free -ht --si"
+alias ls="ls --color=auto"
+alias ll="ls -lh"
+alias la="ll -A"
+alias mkdir="mkdir -pv"
+
+[ -f /usr/bin/htop ] && alias top=htop
+
+check_venv() {
+	current_path="${PWD}"
+
+	while [[ "${current_path}" != "/" ]]
+	do
+		dotvenv="${current_path}/.venv"
+		if [ -f "${dotvenv}" ]
+		then
+			venv="$(dirname ${dotvenv})"
+			if [[ "${VIRTUAL_ENV}" == "" || "$(readlink -f "${VIRTUAL_ENV}")" != "$(readlink "${venv}")" ]]
+			then
+				source "${venv}/bin/activate"
+			fi
+			return
+		fi
+		current_path="$(dirname "${current_path}")"
+	done
+
+	if [[ "${VIRTUAL_ENV}" != "" ]]
+	then
+		deactivate
+	fi
+}
+
+md() {
+	mkdir $1
+	cd $1
+}
+
+popd() {
+	builtin popd
+	check_venv
+}
+
+pushd() {
+	builtin pushd "${@:-$HOME}"
+	check_venv
+}
+
+# Prompt before action
+alias cp='cp -i'
+alias mv='mv -i'
+alias rm='rm -i'
+
+# https://twitter.com/chris__martin/status/420992421673988096
+alias wow="git status"
+alias such="git"
+alias very="git"
+
+export EDITOR="vim"
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export TERMINAL="urxvtc"

@@ -1,0 +1,22 @@
+# .bash_profile
+
+# Source global definitions
+[ -f /etc/bash_profile ] && . /etc/bash_profile
+[ -f /etc/profile ] && . /etc/profile
+
+# Source local definitions
+[ -f ~/.profile ] && . ~/.profile
+
+# Get the aliases and functions
+[ -f ~/.bashrc ] && . ~/.bashrc
+
+# User specific environment and startup programs
+export PATH=$PATH:$HOME/.local/bin:$HOME/bin
+
+# NVM commands
+[ -s "$HOME/.nvm/nvm.sh" ] && . "$HOME/.nvm/nvm.sh" # Loav NVM into a shell session
+[ -r "$NVM_DIR/bash_completion" ] && . $NVM_DIR/bash_completion
+
+if hash cowsay 2> /dev/null && hash fortune 2> /dev/null; then
+	fortune | cowsay -f dragon
+fi
