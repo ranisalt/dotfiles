@@ -1,1 +1,1 @@
-ln -sfv $PWD $HOME/.vim
+ln -sfTv $PWD $HOME/.vim
