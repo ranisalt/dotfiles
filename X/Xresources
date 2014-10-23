@@ -1,0 +1,44 @@
+! Molokai
+URxvt*.background: [85]#000000
+URxvt*.foreground: #d0d0d0
+URxvt*.color0: #101010
+URxvt*.color1: #960050
+URxvt*.color2: #66aa11
+URxvt*.color3: #c47f2c
+URxvt*.color4: #30309b
+URxvt*.color5: #7e40a5
+URxvt*.color6: #3579a8
+URxvt*.color7: #9999aa
+URxvt*.color8: #303030
+URxvt*.color9: #ff0090
+URxvt*.color10: #80ff00
+URxvt*.color11: #ffba68
+URxvt*.color12: #5f5fee
+URxvt*.color13: #bb88dd
+URxvt*.color14: #4eb4fa
+URxvt*.color15: #d0d0d0
+
+URxvt*.depth: 32
+URxvt*.scrollBar: false
+URxvt*.scrollTtyOutput: false
+URxvt*.scrollTtyKeypress: true
+
+URxvt*.font: xft:Terminus:size=10
+
+URxvt*.perl-ext-common: clipboard,font-size,tabbed
+URxvt*.keysym.C-Up: perl:font-size:increase
+URxvt*.keysym.C-Down: perl:font-size:decrease
+URxvt*.keysym.C-Insert: perl:clipboard:copy
+URxvt*.keysym.S-Insert: perl:clipboard:paste
+URxvt*.copyCommand: xsel -ib
+URxvt*.pasteCommand: xsel -ob
+
+URxvt*.loginShell: true
+
+Xft*.dpi: 96
+Xft*.antialias: true
+Xft*.autohint: false
+Xft*.hinting: true
+Xft*.hintstyle: hintfull
+Xft*.lcdfilter: lcddefault
+Xft*.rgba: rgb
