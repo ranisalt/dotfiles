@@ -1,0 +1,46 @@
+# It is important that this file is edited as UTF-8.
+# The following line should contain a sharp s:
+# ß
+# If the above line is not correctly displayed, fix your editor first!
+
+general {
+	colors = true
+	interval = 1
+}
+
+#order += "disk /"
+order += "volume master"
+order += "ethernet p4p1"
+order += "wireless wlp0s22f2u3"
+order += "battery 0"
+order += "tztime local"
+
+wireless wlp0s22f2u3 {
+	format_up = "W: %essid"
+	format_down = "W: down"
+}
+
+ethernet p4p1 {
+	# if you use %speed, i3status requires root privileges
+  format_up = "E: %ip (%speed)"
+	format_down = "E: down"
+}
+
+battery 0 {
+  format = "(%status) %percentage"
+}
+
+tztime local {
+  format = "%d/%m/%Y %H:%M:%S"
+}
+
+disk "/" {
+  format = "%avail"
+}
+
+volume master {
+	format = "♪: %volume"
+	device = "default"
+	mixer = "Master"
+	mixer_idx = 0
+}
