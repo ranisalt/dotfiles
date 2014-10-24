@@ -130,7 +130,6 @@ hide_edge_borders both
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id urxvtd
 exec --no-startup-id xcompmgr
-exec --no-startup-id xrdb ~/.Xresources
 
 # Applications that can be slightly delayed
 exec --no-startup-id "sh -c 'sleep 3; nm-applet'"
