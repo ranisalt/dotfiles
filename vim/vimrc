@@ -10,6 +10,7 @@ set nohlsearch
 set number
 set ruler
 set smartcase
+set smartindent
 set smarttab
 set shiftwidth=2
 set showcmd
