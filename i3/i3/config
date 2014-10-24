@@ -14,7 +14,7 @@ set $ws10 10: music & video
 
 bindsym --release $mod+Return exec i3-sensible-terminal
 bindsym --release $mod+w exec firefox
-bindsym --release $mod+e exec pcmanfm
+bindsym --release $mod+e exec urxvtc -e ranger
 bindsym --release Print exec scrot '%F-%H-%M-%S.png' -e 'mv $f ~/Pictures/Screenshots/'
 
 bindsym --release $mod+l exec slock
@@ -134,7 +134,6 @@ exec --no-startup-id xrdb ~/.Xresources
 
 # Applications that can be slightly delayed
 exec --no-startup-id "sh -c 'sleep 3; nm-applet'"
-exec --no-startup-id "sh -c 'sleep 3; pcmanfm -d'"
 exec --no-startup-id "sh -c 'sleep 3; redshift -l -27.40:-48.33'"
 
 # Applications never used after login
