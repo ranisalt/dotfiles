@@ -22,9 +22,15 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
+" extensions
 Plugin 'gmarik/Vundle.vim'
 Plugin 'davidhalter/jedi-vim'
+Plugin 'ervandew/supertab'
 Plugin 'scrooloose/syntastic'
+Plugin 'bling/vim-airline'
+
+" colorschemes
+Plugin 'tomasr/molokai'
 call vundle#end()
 
 filetype plugin indent on
