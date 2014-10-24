@@ -136,4 +136,3 @@ exec --no-startup-id "sh -c 'sleep 3; redshift -l -27.40:-48.33'"
 
 # Applications never used after login
 exec --no-startup-id "sh -c 'sleep 10; dropboxd'"
-exec --no-startup-id "sh -c 'sleep 10; xautolock -time 10 -locker slock'"
