@@ -25,13 +25,9 @@ URxvt*.scrollTtyKeypress: true
 
 URxvt*.font: xft:Terminus:size=10
 
-URxvt*.perl-ext-common: clipboard,font-size,tabbed
+URxvt*.perl-ext-common: font-size,tabbed
 URxvt*.keysym.C-Up: perl:font-size:increase
 URxvt*.keysym.C-Down: perl:font-size:decrease
-URxvt*.keysym.C-Insert: perl:clipboard:copy
-URxvt*.keysym.S-Insert: perl:clipboard:paste
-URxvt*.copyCommand: xsel -ib
-URxvt*.pasteCommand: xsel -ob
 
 URxvt*.loginShell: true
 
