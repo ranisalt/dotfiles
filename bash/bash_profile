@@ -11,7 +11,7 @@
 [ -f ~/.bashrc ] && . ~/.bashrc
 
 # User specific environment and startup programs
-export PATH=$PATH:$HOME/.local/bin:$HOME/bin
+export PATH="$PATH:$HOME/.local/bin:/usr/local/heroku/bin"
 
 # NVM commands
 [ -s "$HOME/.nvm/nvm.sh" ] && . "$HOME/.nvm/nvm.sh" # Loav NVM into a shell session
