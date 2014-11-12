@@ -14,15 +14,15 @@ set $ws10 10: music & video
 
 bindsym --release $mod+Return exec i3-sensible-terminal
 bindsym --release $mod+w exec firefox
-bindsym --release $mod+e exec urxvtc -e ranger
+bindsym --release $mod+e exec --no-startup-id urxvtc -e ranger
 bindsym --release Print exec scrot '%F-%H-%M-%S.png' -e 'mv $f ~/Pictures/Screenshots/'
 
 bindsym --release $mod+l exec slock
 bindsym --release $mod+Shift+l exec exitx
 
 #XF86 bindings
-bindsym XF86MonBrightnessUp exec xbacklight -inc 5
-bindsym XF86MonBrightnessDown exec xbacklight -dec 5
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 5
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 5
 bindsym XF86AudioRaiseVolume exec amixer -q set Master 5%+ && killall -SIGUSR1 i3status
 bindsym XF86AudioLowerVolume exec amixer -q set Master 5%- && killall -SIGUSR1 i3status
 bindsym XF86AudioMute exec amixer -q set Master toggle && killall -SIGUSR1 i3status
@@ -128,10 +128,8 @@ hide_edge_borders both
 
 # Applications needed at login time
 exec --no-startup-id nitrogen --restore
+exec --no-startup-id nm-applet
 exec --no-startup-id urxvtd
 
 # Applications that can be slightly delayed
 exec --no-startup-id "sh -c 'sleep 3; redshift -l -27.40:-48.33'"
-
-# Applications never used after login
-exec --no-startup-id "sh -c 'sleep 10; dropboxd'"
