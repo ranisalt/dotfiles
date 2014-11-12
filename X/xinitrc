@@ -1,6 +1,6 @@
 xrdb -merge ~/.Xresources &
-xset dpms 0 0 120 &
-xautolock -time 5 -locker slock &
+xset dpms 0 0 600 &
+xautolock -time 10 -locker slock &
 xcompmgr &
 
 exec i3
