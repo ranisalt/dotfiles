@@ -1,10 +1,6 @@
 # Source global definitions
 [ -f /etc/bashrc ] && . /etc/bashrc
 
-export PS1="\[\e[0;36m\][\$(date +%R)] \[\e[0;32m\]\u\[\e[1;31m\]@\[\e[0;32m\]\h\[\e[1;31m\]:\[\e[0;36m\]\w\[\e[1;31m\]\\$\[\e[0m\] "
-export PS2="\[\e[1;31m\]>>>\[\e[0m\] "
-export HISTCONTROL=ignoreboth
-
 # User specific aliases and functions
 alias cd="pushd"
 alias free="free -ht --si"
@@ -14,6 +10,21 @@ alias la="ll -A"
 alias mkdir="mkdir -pv"
 
 [ -f /usr/bin/htop ] && alias top=htop
+
+git_ps1() {
+  git rev-parse 2> /dev/null
+  if [ "$?" -eq 0 ]
+  then
+    stat=$(git status -z 2> /dev/null)
+    if [[ -n "${stat}" ]]
+    then
+      echo -e -n "\033[0;31m"
+    else
+      echo -e -n "\033[0;32m"
+    fi
+    echo -n "($(git rev-parse --abbrev-ref HEAD) $(git rev-parse --short HEAD)) "
+  fi
+}
 
 check_venv() {
 	current_path="${PWD}"
@@ -63,6 +74,10 @@ alias rm='rm -i'
 alias wow="git status"
 alias such="git"
 alias very="git"
+
+export PS1="\[\e[0;36m\][\$(date +%R)] \[\e[0;32m\]\u\[\e[1;31m\]@\[\e[0;32m\]\h\[\e[1;31m\]:\[\e[0;36m\]\w\[\e[1;31m\]\\$ \$(git_ps1 2>/dev/null)\[\e[0m\]"
+export PS2="\[\e[1;31m\]>>>\[\e[0m\] "
+export HISTCONTROL=ignoreboth
 
 export EDITOR="vim"
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
