@@ -1,0 +1,10 @@
+[Unit]
+Description=Synergy client
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/synergyc -f %i
+ExecStop=/usr/bin/kill -HUP $MAINPID
+
+[Install]
+WantedBy=multi-user.target

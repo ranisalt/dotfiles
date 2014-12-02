@@ -1,0 +1,10 @@
+[Unit]
+Description=Synergy server
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/synergys -f
+ExecStop=/usr/bin/kill -HUP $MAINPID
+
+[Install]
+WantedBy=multi-user.target

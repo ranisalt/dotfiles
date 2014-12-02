@@ -1,0 +1,10 @@
+[Unit]
+Description=Rxvt-Unicode daemon
+After=xorg.target
+
+[Service]
+ExecStart=/usr/bin/urxvtd -o
+ExecStop=/usr/bin/kill -HUP $MAINPID
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,12 @@
+[Unit]
+Description=Conky
+After=xorg.target
+
+[Service]
+Type=idle
+Environment=DISPLAY=:0
+ExecStart=/usr/bin/conky
+ExecStop=/usr/bin/kill $MAINPID
+
+[Install]
+WantedBy=default.target
