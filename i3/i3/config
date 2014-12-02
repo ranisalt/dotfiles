@@ -129,7 +129,3 @@ hide_edge_borders both
 # Applications needed at login time
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id nm-applet
-exec --no-startup-id urxvtd
-
-# Applications that can be slightly delayed
-exec --no-startup-id "sh -c 'sleep 3; redshift -l -27.40:-48.33'"
