@@ -67,14 +67,17 @@ W I F I  ${hr}
 Gateway:${alignr}${gw_ip}
 Local IP:${alignr}${addr wlp2s0}
 Public IP:${alignr}${execi 60 ~/.local/bin/conky/remote_ip.sh}
+
 ${endif}\
+\
 ${if_existing /proc/net/route p3p1}\
 E T H E R N E T  ${hr}
 Gateway:${alignr}${gw_ip}
-Local IP:${alignr}${addr wlp2s0}
+Local IP:${alignr}${addr p3p1}
 Public IP:${alignr}${execi 60 ~/.local/bin/conky/remote_ip.sh}
-${endif}\
 
+${endif}\
+\
 S H O R T C U T   K E Y S  ${hr}
 Super+Return${alignr} Terminal
 Super+R${alignr} Run
