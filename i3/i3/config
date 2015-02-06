@@ -85,6 +85,10 @@ bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
+# move focused container to stratchpad
+bindsym $mod+S move scratchpad
+bindsym $mod+Shift+S scratchpad show
+
 bindsym $mod+Shift+z reload
 bindsym $mod+Shift+x restart
 
