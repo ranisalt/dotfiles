@@ -4,7 +4,7 @@
 # User specific aliases and functions
 alias cd="pushd"
 alias free="free -ht --si"
-alias ls="ls --color=auto"
+alias ls="ls --classify --color=auto --group-directories-first"
 alias ll="ls -lh"
 alias la="ll -A"
 alias mkdir="mkdir -pv"
