@@ -1,9 +1,0 @@
-[Unit]
-Description=Simple lock after suspend
-
-[Service]
-User=%u
-ExecStart=/usr/bin/xautolock -locknow
-
-[Install]
-WantedBy=suspend.target
