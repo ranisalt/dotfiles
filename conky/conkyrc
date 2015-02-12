@@ -78,6 +78,8 @@ E T H E R N E T  ${hr}
 Gateway:${alignr}${gw_ip}
 Local IP:${alignr}${addr enp3s0f2}
 Public IP:${alignr}${execi 60 ~/.local/bin/conky/remote_ip.sh}
+${downspeedgraph enp3s0f2 24,116 -l}${alignr}${upspeedgraph enp3s0f2 24,116 -l}
+Network:${alignr}${downspeed enp3s0f2}/${upspeed enp3s0f2}
 
 ${endif}\
 \
