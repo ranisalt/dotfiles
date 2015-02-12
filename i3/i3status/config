@@ -16,7 +16,7 @@ order += "battery 0"
 order += "tztime local"
 
 wireless wlp2s0 {
-	format_up = "W: %ip (%quality at %essid)"
+	format_up = "W: %ip (%quality @ %essid)"
 }
 
 ethernet enp3s0f2 {
