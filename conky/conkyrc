@@ -83,9 +83,12 @@ Network:${alignr}${downspeed enp3s0f2}/${upspeed enp3s0f2}
 
 ${endif}\
 \
-S H O R T C U T   K E Y S  ${hr}
-Super+Return${alignr} Terminal
-Super+R${alignr} Run
-Super+W${alignr} Firefox
-Super+E${alignr} File Manager
-Super+L${alignr} Lock Screen
+${if_mpd_playing}\
+M U S I C  ${hr}
+Title: ${mpd_title}
+Artist: ${mpd_artist}
+Album: ${mpd_album}
+${mpd_bar}
+${alignr}${mpd_elapsed}/${mpd_length}
+
+${endif}
