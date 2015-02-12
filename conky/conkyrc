@@ -68,6 +68,8 @@ W I F I  ${hr}
 Gateway:${alignr}${gw_ip}
 Local IP:${alignr}${addr wlp2s0}
 Public IP:${alignr}${execi 60 ~/.local/bin/conky/remote_ip.sh}
+${downspeedgraph wlp2s0 24,116 -l}${alignr}${upspeedgraph wlp2s0 24,116 -l}
+Network:${alignr}${downspeed wlp2s0}/${upspeed wlp2s0}
 
 ${endif}\
 \
