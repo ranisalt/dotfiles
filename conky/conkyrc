@@ -73,10 +73,10 @@ Network:${alignr}${downspeed wlp2s0}/${upspeed wlp2s0}
 
 ${endif}\
 \
-${if_existing /proc/net/route p3p1}\
+${if_existing /proc/net/route enp3s0f2}\
 E T H E R N E T  ${hr}
 Gateway:${alignr}${gw_ip}
-Local IP:${alignr}${addr p3p1}
+Local IP:${alignr}${addr enp3s0f2}
 Public IP:${alignr}${execi 60 ~/.local/bin/conky/remote_ip.sh}
 
 ${endif}\
