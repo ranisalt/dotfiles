@@ -43,22 +43,23 @@ no_buffers yes
 uppercase no
 cpu_avg_samples 2
 override_utf8_locale no
+
 ##############################################
 #  Output
 ##############################################
 TEXT
 
 S Y S T E M    L O A D  ${hr}
-${cpugraph 24,240 FFFFFF FFFFFF -l}
+${cpugraph 24, -l}
 CPU:${alignr}${cpu}%
-${memgraph 24,240 FFFFFF FFFFFF -l}
+${memgraph 24, -l}
 RAM:${alignr}${mem}/${memmax}
-${diskiograph 24,240 FFFFFF FFFFFF -l}
+${diskiograph 24, -l}
 Disk:${alignr}${diskio}
 
 S Y S T E M    I N F O  ${hr}
-Host:${alignr}$nodename
-Uptime:${alignr}$uptime
+Host:${alignr}${nodename}
+Uptime:${alignr}${uptime}
 SSD usage:${alignr}${fs_used /}/${fs_size /}
 HDD usage:${alignr}${fs_used /home}/${fs_size /home}
 
