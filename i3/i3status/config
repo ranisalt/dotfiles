@@ -33,7 +33,7 @@ battery 0 {
 
 cpu_temperature 0 {
   format = "CPU %degrees ºC"
-  max_threshold = 55
+  max_threshold = 60
   path = "/sys/class/thermal/thermal_zone6/temp"
  }
 
