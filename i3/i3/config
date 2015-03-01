@@ -18,7 +18,7 @@ set $ws10 10: music & video
 bindsym --release $mod+Return exec i3-sensible-terminal
 bindsym --release $mod+w exec firefox
 bindsym --release $mod+e exec --no-startup-id urxvtc -e ranger
-bindsym --release Print exec scrot '%F-%H-%M-%S.png' -e 'mv $f ~/Pictures/Screenshots/'
+bindsym --release Print exec scrot '%F-%H-%M-%S.png' -e 'mv $f ~/Dropbox/Screenshots/'
 
 bindsym --release $mod+l exec xautolock -locknow
 bindsym --release $mod+Shift+l exec exitx
