@@ -78,5 +78,4 @@ Artist: ${mpd_artist}
 Album: ${mpd_album}
 ${mpd_bar}
 ${alignr}${mpd_elapsed}/${mpd_length}
-
-${endif}
+${endif}\
