@@ -18,7 +18,7 @@ background no
 use_xft yes
 xftfont Roboto:size=10
 xftalpha 1
-update_interval 1.0
+update_interval 2.0
 total_run_times 0
 own_window yes
 own_window_transparent yes
