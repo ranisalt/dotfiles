@@ -41,7 +41,7 @@ gap_x 12
 gap_y 27
 no_buffers yes
 uppercase no
-cpu_avg_samples 2
+cpu_avg_samples 3
 override_utf8_locale no
 
 ##############################################
