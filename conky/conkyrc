@@ -56,13 +56,6 @@ ${memgraph 24, -l}
 RAM:${alignr}${mem}/${memmax}
 ${diskiograph 24, -l}
 Disk:${alignr}${diskio}
-
-S Y S T E M    I N F O  ${hr}
-Host:${alignr}${nodename}
-Uptime:${alignr}${uptime}
-SSD usage:${alignr}${fs_used /}/${fs_size /}
-HDD usage:${alignr}${fs_used /home}/${fs_size /home}
-
 ${if_existing /proc/net/route wlp2s0}\
 W I F I  ${hr}
 Gateway:${alignr}${gw_ip}
@@ -82,7 +75,13 @@ ${downspeedgraph enp3s0f2 24,116 -l}${alignr}${upspeedgraph enp3s0f2 24,116 -l}
 Network:${alignr}${downspeed enp3s0f2}/${upspeed enp3s0f2}
 
 ${endif}\
-\
+
+S Y S T E M    I N F O  ${hr}
+Host:${alignr}${nodename}
+Uptime:${alignr}${uptime}
+SSD usage:${alignr}${fs_used /}/${fs_size /}
+HDD usage:${alignr}${fs_used /home}/${fs_size /home}
+
 ${if_mpd_playing}\
 M U S I C  ${hr}
 Title: ${mpd_title}
