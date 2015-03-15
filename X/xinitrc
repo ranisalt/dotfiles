@@ -7,7 +7,7 @@ fi
 
 xrdb -merge ~/.Xresources &
 xset dpms 0 0 600 &
-xautolock -time 10 -locker slimlock &
+xautolock -time 10 -locker i3lock-wrapper &
 xcompmgr &
 
 exec i3
