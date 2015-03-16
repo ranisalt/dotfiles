@@ -1,1 +1,1 @@
-ln -sfTv $PWD/conkyrc $HOME/.conkyrc
+ln -sfTv "$PWD/conkyrc" "$HOME/.conkyrc"
