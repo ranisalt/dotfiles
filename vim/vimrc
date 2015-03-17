@@ -27,13 +27,15 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " extensions
 Plugin 'gmarik/Vundle.vim'
-"Plugin 'davidhalter/jedi-vim'
-"Plugin 'ervandew/supertab'
-"Plugin 'Valloric/YouCompleteMe'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'ervandew/supertab'
 Plugin 'scrooloose/syntastic'
 Plugin 'bling/vim-airline'
+Plugin 'tpope/vim-fugitive'
 
 " colorschemes
+Plugin 'sjl/badwolf'
 Plugin 'tomasr/molokai'
 call vundle#end()
 
