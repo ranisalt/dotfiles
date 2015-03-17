@@ -18,7 +18,9 @@ set $ws10 10: music & video
 bindsym --release $mod+Return exec i3-sensible-terminal
 bindsym --release $mod+w exec firefox
 bindsym --release $mod+e exec --no-startup-id urxvtc -e ranger
-bindsym --release Print exec scrot '%F-%H-%M-%S.png' -e 'mv $f ~/Dropbox/Screenshots/'
+bindsym --release Print exec import "$HOME/Pictures/Screenshots/$(date '+%F-%H-%M-%S').png"
+bindsym --release Shift+Print exec import -window root "$HOME/Pictures/Screenshots/$(date '+%F-%H-%M-%S').png"
+bindsym --release Ctrl+Print exec import -window "${$(xprop -root | grep '_NET_ACTIVE_WINDOW(WINDOW)'):40}" "$HOME/Pictures/Screenshots/$(date '+%F-%H-%M-%S').png"
 
 bindsym --release $mod+l exec xautolock -locknow
 bindsym --release $mod+Shift+l exec exitx
