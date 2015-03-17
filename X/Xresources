@@ -28,9 +28,11 @@ URxvt*.scrollTtyKeypress: true
 
 URxvt*.font: xft:Terminess Powerline:size=10
 
-URxvt*.perl-ext-common: font-size,tabbed
+URxvt*.perl-ext-common: font-size,tabbedex
 URxvt*.keysym.C-Up: perl:font-size:increase
 URxvt*.keysym.C-Down: perl:font-size:decrease
+URxvt*.tabbed.autohide: true
+URxvt*.tabbed.new-button: false
 
 URxvt*.loginShell: true
 
