@@ -49,4 +49,7 @@ map <C-w> :tabclose<cr>
 map <C-a> :tabprevious<cr>
 map <C-d> :tabnext<cr>
 
+let g:badwolf_tabline = 0
+let g:badwolf_darkgutter = 1
+
 colorscheme badwolf
