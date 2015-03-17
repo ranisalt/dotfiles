@@ -41,4 +41,12 @@ call vundle#end()
 
 filetype plugin indent on
 
+map <C-e> :NERDTreeToggle<cr>
+
+map <C-t> :tabnew<cr>
+map <C-o> :tabedit 
+map <C-w> :tabclose<cr>
+map <C-a> :tabprevious<cr>
+map <C-d> :tabnext<cr>
+
 colorscheme badwolf
