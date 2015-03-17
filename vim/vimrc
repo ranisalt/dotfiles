@@ -5,8 +5,10 @@ set cursorline
 "set expandtab
 set ignorecase
 set incsearch
+set laststatus=2 " eeded for airline
 set mouse=a
 set nohlsearch
+set noshowmode " irline already shows me
 set number
 set ruler
 set smartcase
