@@ -1,3 +1,4 @@
+set nocompatible
 set autoindent
 set background=dark
 set cursorline
@@ -5,7 +6,6 @@ set cursorline
 set ignorecase
 set incsearch
 set mouse=a
-set nocompatible
 set nohlsearch
 set number
 set ruler
