@@ -86,6 +86,10 @@ pushd() {
 	check_venv
 }
 
+resize-extent() {
+  convert $1 -resize $2 -gravity center -extent $2 $1
+}
+
 # Prompt before action
 alias cp='cp -i'
 alias mv='mv -i'
