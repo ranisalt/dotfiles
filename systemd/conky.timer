@@ -2,7 +2,7 @@
 Description=Delayed start for conky
 
 [Timer]
-OnActiveSec=5
+OnActiveSec=3
 Unit=conky.service
 
 [Install]
