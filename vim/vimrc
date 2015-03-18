@@ -54,6 +54,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:badwolf_tabline = 0
 let g:badwolf_darkgutter = 1
 
+set shell=/bin/sh
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
