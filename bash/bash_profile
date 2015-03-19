@@ -1,5 +1,5 @@
 # .bash_profile
-if [ -x /usr/bin/fish ] && [ "$(hostname)" != "chloe" ]; then
+if [ -x /usr/bin/fish ]; then
 	exec fish -l
 fi
 echo "fish not available, falling back to bash"
