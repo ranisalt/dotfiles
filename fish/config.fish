@@ -17,3 +17,5 @@ set fish_plugins theme
 
 set -g theme_display_hg no
 set -g theme_display_ruby no
+
+test -s /home/ranieri/.nvm-fish/nvm.fish; and source /home/ranieri/.nvm-fish/nvm.fish
