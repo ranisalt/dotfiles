@@ -19,6 +19,7 @@ set fish_plugins theme
 # Load oh-my-fish configuration.
 . $fish_path/oh-my-fish.fish
 
+set -g TERMINAL "urxvt"
 set -g theme_display_hg no
 set -g theme_display_ruby no
 
