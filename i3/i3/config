@@ -13,7 +13,7 @@ workspace_auto_back_and_forth yes
 set $ws1 1: coding
 set $ws2 2: internet
 set $ws9 9: social stuff
-set $ws10 10: music & video
+set $ws10 10: music and video
 
 bindsym --release $mod+Return exec urxvt
 bindsym --release $mod+w exec firefox
