@@ -1,3 +1,3 @@
 function la
-	ll --almost-all
+	ll --almost-all $argv
 end
