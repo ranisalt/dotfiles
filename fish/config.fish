@@ -1,7 +1,3 @@
-if test (hostname) = "chloe"
-	exit
-end
-
 # Path to your oh-my-fish.
 set fish_path $HOME/.oh-my-fish
 
