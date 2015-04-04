@@ -16,6 +16,7 @@ set fish_plugins theme
 . $fish_path/oh-my-fish.fish
 
 set -g TERMINAL "urxvt"
+set -g VIRTUAL_ENV_DISABLE_PROMPT "yes"
 set -g theme_display_hg no
 set -g theme_display_ruby no
 
