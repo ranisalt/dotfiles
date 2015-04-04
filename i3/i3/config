@@ -35,6 +35,7 @@ bindsym XF86AudioNext exec mpc next
 bindsym XF86AudioPrev exec mpc prev
 bindsym XF86AudioPause exec mpc toggle
 bindsym XF86AudioStop exec mpc stop
+bindsym XF86TouchpadToggle exec touchpad-toggle
 
 # kill focused window
 bindsym $mod+Shift+q kill
