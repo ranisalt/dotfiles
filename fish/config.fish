@@ -15,6 +15,7 @@ set fish_plugins theme
 # Load oh-my-fish configuration.
 . $fish_path/oh-my-fish.fish
 
+set -gx PATH $HOME/.local/bin $PATH
 set -g TERMINAL "urxvt"
 set -g VIRTUAL_ENV_DISABLE_PROMPT "yes"
 set -g theme_display_hg no
