@@ -9,5 +9,6 @@ xrdb -merge ~/.Xresources &
 xset dpms 0 0 600 &
 xautolock -time 10 -locker i3lock-wrapper &
 xcompmgr &
+oneko -tora &
 
 exec i3
