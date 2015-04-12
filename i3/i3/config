@@ -142,5 +142,7 @@ assign [class="Skype"] $ws9
 new_window 1pixel
 hide_edge_borders both
 
+gaps inner 15
+
 # Applications needed at login time
 exec --no-startup-id nitrogen --restore
