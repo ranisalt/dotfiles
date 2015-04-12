@@ -129,10 +129,11 @@ bar {
   }
 }
 
-client.focused #333333 #333333 #f9f9f9
-client.focused_inactive #2d2d2d #2d2d2d #dedede
-client.unfocused #2d2d2d #2d2d2d #dedede
-client.urgent #333333 #333333 #d64937
+# class                 border  backgr  text    indicator
+client.focused          #333333 #333333 #f9f9f9 #333333
+client.focused_inactive #2d2d2d #2d2d2d #dedede #2d2d2d
+client.unfocused        #2d2d2d #2d2d2d #dedede #2d2d2d
+client.urgent           #333333 #333333 #d64937 #333333
 
 assign [class="Firefox"] $ws2
 assign [class="Hexchat"] $ws9
