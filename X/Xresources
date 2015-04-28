@@ -28,11 +28,12 @@ URxvt*.scrollTtyKeypress: true
 
 URxvt*.font: xft:Terminess Powerline:size=10
 
-URxvt*.perl-ext-common: font-size,tabbedex
+URxvt*.perl-ext-common: default,font-size,tabbedex
 URxvt*.keysym.C-Up: perl:font-size:increase
 URxvt*.keysym.C-Down: perl:font-size:decrease
 URxvt*.tabbed.autohide: true
 URxvt*.tabbed.new-button: false
+URxvt*.url-launcher: /usr/bin/firefox
 
 URxvt*.loginShell: true
 
