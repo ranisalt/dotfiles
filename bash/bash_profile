@@ -1,6 +1,6 @@
 # .bash_profile
-if [ -x /usr/bin/fish ]; then
-	exec fish -l $@
+if [ -x /usr/bin/fish && $XDG_VTNR -ne 7 ]; then
+	exec fish -l
 fi
 echo "fish not available, falling back to bash"
 
