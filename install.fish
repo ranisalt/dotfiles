@@ -1,13 +1,14 @@
-#!/usr/bin/env sh
-[ -z "$XDG_CONFIG_HOME" ] && export XDG_CONFIG_HOME="$HOME/.config"
+#!/usr/bin/fish
+if [ -z "$XDG_CONFIG_HOME" ]
+	set -x XDG_CONFIG_HOME $HOME/.config
+end
 
 for i in bash conky fish gtk i3 systemd X vim
-do
-  \cd $i
+  pushd $i
   echo "Linking $i files..."
   sh install.sh
   echo
-  \cd ..
-done
+  popd
+end
 
 echo "Done!"
