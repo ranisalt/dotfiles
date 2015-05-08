@@ -14,35 +14,53 @@
 ##############################################
 # Settings
 ##############################################
-background no
-use_xft yes
-xftfont Roboto:size=10
-xftalpha 1
-update_interval 2.0
-total_run_times 0
-own_window yes
-own_window_transparent yes
-own_window_type override
-#own_window_argb_visual yes
-own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+# Conky settings #
+background yes
+update_interval 1
 double_buffer yes
-minimum_size 200 200
-maximum_width 240
+no_buffers yes
+imlib_cache_size 10
+
+# Window specifications #
+gap_x 15
+gap_y 30
+minimum_size 268 620
+maximum_width 268
+own_window yes
+own_window_type override  # other options are: override/dock/desktop/panel
+own_window_transparent yes
+own_window_hints undecorate,sticky,skip_taskbar,skip_pager,below
+border_inner_margin 0
+border_outer_margin 0
+alignment top_left
+#own_window_argb_visual yes
+#own_window_argb_value 0
+
+# Graphics settings #
 draw_shades no
-draw_outline yes
+default_shade_color 2d2d2d
+draw_outline no
+default_outline_color 2d2d2d
 draw_borders no
 draw_graph_borders no
+default_graph_size 26 80
+show_graph_scale no
+show_graph_range no
+
+# Text settings #
+use_xft yes
+xftalpha 0
+xftfont Roboto:size=10
+text_buffer_size 256
+override_utf8_locale yes
+
+# Useful shortenings #
+short_units yes
+pad_percents 2
+top_name_width 7
+
+# Color scheme #
 default_color f9f9f9
-default_shade_color 2d2d2d
-default_outline_color 2d2d2d
-alignment top_right
-gap_x 12
-# i3bar height is 15px
-gap_y 27
-no_buffers yes
-uppercase no
-cpu_avg_samples 3
-override_utf8_locale no
 
 ##############################################
 #  Output
@@ -57,11 +75,11 @@ RAM:${alignr}${mem}/${memmax}
 ${diskiograph 24, -l}
 Disk:${alignr}${diskio}
 ${if_existing /proc/net/route wlp2s0}\
-${downspeedgraph wlp2s0 24,116 -l}${alignr}${upspeedgraph wlp2s0 24,116 -l}
+${downspeedgraph wlp2s0 24,133 -l}${alignr}${upspeedgraph wlp2s0 24,133 -l}
 Network:${alignr}${downspeed wlp2s0}/${upspeed wlp2s0}
 ${endif}\
 ${if_existing /proc/net/route enp3s0f2}\
-${downspeedgraph enp3s0f2 24,116 -l}${alignr}${upspeedgraph enp3s0f2 24,116 -l}
+${downspeedgraph enp3s0f2 24,133 -l}${alignr}${upspeedgraph enp3s0f2 24,133 -l}
 Network:${alignr}${downspeed enp3s0f2}/${upspeed enp3s0f2}
 ${endif}\
 
