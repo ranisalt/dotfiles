@@ -9,6 +9,7 @@ xrdb -merge ~/.Xresources &
 xset dpms 0 0 600 &
 xautolock -time 10 -locker i3lock-wrapper &
 xcompmgr -c -D4 -f -F -o0.8 -r10 &
+backl &
 ~/.local/bin/hotplug
 
 exec i3
