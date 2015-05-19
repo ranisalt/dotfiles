@@ -67,6 +67,11 @@ bindsym F11 fullscreen
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
 
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+a layout stacking
+bindsym $mod+s layout tabbed
+bindsym $mod+d layout toggle split
+
 # switch to workspace
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
@@ -92,8 +97,8 @@ bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
 # move focused container to stratchpad
-bindsym $mod+S move scratchpad
-bindsym $mod+Shift+S scratchpad show
+bindsym $mod+z move scratchpad
+bindsym $mod+x scratchpad show
 
 bindsym $mod+Shift+z reload
 bindsym $mod+Shift+x restart
