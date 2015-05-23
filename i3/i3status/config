@@ -21,29 +21,29 @@ wireless wlp2s0 {
 
 ethernet enp3s0f2 {
 	# if you use %speed, i3status requires root privileges
-  format_up = "E: %ip (%speed)"
+	format_up = "E: %ip (%speed)"
 }
 
 battery 0 {
-  format = "%status %remaining (%percentage)"
-  last_full_capacity = true
-  low_threshold = 15
-  threshold_type = percentage
+	format = "%status %remaining (%percentage)"
+	last_full_capacity = true
+	low_threshold = 15
+	threshold_type = percentage
 }
 
 cpu_temperature 0 {
-  format = "CPU %degrees ºC"
-  max_threshold = 60
-  path = "/sys/class/thermal/thermal_zone6/temp"
- }
+	format = "CPU %degrees ºC"
+	max_threshold = 65
+	path = "/sys/class/thermal/thermal_zone0/temp"
+}
 
 tztime local {
-  format = "%d/%m/%Y %H:%M:%S"
+	format = "%d/%m/%Y %H:%M:%S"
 }
 
 volume master {
 	format = "♪: %volume"
-  format_muted = "♪: muted (%volume)"
+	format_muted = "♪: muted (%volume)"
 	device = "default"
 	mixer = "Master"
 	mixer_idx = 0
