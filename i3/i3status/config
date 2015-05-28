@@ -34,7 +34,7 @@ battery 0 {
 cpu_temperature 0 {
 	format = "CPU %degrees ºC"
 	max_threshold = 65
-	path = "/sys/class/thermal/thermal_zone0/temp"
+	path = "/sys/class/thermal/thermal_zone7/temp"
 }
 
 tztime local {
