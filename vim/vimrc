@@ -42,6 +42,7 @@ call vundle#end()
 
 filetype plugin indent on
 
+map <silent> <C-i> gg=G'
 map <C-e> :NERDTreeToggle<cr>
 
 map <C-t> :tabnew<cr>
