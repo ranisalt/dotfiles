@@ -144,7 +144,7 @@ assign [class="jetbrains"] $ws1
 assign [class="Firefox"] $ws2
 assign [class="Hexchat"] $ws9
 assign [class="Skype"] $ws9
-assign [class="Popcorntime"] $ws10
+assign [title="Popcorn Time"] $ws10
 assign [class="Spotify"] $ws10
 
 new_window 1pixel
