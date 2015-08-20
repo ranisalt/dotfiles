@@ -21,8 +21,6 @@ export PATH="$PATH:$HOME/.local/bin:/usr/local/heroku/bin"
 [ -s "$HOME/.nvm/nvm.sh" ] && . "$HOME/.nvm/nvm.sh" # Loav NVM into a shell session
 [ -r "$NVM_DIR/bash_completion" ] && . $NVM_DIR/bash_completion
 
-if hash cowsay 2> /dev/null && hash fortune 2> /dev/null; then
-	fortune | cowsay -f dragon
-fi
+[ -f /usr/share/fortune/chucknorris ] && [[ hash cowsay 2> /dev/null && hash fortune 2> /dev/null ]] && fortune chucknorris | cowsay -f dragon
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
