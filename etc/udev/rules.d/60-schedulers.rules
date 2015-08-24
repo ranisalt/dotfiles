@@ -1,0 +1,5 @@
+# set bfq scheduler for rotating disks
+ACTION=="add|change", KERNEL=="sda", ATTR{queue/rotational}=="1", ATTR{queue/scheduler}="kyber"
+
+# set deadline scheduler for non-rotating disks
+ACTION=="add|change", KERNEL=="sd[b-z]", ATTR{queue/rotational}=="0", ATTR{queue/scheduler}="mq-deadline"

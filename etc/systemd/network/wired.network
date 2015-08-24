@@ -1,0 +1,10 @@
+[Match]
+Name=enp*
+
+[Network]
+DHCP=yes
+IPForward=kernel
+IPv6PrivacyExtensions=kernel
+
+[DHCP]
+RouteMetric=10
