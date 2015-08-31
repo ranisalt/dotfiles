@@ -1,19 +1,16 @@
 # Path to your oh-my-fish.
-set fish_path $HOME/.oh-my-fish
+set -g OMF_PATH $HOME/.local/share/omf
 
-# Theme
-set fish_theme bobthefish
+# Path to your oh-my-fish configuration.
+set -g OMF_CONFIG $HOME/.config/omf
 
-# All built-in plugins can be found at ~/.oh-my-fish/plugins/
-# Custom plugins may be added to ~/.oh-my-fish/custom/plugins/
-# Enable plugins by adding their name separated by a space to the line below.
-set fish_plugins theme
-
-# Path to your custom folder (default path is ~/.oh-my-fish/custom)
-#set fish_custom $HOME/dotfiles/oh-my-fish
+### Configuration required to load oh-my-fish ###
+# Note: Only add configurations that are required to be set before oh-my-fish is loaded.
+# For common configurations, we advise you to add them to your $OMF_CONFIG/init.fish file or
+# to create a custom plugin instead.
 
 # Load oh-my-fish configuration.
-. $fish_path/oh-my-fish.fish
+source $OMF_PATH/init.fish
 
 set -gx CCACHE_SLOPPINESS pch_defines,time_macros
 set -gx CC "ccache gcc"
