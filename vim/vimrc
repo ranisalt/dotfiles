@@ -2,13 +2,13 @@ set nocompatible
 set autoindent
 set background=dark
 set cursorline
-"set expandtab
+set expandtab
 set ignorecase
 set incsearch
-set laststatus=2 " eeded for airline
+set laststatus=2 " needed for airline
 set mouse=a
 set nohlsearch
-set noshowmode " irline already shows me
+set noshowmode " airline already shows me
 set number
 set ruler
 set smartcase
