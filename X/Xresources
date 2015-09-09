@@ -18,7 +18,6 @@ URxvt*.color13: #bb88dd
 URxvt*.color14: #4eb4fa
 URxvt*.color15: #d0d0d0
 
-URxvt*.internalBorder: 4
 URxvt*.lineSpace: 1
 
 URxvt*.depth: 32

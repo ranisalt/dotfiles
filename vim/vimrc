@@ -53,8 +53,9 @@ map <C-d> :tabnext<cr>
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-let g:badwolf_tabline = 0
+let g:badwolf_css_props_highlight = 1
 let g:badwolf_darkgutter = 1
+let g:badwolf_tabline = 0
 
 set shell=/bin/sh
 set statusline+=%#warningmsg#
