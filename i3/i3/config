@@ -22,7 +22,7 @@ bindsym --release Print exec --no-startup-id import "$HOME/Pictures/Screenshots/
 bindsym --release Shift+Print exec --no-startup-id import -window root "$HOME/Pictures/Screenshots/$(date '+%F-%H-%M-%S').png"
 bindsym --release Ctrl+Print exec --no-startup-id import -window "${$(xprop -root | grep '_NET_ACTIVE_WINDOW(WINDOW)'):40}" "$HOME/Pictures/Screenshots/$(date '+%F-%H-%M-%S').png"
 
-bindsym --release $mod+l exec xautolock -locknow
+bindsym --release $mod+l exec slimlock
 bindsym --release $mod+Shift+l exec exitx
 
 #XF86 bindings
