@@ -27,7 +27,7 @@ ethernet enp3s0f2 {
 battery 0 {
 	format = "%status %remaining (%percentage)"
 	last_full_capacity = true
-	low_threshold = 15
+	low_threshold = 10
 	threshold_type = percentage
 }
 
