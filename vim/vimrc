@@ -1,13 +1,16 @@
 set nocompatible
+set autochdir
 set autoindent
 set background=dark
+set backspace=indent,eol,start
+set clipboard=unnamedplus
 set cursorline
 set expandtab
+set hlsearch
 set ignorecase
 set incsearch
 set laststatus=2 " needed for airline
 set mouse=a
-set nohlsearch
 set noshowmode " airline already shows me
 set number
 set ruler
@@ -27,22 +30,22 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " extensions
 Plugin 'gmarik/Vundle.vim'
+Plugin 'Rip-Rip/clang_complete'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'ervandew/supertab'
 Plugin 'scrooloose/syntastic'
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-fugitive'
 
 " colorschemes
 Plugin 'sjl/badwolf'
-Plugin 'tomasr/molokai'
 call vundle#end()
 
 filetype plugin indent on
 
 map <silent> <C-i> gg=G'
+map <silent> q :q<cr>
 map <C-e> :NERDTreeToggle<cr>
 
 map <C-t> :tabnew<cr>
@@ -53,6 +56,7 @@ map <C-d> :tabnext<cr>
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#tab_nr_type=1
 let g:badwolf_css_props_highlight = 1
 let g:badwolf_darkgutter = 1
 let g:badwolf_tabline = 0
