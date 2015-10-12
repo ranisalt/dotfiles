@@ -54,6 +54,20 @@ map <C-w> :tabclose<cr>
 map <C-a> :tabprevious<cr>
 map <C-d> :tabnext<cr>
 
+" turn off arrows
+noremap <silent> <Left> <NOP>
+noremap <silent> <Down> <NOP>
+noremap <silent> <Up> <NOP>
+noremap <silent> <Right> <NOP>
+inoremap <silent> <Left> <NOP>
+inoremap <silent> <Down> <NOP>
+inoremap <silent> <Up> <NOP>
+inoremap <silent> <Right> <NOP>
+vnoremap <silent> <Left> <NOP>
+vnoremap <silent> <Down> <NOP>
+vnoremap <silent> <Up> <NOP>
+vnoremap <silent> <Right> <NOP>
+
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#tab_nr_type=1
