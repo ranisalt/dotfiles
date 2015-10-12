@@ -15,10 +15,10 @@ set $ws2 2: internet
 set $ws9 9: social stuff
 set $ws10 10: music and video
 
-bindsym --release $mod+Return exec urxvtc
+bindsym --release $mod+Return exec urxvt
 bindsym --release $mod+w exec firefox
-bindsym --release $mod+e exec --no-startup-id urxvtc -e ranger
-bindsym --release Print exec --no-startup-id import "$HOME/Pictures/Screenshots/$(date '+%F-%H-%M-%S').png"
+bindsym --release $mod+e exec --no-startup-id urxvt -e ranger
+bindsym --release Print exec --no-startup-id scrot -s "$HOME/Pictures/Screenshots/%F-%H-%M-%S.png"
 bindsym --release Shift+Print exec --no-startup-id import -window root "$HOME/Pictures/Screenshots/$(date '+%F-%H-%M-%S').png"
 bindsym --release Ctrl+Print exec --no-startup-id import -window "${$(xprop -root | grep '_NET_ACTIVE_WINDOW(WINDOW)'):40}" "$HOME/Pictures/Screenshots/$(date '+%F-%H-%M-%S').png"
 
