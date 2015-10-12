@@ -10,9 +10,9 @@ floating_modifier $mod
 # Automatic back-and-forth when switching to the current workspace
 workspace_auto_back_and_forth yes
 
-set $ws1 1: coding
-set $ws2 2: internet
-set $ws9 9: social stuff
+set $ws1 1: h4ck3rz
+set $ws2 2: interwebz
+set $ws9 9: social argh
 set $ws10 10: music and video
 
 bindsym --release $mod+Return exec urxvt
