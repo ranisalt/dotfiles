@@ -85,6 +85,11 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_cpp_compiler_options = '-Wall -Wpedantic -std=c++14'
 
+" remove trailing whitespace on save
+au BufWritePre * :%s/\s\+$//e
+" highlight text exceeding 80 columns
+match ErrorMsg '\%81v.\+'
+
 colorscheme badwolf
 highlight NonText ctermbg=none
 highlight Normal ctermbg=none
