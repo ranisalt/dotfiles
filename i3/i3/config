@@ -23,7 +23,7 @@ bindsym --release Shift+Print exec --no-startup-id maim "$HOME/Pictures/Screensh
 bindsym --release Ctrl+Print exec --no-startup-id maim -i $(xdotool getactivewindow) "$HOME/Pictures/Screenshots/$(date +%F-%T).png"
 
 bindsym --release $mod+l exec slimlock
-bindsym --release $mod+Shift+l exec exitx
+bindsym --release $mod+Shift+l exec --no-startup-id $HOME/.local/bin/exitx
 
 #XF86 bindings
 bindsym XF86MonBrightnessUp exec --no-startup-id backl -inc 5
