@@ -5,7 +5,11 @@ set background=dark
 set backspace=indent,eol,start
 set clipboard=unnamedplus
 set cursorline
+set encoding=utf-8
 set expandtab
+set fileformat=unix
+set foldmethod=indent
+set foldlevel=8
 set hlsearch
 set ignorecase
 set incsearch
@@ -44,15 +48,30 @@ call vundle#end()
 
 filetype plugin indent on
 
+" reindent file
 map <silent> <C-i> gg=G'
+
+" silently quit if no changes
 map <silent> q :q<cr>
+
+" open nerdtree navigation
 map <C-e> :NERDTreeToggle<cr>
 
+" toggle folding
+nnoremap <space> za
+
+" tab manipulation
 map <C-t> :tabnew<cr>
-map <C-o> :tabedit 
+map <C-o> :tabedit
 map <C-w> :tabclose<cr>
 map <C-a> :tabprevious<cr>
 map <C-d> :tabnext<cr>
+
+" split navigation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 " turn off arrows
 noremap <silent> <Left> <NOP>
