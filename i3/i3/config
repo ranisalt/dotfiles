@@ -16,6 +16,7 @@ set $ws9 9: social argh
 set $ws10 10: music and video
 
 bindsym --release $mod+Return exec urxvt
+bindsym --release $mod+q exec --no-startup-id urxvt -e ncmpcpp
 bindsym --release $mod+w exec firefox
 bindsym --release $mod+e exec --no-startup-id urxvt -e ranger
 bindsym --release Print exec --no-startup-id maim -s "$HOME/Pictures/Screenshots/$(date +%F-%T).png"
