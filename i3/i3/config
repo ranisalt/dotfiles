@@ -18,7 +18,7 @@ set $ws10 10: music and video
 bindsym --release $mod+Return exec urxvt
 bindsym --release $mod+w exec firefox
 bindsym --release $mod+e exec --no-startup-id urxvt -e ranger
-bindsym --release Print exec --no-startup-id maim -s "$HOME/Pictures/Screenshots/$(date +%F-%T)png"
+bindsym --release Print exec --no-startup-id maim -s "$HOME/Pictures/Screenshots/$(date +%F-%T).png"
 bindsym --release Shift+Print exec --no-startup-id maim "$HOME/Pictures/Screenshots/$(date +%F-%T).png"
 bindsym --release Ctrl+Print exec --no-startup-id maim -i $(xdotool getactivewindow) "$HOME/Pictures/Screenshots/$(date +%F-%T).png"
 
