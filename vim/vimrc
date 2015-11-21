@@ -40,7 +40,11 @@ Plugin 'davidhalter/jedi-vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'bling/vim-airline'
+Plugin 'tpope/vim-eunuch'
 Plugin 'tpope/vim-fugitive'
+Plugin 'moll/vim-node'
+Plugin 'tpope/vim-sensible'
+Plugin 'tpope/vim-surround'
 
 " colorschemes
 Plugin 'sjl/badwolf'
