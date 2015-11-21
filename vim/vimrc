@@ -50,6 +50,7 @@ filetype plugin indent on
 
 " reindent file
 map <silent> <C-i> gg=G'
+nnoremap <silent> <Tab> <NOP>
 
 " silently quit if no changes
 map <silent> q :q<cr>
