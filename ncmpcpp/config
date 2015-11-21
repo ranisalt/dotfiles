@@ -24,9 +24,9 @@ ncmpcpp_directory = ~/.ncmpcpp
 #
 ##### connection settings #####
 #
-mpd_host = localhost
+mpd_host = /home/ranieri/.local/run/mpd.sock
 #
-mpd_port = 6600
+#mpd_port = 6600
 #
 #mpd_connection_timeout = 5
 #
