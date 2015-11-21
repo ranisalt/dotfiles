@@ -145,7 +145,7 @@ assign [class="Firefox"] $ws2
 assign [class="Hexchat"] $ws9
 assign [class="Skype"] $ws9
 assign [title="Popcorn Time"] $ws10
-assign [class="Spotify"] $ws10
+for_window [class="[Ss]potify"] move container to workspace $ws10
 
 new_window 1pixel
 hide_edge_borders both
