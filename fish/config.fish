@@ -22,3 +22,4 @@ set -g theme_display_hg no
 set -g theme_display_ruby no
 
 test -s /home/ranieri/.nvm-fish/nvm.fish; and source /home/ranieri/.nvm-fish/nvm.fish
+set -gx PATH (echo $HOME/.gem/ruby/(ruby --version | awk '{ print $2 }' | cut -c -4)0/bin) $PATH

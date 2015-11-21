@@ -110,3 +110,6 @@ export TERM="rxvt-256color"
 export TERMINAL="urxvt"
 
 check_venv
+
+export NVM_DIR="/home/ranieri/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
