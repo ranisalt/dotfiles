@@ -50,6 +50,7 @@ URxvt*.color15: snow
 URxvt*.lineSpace: 1
 
 URxvt*.depth: 32
+URxvt*.fading: 15
 URxvt*.scrollBar: false
 URxvt*.scrollTtyOutput: false
 URxvt*.scrollTtyKeypress: true
