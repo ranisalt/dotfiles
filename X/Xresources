@@ -1,22 +1,51 @@
-! Molokai
+! Badwolf
+#define   plain            #f8f6f2
+#define   snow             #ffffff
+#define   coal             #000000
+
+#define   brightgravel     #d9cec3
+#define   lightgravel      #998f84
+#define   gravel           #857f78
+#define   mediumgravel     #666462
+#define   deepgravel       #45413b
+#define   deepergravel     #35322d
+#define   darkgravel       #242321
+#define   blackgravel      #1c1b1a
+#define   blackestgravel   #141413
+
+#define   dalespale        #fade3e
+#define   dirtyblonde      #f4cf86
+#define   taffy            #ff2c4b
+#define   saltwatertaffy   #8cffba
+#define   tardis           #0a9dff
+#define   orange           #ffa724
+#define   lime             #aeee00
+#define   dress            #ff9eb8
+#define   toffee           #b88853
+#define   coffee           #c7915b
+#define   darkroast        #88633f
+
 URxvt*.background: [85]#000000
-URxvt*.foreground: #d0d0d0
-URxvt*.color0: #101010
-URxvt*.color1: #960050
-URxvt*.color2: #66aa11
-URxvt*.color3: #c47f2c
-URxvt*.color4: #30309b
-URxvt*.color5: #7e40a5
-URxvt*.color6: #3579a8
-URxvt*.color7: #9999aa
-URxvt*.color8: #303030
-URxvt*.color9: #ff0090
-URxvt*.color10: #80ff00
-URxvt*.color11: #ffba68
-URxvt*.color12: #5f5fee
-URxvt*.color13: #bb88dd
-URxvt*.color14: #4eb4fa
-URxvt*.color15: #d0d0d0
+URxvt*.foreground: plain
+URxvt*.cursorColor: lime
+URxvt*.fadeColor: snow
+URxvt*.scrollColor: deepgravel
+URxvt*.color0: blackestgravel
+URxvt*.color1: taffy
+URxvt*.color2: lime
+URxvt*.color3: dalespale
+URxvt*.color4: tardis
+URxvt*.color5: dress
+URxvt*.color6: saltwatertaffy
+URxvt*.color7: brightgravel
+URxvt*.color8: coal
+URxvt*.color9: taffy
+URxvt*.color10: lime
+URxvt*.color11: orange
+URxvt*.color12: tardis
+URxvt*.color13: dress
+URxvt*.color14: saltwatertaffy
+URxvt*.color15: snow
 
 URxvt*.lineSpace: 1
 
