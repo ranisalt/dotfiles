@@ -60,6 +60,7 @@ URxvt*.font: xft:Terminess Powerline:size=10
 URxvt*.perl-ext-common: default,font-size,tabbedex
 URxvt*.keysym.C-Up: perl:font-size:increase
 URxvt*.keysym.C-Down: perl:font-size:decrease
+URxvt*.keysym.C-0: perl:font-size:reset
 URxvt*.tabbed.autohide: true
 URxvt*.tabbed.new-button: false
 URxvt*.url-launcher: /usr/bin/firefox
