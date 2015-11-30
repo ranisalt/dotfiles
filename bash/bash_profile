@@ -1,5 +1,5 @@
 # .bash_profile
-if [ -x /usr/bin/fish && -t 0 ]; then
+if [[ -x /usr/bin/fish && -t 0 ]]; then
 	exec fish -l $@
 fi
 echo "fish not available, falling back to bash"
@@ -20,7 +20,5 @@ export PATH="$PATH:$HOME/.local/bin:/usr/local/heroku/bin"
 # NVM commands
 [ -s "$HOME/.nvm/nvm.sh" ] && . "$HOME/.nvm/nvm.sh" # Loav NVM into a shell session
 [ -r "$NVM_DIR/bash_completion" ] && . $NVM_DIR/bash_completion
-
-[ -f /usr/share/fortune/chucknorris ] && [[ hash cowsay 2> /dev/null && hash fortune 2> /dev/null ]] && fortune chucknorris | cowsay -f dragon
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
