@@ -1,1 +1,1 @@
-ln -sfTv "$PWD" "$XDG_CONFIG_HOME/fish"
+ln -sfv "$PWD" "$XDG_CONFIG_HOME/fish"
