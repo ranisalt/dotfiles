@@ -1,26 +1,27 @@
-set nocompatible
+" set nocompatible
 set autochdir
-set autoindent
+" set autoindent
 set background=dark
-set backspace=indent,eol,start
+" set backspace=indent,eol,start
 set clipboard=unnamedplus
 set cursorline
-set encoding=utf-8
+" set encoding=utf8
 set expandtab
-set fileformat=unix
+set fileencoding=latin1
 set foldmethod=indent
 set foldlevel=8
-set hlsearch
+" set hlsearch
 set ignorecase
-set incsearch
-set laststatus=2 " needed for airline
-set mouse=a
+" set incsearch
+" set laststatus=2 " needed for airline
+set magic
+" set mouse=a
 set noshowmode " airline already shows me
 set number
 set ruler
 set smartcase
 set smartindent
-set smarttab
+" set smarttab
 set shiftwidth=4
 set showcmd
 set showmatch
@@ -33,8 +34,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
 " extensions
-Plugin 'gmarik/Vundle.vim'
-Plugin 'Rip-Rip/clang_complete'
+Plugin 'VundleVim/Vundle.vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'scrooloose/nerdtree'
