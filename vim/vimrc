@@ -72,6 +72,10 @@ map <C-w> :tabclose<cr>
 map <C-a> :tabprevious<cr>
 map <C-d> :tabnext<cr>
 
+" Treat long lines as break lines (useful when moving around in them)
+map j gj
+map k gk
+
 " split navigation
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -108,11 +112,20 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_cpp_compiler_options = '-Wall -Wpedantic -std=c++14'
+let g:syntastic_javascript_checkers=['standard']
+let g:syntastic_javascript_standard_exec = 'semistandard'
 
 " remove trailing whitespace on save
 au BufWritePre * :%s/\s\+$//e
+
+" Return to last edit position when opening files (You want this!)
+au BufReadPost *
+    \ if line("'\"") > 0 && line("'\"") <= line("$") |
+    \   exe "normal! g`\"" |
+    \ endif
+
 " highlight text exceeding 80 columns
-match ErrorMsg '\%81v.\+'
+match ErrorMsg '\%81v'
 
 colorscheme badwolf
 highlight NonText ctermbg=none
