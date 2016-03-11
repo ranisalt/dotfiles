@@ -1,8 +1,4 @@
 # .bash_profile
-if [[ -x /usr/bin/fish && -t 0 ]]; then
-	exec fish -l $@
-fi
-echo "fish not available, falling back to bash"
 
 # Source global definitions
 [ -f /etc/bash_profile ] && . /etc/bash_profile
