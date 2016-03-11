@@ -4,6 +4,7 @@ set autochdir
 set background=dark
 " set backspace=indent,eol,start
 set clipboard=unnamedplus
+set colorcolumn=80
 set cursorline
 " set encoding=utf8
 set expandtab
@@ -123,9 +124,6 @@ au BufReadPost *
     \ if line("'\"") > 0 && line("'\"") <= line("$") |
     \   exe "normal! g`\"" |
     \ endif
-
-" highlight text exceeding 80 columns
-match ErrorMsg '\%81v'
 
 colorscheme badwolf
 highlight NonText ctermbg=none
