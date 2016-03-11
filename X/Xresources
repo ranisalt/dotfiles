@@ -25,7 +25,7 @@
 #define   coffee           #c7915b
 #define   darkroast        #88633f
 
-URxvt*.background: [85]#000000
+URxvt*.background: [80]blackestgravel
 URxvt*.foreground: plain
 URxvt*.cursorColor: lime
 URxvt*.fadeColor: snow
@@ -38,7 +38,7 @@ URxvt*.color4: tardis
 URxvt*.color5: dress
 URxvt*.color6: saltwatertaffy
 URxvt*.color7: brightgravel
-URxvt*.color8: coal
+URxvt*.color8: plain
 URxvt*.color9: taffy
 URxvt*.color10: lime
 URxvt*.color11: orange
@@ -50,7 +50,7 @@ URxvt*.color15: snow
 URxvt*.lineSpace: 1
 
 URxvt*.depth: 32
-URxvt*.fading: 15
+URxvt*.fading: 20
 URxvt*.scrollBar: false
 URxvt*.scrollTtyOutput: false
 URxvt*.scrollTtyKeypress: true
