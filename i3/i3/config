@@ -153,8 +153,17 @@ assign [class="jetbrains"] $ws1
 assign [class="Firefox"] $ws2
 assign [class="Hexchat"] $ws9
 assign [class="Skype"] $ws9
-assign [title="Popcorn Time"] $ws10
+assign [instance="www.netflix.com"] $ws10
 for_window [class="[Ss]potify"] move container to workspace $ws10
+
+for_window [class="[Yy]ad"] floating enable, border normal
+for_window [window_role="bubble"] floating enable
+for_window [window_type="dialog"] floating enable
+for_window [window_type="menu"] floating enable
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="task_dialog"] floating enable
+for_window [window_role="preferences"] floating enable
+for_window [instance="www.netflix.com"] floating disable
 
 new_window 1pixel
 hide_edge_borders both
