@@ -22,17 +22,17 @@ set $ws9 "9: &#xf086; "
 set $ws10 "10: &#xf001; "
 
 bindsym --release $mod+Return exec urxvt
-bindsym --release $mod+w exec firefox
+bindsym --release $mod+w exec --no-startup-id firefox
 bindsym --release $mod+e exec --no-startup-id urxvt -e ranger
 bindsym --release $mod+t exec --no-startup-id urxvt -e ncmpcpp
-bindsym --release $mod+c exec --no-startup-id $HOME/.local/bin/finebooty
-bindsym --release $mod+v exec --no-startup-id $HOME/.local/bin/whatever
+bindsym --release $mod+c exec --no-startup-id finebooty
+bindsym --release $mod+v exec --no-startup-id whatever
 bindsym --release Print exec --no-startup-id maim -s "$HOME/Pictures/Screenshots/$(date +%F-%T).png"
 bindsym --release Shift+Print exec --no-startup-id maim "$HOME/Pictures/Screenshots/$(date +%F-%T).png"
 bindsym --release Ctrl+Print exec --no-startup-id maim -i $(xdotool getactivewindow) "$HOME/Pictures/Screenshots/$(date +%F-%T).png"
 
 bindsym --release $mod+l exec slimlock
-bindsym --release $mod+Shift+l exec --no-startup-id $HOME/.local/bin/exitx
+bindsym --release $mod+Shift+l exec --no-startup-id exitx
 
 #XF86 bindings
 bindsym XF86MonBrightnessUp exec --no-startup-id backl -inc 5
