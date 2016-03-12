@@ -1,5 +1,5 @@
 set $mod Mod4
-font pango:Roboto,FontAwesome 10
+font pango:Noto Sans,FontAwesome 10
 
 # Prevent mouse moving to focus on wrong window
 focus_follows_mouse no
@@ -167,3 +167,5 @@ for_window [instance="www.netflix.com"] floating disable
 
 new_window 1pixel
 hide_edge_borders both
+
+exec i3-swipe.py
