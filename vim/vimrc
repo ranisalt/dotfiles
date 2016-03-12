@@ -97,6 +97,8 @@ vnoremap <silent> <Down> <NOP>
 vnoremap <silent> <Up> <NOP>
 vnoremap <silent> <Right> <NOP>
 
+cmap w!! w !sudo tee > /dev/null %
+
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#tab_nr_type=1
