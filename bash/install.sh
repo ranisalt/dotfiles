@@ -1,2 +1,3 @@
-ln -sfv "$PWD/bash_profile" "$HOME/.bash_profile"
-ln -sfv "$PWD/bashrc" "$HOME/.bashrc"
+#!/usr/bin/env sh
+${RSYNC} "$PWD/bash_profile" "$HOME/.bash_profile"
+${RSYNC} "$PWD/bashrc" "$HOME/.bashrc"

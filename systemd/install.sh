@@ -1,6 +1,6 @@
-\mkdir -p "$XDG_CONFIG_HOME/systemd/user"
+#!/usr/bin/env sh
+[ ! -d "$XDG_CONFIG_HOME/systemd/user" ] && mkdir -pv "$XDG_CONFIG_HOME/systemd/user"
 
-for i in *.{service,timer}
-do
-  ln -sfTv "$PWD/$i" "$XDG_CONFIG_HOME/systemd/user/$i"
+for i in *.service; do
+  ${RSYNC} "$PWD/$i" "$XDG_CONFIG_HOME/systemd/user/$i"
 done

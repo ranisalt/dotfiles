@@ -1,1 +1,2 @@
-ln -sfTv "$PWD" "$HOME/.vim"
+#!/usr/bin/env sh
+${RSYNC} "$PWD/" "$HOME/.vim"

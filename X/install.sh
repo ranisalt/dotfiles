@@ -1,3 +1,4 @@
-ln -sfv "$PWD/compton.conf" "$XDG_CONFIG_HOME/compton.conf"
-ln -sfv "$PWD/xinitrc" "$HOME/.xinitrc"
-ln -sfv "$PWD/Xresources" "$HOME/.Xresources"
+#!/usr/bin/env sh
+${RSYNC} "$PWD/compton.conf" "$XDG_CONFIG_HOME/compton.conf"
+${RSYNC} "$PWD/xinitrc" "$HOME/.xinitrc"
+${RSYNC} "$PWD/Xresources" "$HOME/.Xresources"
