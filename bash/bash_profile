@@ -1,5 +1,4 @@
-# .bash_profile
-
+#!/usr/bin/env bash
 # Source global definitions
 [ -f /etc/bash_profile ] && . /etc/bash_profile
 [ -f /etc/profile ] && . /etc/profile
@@ -11,10 +10,4 @@
 [ -f ~/.bashrc ] && . ~/.bashrc
 
 # User specific environment and startup programs
-export PATH="$PATH:$HOME/.local/bin:/usr/local/heroku/bin"
-
-# NVM commands
-[ -s "$HOME/.nvm/nvm.sh" ] && . "$HOME/.nvm/nvm.sh" # Loav NVM into a shell session
-[ -r "$NVM_DIR/bash_completion" ] && . $NVM_DIR/bash_completion
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+export PATH="$PATH:$HOME/.local/bin"
