@@ -58,13 +58,13 @@ URxvt*.scrollTtyKeypress: true
 
 URxvt*.font: xft:Sauce Code Powerline:size=10
 
-URxvt*.perl-ext-common: default,font-size,tabbedex
-URxvt*.keysym.C-Up: perl:font-size:increase
-URxvt*.keysym.C-Down: perl:font-size:decrease
-URxvt*.keysym.C-0: perl:font-size:reset
+URxvt*.perl-ext-common: default,matcher,resize-font,tabbedex
+URxvt*.matcher.button: 1
+URxvt*.resize-font.bigger: C-Up
+URxvt*.resize-font.smaller: C-Down
 URxvt*.tabbed.autohide: true
 URxvt*.tabbed.new-button: false
-URxvt*.url-launcher: /usr/bin/firefox
+URxvt*.url-launcher: firefox
 
 URxvt*.loginShell: true
 
