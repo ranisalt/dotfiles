@@ -1,9 +1,0 @@
-[Unit]
-Description=Delayed start for conky
-
-[Timer]
-OnActiveSec=3
-Unit=conky.service
-
-[Install]
-WantedBy=default.target
