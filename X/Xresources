@@ -47,7 +47,8 @@ URxvt*.color13: dress
 URxvt*.color14: saltwatertaffy
 URxvt*.color15: snow
 
-URxvt*.lineSpace: 1
+URxvt*.letterSpace: -1
+URxvt*.lineSpace: -1
 
 URxvt*.depth: 32
 URxvt*.fading: 20
@@ -55,7 +56,7 @@ URxvt*.scrollBar: false
 URxvt*.scrollTtyOutput: false
 URxvt*.scrollTtyKeypress: true
 
-URxvt*.font: xft:Terminess Powerline:size=10
+URxvt*.font: xft:Sauce Code Powerline:size=10
 
 URxvt*.perl-ext-common: default,font-size,tabbedex
 URxvt*.keysym.C-Up: perl:font-size:increase
