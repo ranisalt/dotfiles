@@ -28,7 +28,6 @@ call vundle#begin()
 " extensions
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'editorconfig/editorconfig-vim'
-Plugin 'davidhalter/jedi-vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'benekastah/neomake'
 Plugin 'bling/vim-airline'
