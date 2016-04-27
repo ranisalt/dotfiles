@@ -1,3 +1,5 @@
-vim/bundle/
-vim/.netrwhist
-vim/.swp
+fish/.config/fish/completions/
+fish/.config/fish/conf.d/
+fish/.config/fish/fishfile
+fish/.config/fish/functions/
+neovim/.vim/bundle/
