@@ -11,15 +11,12 @@ set ignorecase
 set magic
 set noshowmode " airline already shows me
 set number
-set ruler
-set smartcase
 set smartindent
 set shiftwidth=4
 set showcmd
 set showmatch
 set softtabstop=4
 set tabstop=4
-syntax on
 
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -41,8 +38,6 @@ Plugin 'tpope/vim-surround'
 " colorschemes
 Plugin 'sjl/badwolf'
 call vundle#end()
-
-filetype plugin indent on
 
 " reindent file
 map <silent> <C-i> gg=G'
@@ -91,10 +86,10 @@ vnoremap <silent> <Right> <NOP>
 cmap w!! w !sudo tee > /dev/null %
 
 let g:neomake_javascript_xo_maker={
-            \ 'args': ['--reporter=compact'],
-            \ 'errorformat': '%E%f: line %l\, col %c\, Error - %m,' .
-            \ '%W%f: line %l\, col %c\, Warning - %m'
-            \ }
+      \ 'args': ['--reporter=compact'],
+      \ 'errorformat': '%E%f: line %l\, col %c\, Error - %m,' .
+      \ '%W%f: line %l\, col %c\, Warning - %m'
+      \ }
 
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled=1
@@ -103,7 +98,6 @@ let g:badwolf_css_props_highlight=1
 let g:badwolf_darkgutter=1
 let g:badwolf_tabline=0
 
-set shell=/bin/sh
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -118,10 +112,12 @@ au BufReadPost,BufWritePost * Neomake
 
 " Return to last edit position when opening files (You want this!)
 au BufReadPost *
-            \ if line("'\"") > 0 && line("'\"") <= line("$") |
-            \   exe "normal! g`\"" |
-            \ endif
+      \ if line("'\"") > 0 && line("'\"") <= line("$") |
+      \   exe "normal! g`\"" |
+      \ endif
 
 colorscheme badwolf
 highlight NonText ctermbg=none
 highlight Normal ctermbg=none
+
+" vim:set ft=vim et sw=2:
