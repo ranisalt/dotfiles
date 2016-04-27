@@ -1,11 +1,10 @@
 set fisher_home ~/.local/share/fisherman
 set fisher_config ~/.config/fisherman
-source $fisher_home/config.fish
 
 set -gx CCACHE_SLOPPINESS "pch_defines,time_macros"
 set -gx CC "ccache gcc"
 set -gx CXX "ccache g++"
-set -gx EDITOR "vim"
+set -gx EDITOR "nvim"
 set -gx PATH $HOME/.local/bin $PATH
 set -gx TERMINAL "urxvt"
 set -g VIRTUAL_ENV_DISABLE_PROMPT "yes"
