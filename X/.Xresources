@@ -25,6 +25,8 @@
 #define   coffee           #c7915b
 #define   darkroast        #88633f
 
+rofi.lines: 5
+
 URxvt*.background: [80]blackestgravel
 URxvt*.foreground: plain
 URxvt*.cursorColor: lime
