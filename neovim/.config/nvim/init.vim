@@ -5,7 +5,7 @@ set colorcolumn=80
 set cursorline
 set expandtab
 set fileencoding=latin1
-set foldmethod=indent
+set foldmethod=syntax
 set foldlevel=8
 set ignorecase
 set magic
