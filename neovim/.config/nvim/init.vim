@@ -18,27 +18,30 @@ set showmatch
 set softtabstop=4
 set tabstop=4
 
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
+" ensure vim-plug is installed and autoloaded
+if empty(glob('~/.config/nvim/autoload/plug.vim'))
+  silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall | source $MYVIMRC
+endif
 
-call vundle#begin()
+call plug#begin()
 " extensions
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'benekastah/neomake'
-Plugin 'bling/vim-airline'
-Plugin 'tpope/vim-eunuch'
-Plugin 'dag/vim-fish'
-Plugin 'tpope/vim-fugitive'
-Plugin 'pangloss/vim-javascript'
-Plugin 'moll/vim-node'
-Plugin 'tpope/vim-sensible'
-Plugin 'tpope/vim-surround'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'benekastah/neomake'
+Plug 'bling/vim-airline'
+Plug 'tpope/vim-eunuch'
+Plug 'dag/vim-fish'
+Plug 'tpope/vim-fugitive'
+Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+Plug 'moll/vim-node'
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-surround'
 
 " colorschemes
-Plugin 'sjl/badwolf'
-call vundle#end()
+Plug 'sjl/badwolf'
+call plug#end()
 
 " reindent file
 map <silent> <C-i> gg=G'
