@@ -41,7 +41,7 @@ Plug 'tpope/vim-eunuch'
 Plug 'dag/vim-fish'
 Plug 'tpope/vim-fugitive'
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
-Plug 'moll/vim-node'
+Plug 'moll/vim-node', { 'for': 'javascript' }
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 
