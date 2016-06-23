@@ -5,7 +5,7 @@ set colorcolumn=80
 set cursorline
 set expandtab
 set fileencoding=latin1
-set foldmethod=syntax
+set foldmethod=manual
 set foldlevel=8
 set ignorecase
 set magic
@@ -25,9 +25,15 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall | source $MYVIMRC
 endif
 
+function! DoRemote(arg)
+  UpdateRemotePlugins
+endfunction
+
 call plug#begin()
 " extensions
+Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
 Plug 'editorconfig/editorconfig-vim'
+Plug 'Konfekt/FastFold'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'benekastah/neomake'
 Plug 'bling/vim-airline'
@@ -53,7 +59,8 @@ map <silent> q :q<cr>
 " open nerdtree navigation
 map <C-e> :NERDTreeToggle<cr>
 
-" toggle folding
+" deoplete autocompletion
+inoremap <silent><expr> <C-space> pumvisible() ? "\<C-n>" : deoplete#mappings#manual_complete()
 nnoremap <space> za
 
 " tab manipulation
@@ -101,10 +108,7 @@ let g:airline#extensions#tabline#tab_nr_type=1
 let g:badwolf_css_props_highlight=1
 let g:badwolf_darkgutter=1
 let g:badwolf_tabline=0
-
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+let g:deoplete#enable_at_startup=1
 let g:neomake_cpp_enabled_makers=['gcc']
 let g:neomake_javascript_enabled_makers=['xo']
 
