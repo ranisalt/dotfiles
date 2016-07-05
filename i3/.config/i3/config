@@ -130,20 +130,29 @@ bar {
   strip_workspace_numbers yes
 
   status_command i3blocks
-  position top
+  position bottom
 
   # disable scrolling on bar
   bindsym button4 nop
   bindsym button5 nop
 
   colors {
-    background #2d2d2d
-    statusline #f9f9f9
+    set $bg #2c102a
+    set $fg #f9f9f9
+    background $bg
+    statusline $fg
 
-    focused_workspace #333333 #333333 #f9f9f9
-    active_workspace #2d2d2d #2d2d2d #dedede
-    inactive_workspace #2d2d2d #2d2d2d #dedede
-    urgent_workspace #333333 #333333 #d64937
+    # default colors
+    focused_workspace $bg $bg $fg
+
+    # 40% darkened foreground
+    active_workspace $bg $bg #939393
+
+    # 60% darkened foreground
+    inactive_workspace $bg $bg #606060
+
+    # bright orange foreground
+    urgent_workspace $bg $bg #d64937
   }
 }
 
