@@ -173,4 +173,6 @@ for_window [instance="www.netflix.com"] floating disable
 new_window 1pixel
 hide_edge_borders both
 
-exec i3-swipe.py
+exec_always --no-startup-id sh ~/.fehbg
+exec --no-startup-id auto-xflux
+exec --no-startup-id compton

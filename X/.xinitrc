@@ -9,6 +9,5 @@ fi
 
 xrdb -load ~/.Xresources &
 backl restore &
-sh ~/.fehbg &
 
 exec i3
