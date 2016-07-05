@@ -31,7 +31,7 @@ bindsym --release Print exec --no-startup-id maim -s "$HOME/Pictures/Screenshots
 bindsym --release Shift+Print exec --no-startup-id maim "$HOME/Pictures/Screenshots/$(date +%F-%T).png"
 bindsym --release Ctrl+Print exec --no-startup-id maim -i $(xdotool getactivewindow) "$HOME/Pictures/Screenshots/$(date +%F-%T).png"
 
-bindsym --release $mod+l exec slimlock
+bindsym --release $mod+l exec lockr
 bindsym --release $mod+Shift+l exec --no-startup-id exitx
 
 #XF86 bindings
