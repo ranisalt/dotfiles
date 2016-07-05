@@ -64,7 +64,7 @@
     # the top and down respectevly.
     # The width can be negative.  In this case the actual width is the
     # screen width minus the width defined in within the geometry option.
-    geometry = "300x5-30+45"
+    geometry = "300x5-24+48"
 
     # Shrink window if it's smaller than the width.  Will be ignored if
     # width is 0.
@@ -136,10 +136,10 @@
     startup_notification = false
 
     # dmenu path.
-    dmenu = /usr/bin/dmenu -p dunst:
+    dmenu = /usr/bin/rofi -dmenu -p dunst:
 
     # Browser for opening urls in context menu.
-    browser = /usr/bin/firefox -new-tab
+    browser = /usr/bin/firefox-developer -new-tab
 
     # Align icons left/right/off
     icon_position = left
@@ -148,7 +148,7 @@
     icon_folders = /usr/share/icons/gnome/24x24/status/:/usr/share/icons/gnome/24x24/devices/
 
 [frame]
-    width = 1
+    width = 0
     color = "#aaaaaa"
 
 [shortcuts]
