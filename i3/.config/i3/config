@@ -22,7 +22,7 @@ set $ws9 "9: &#xf086; "
 set $ws10 "10: &#xf001; "
 
 bindsym --release $mod+Return exec urxvt
-bindsym --release $mod+w exec --no-startup-id firefox
+bindsym --release $mod+w exec --no-startup-id firefox-developer
 bindsym --release $mod+e exec --no-startup-id urxvt -e ranger
 bindsym --release $mod+t exec --no-startup-id urxvt -e ncmpcpp
 bindsym --release $mod+c exec --no-startup-id finebooty
