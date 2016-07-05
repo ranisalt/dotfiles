@@ -67,8 +67,6 @@ URxvt*.resize-font.smaller: C-Down
 URxvt*.tabbed.autohide: true
 URxvt*.tabbed.new-button: false
 
-URxvt*.loginShell: true
-
 Xft*.dpi: 96
 Xft*.antialias: true
 Xft*.autohint: false
