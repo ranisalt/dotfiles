@@ -1,27 +1,42 @@
 [alias]
+    branches = branch -a
+    co = checkout
+    jedi = push --force
+    ls = ls-tree -rt --name-only HEAD
+    remotes = remote -v
+    st = status -sb
     tree = log --abbrev-commit --all --decorate --graph --oneline
 
+[color "diff-highlight"]
 [color]
-	ui = auto
+    ui = auto
 
 [commit]
     gpgsign = true
 
 [core]
-	pager = diff-so-fancy | less -FRX
+    editor = nvim
+    newHighlight = green bold 22
+    newNormal = green bold
+    oldHighlight = red bold 52
+    oldNormal = red bold
+    pager = diff-so-fancy | less -FRX --tabs=1,5
 
 [credential]
-	helper = cache
+    helper = cache
+
+[help]
+    autocorrect = true
 
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	required = true
-	smudge = git-lfs smudge -- %f
+    clean = git-lfs clean -- %f
+    required = true
+    smudge = git-lfs smudge -- %f
 
 [push]
-	default = simple
+    default = simple
 
 [user]
-	email = ranisalt@gmail.com
-	name = Ranieri Althoff
-	signingkey = 3508FEB8
+    email = ranisalt@gmail.com
+    name = Ranieri Althoff
+    signingkey = 3508FEB8
