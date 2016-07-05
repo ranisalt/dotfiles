@@ -181,6 +181,7 @@ for_window [instance="www.netflix.com"] floating disable
 
 new_window 1pixel
 hide_edge_borders both
+gaps inner 10
 
 exec_always --no-startup-id sh ~/.fehbg
 exec --no-startup-id auto-xflux
