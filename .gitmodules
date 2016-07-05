@@ -1,3 +1,6 @@
 [submodule "bin/.local/bin"]
 	path = bin/.local/bin
 	url = git@github.com:ranisalt/a-fistful-of-scripts.git
+[submodule "fonts/.local/share/fonts/powerline"]
+	path = fonts/.local/share/fonts/powerline
+	url = git@github.com:powerline/fonts.git
