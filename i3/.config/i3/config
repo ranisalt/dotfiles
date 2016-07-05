@@ -132,6 +132,10 @@ bar {
   status_command i3blocks
   position top
 
+  # disable scrolling on bar
+  bindsym button4 nop
+  bindsym button5 nop
+
   colors {
     background #2d2d2d
     statusline #f9f9f9
@@ -162,7 +166,7 @@ for_window [window_type="dialog"] floating enable
 for_window [window_type="menu"] floating enable
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
-for_window [window_role="preferences"] floating enable
+for_window [window_role="[Pp]references"] floating enable
 for_window [instance="www.netflix.com"] floating disable
 
 new_window 1pixel
