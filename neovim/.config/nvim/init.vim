@@ -4,7 +4,7 @@ set clipboard=unnamedplus
 set colorcolumn=80
 set cursorline
 set expandtab
-set fileencoding=latin1
+set fileencoding=utf8
 set foldmethod=manual
 set foldlevel=8
 set ignorecase
