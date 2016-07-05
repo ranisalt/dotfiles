@@ -2,4 +2,6 @@ fish/.config/fish/completions/
 fish/.config/fish/conf.d/
 fish/.config/fish/fishfile
 fish/.config/fish/functions/
-neovim/.vim/bundle/
+neovim/.config/nvim/.init.vim-rplugin~
+neovim/.config/nvim/autoload/
+neovim/.config/nvim/plugged/
