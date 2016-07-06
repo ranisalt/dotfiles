@@ -59,7 +59,7 @@ URxvt*.scrollTtyKeypress: true
 URxvt*.scrollTtyOutput: false
 URxvt*.scrollWithBuffer: false
 
-URxvt*.font: xft:Sauce Code Powerline:size=10
+URxvt*.font: xft:Fira Code:size=10,xft:PowerlineSymbols:size=10
 
 URxvt*.perl-ext-common: default,resize-font,tabbedex
 URxvt*.resize-font.bigger: C-Up
