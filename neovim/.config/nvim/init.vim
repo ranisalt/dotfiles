@@ -46,7 +46,7 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 
 " colorschemes
-Plug 'sjl/badwolf'
+Plug 'altercation/vim-colors-solarized'
 call plug#end()
 
 " reindent file
@@ -124,7 +124,7 @@ au BufReadPost *
       \   exe "normal! g`\"" |
       \ endif
 
-colorscheme badwolf
+colorscheme solarized
 highlight NonText ctermbg=none
 highlight Normal ctermbg=none
 
