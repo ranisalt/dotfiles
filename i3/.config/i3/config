@@ -171,8 +171,7 @@ for_window [window_role="task_dialog"] floating enable
 for_window [window_role="[Pp]references"] floating enable
 for_window [instance="www.netflix.com"] floating disable
 
-new_window 1pixel
-hide_edge_borders both
+new_window none
 gaps inner 10
 
 exec_always --no-startup-id sh ~/.fehbg
