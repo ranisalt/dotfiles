@@ -142,8 +142,8 @@ bar {
 
     # colors that match background
     focused_workspace $bg $bg $fg
-    active_workspace $bg $bg #fcdbc8cc
-    inactive_workspace $bg $bg #fcdbc899
+    active_workspace $bg $bg #fcdbc8c0
+    inactive_workspace $bg $bg #fcdbc880
     urgent_workspace $bg $bg #fd573b
   }
 }
