@@ -1,10 +1,12 @@
 [alias]
+    amend = commit --amend --reuse-message=HEAD
     branches = branch -a
     co = checkout
     jedi = push --force
     ls = ls-tree -rt --name-only HEAD
     remotes = remote -v
     st = status -sb
+    tags = tag -l
     tree = log --abbrev-commit --all --decorate --graph --oneline
 
 [color "diff-highlight"]
