@@ -155,7 +155,7 @@ client.unfocused        #2d2d2d #2d2d2d #dedede #2d2d2d
 client.urgent           #333333 #333333 #d64937 #333333
 
 assign [class="jetbrains" instance="sun-awt-X11-XFramePeer"] $ws1
-assign [class="Firefox"] $ws2
+assign [class="Firefox" instance="Navigator"] $ws2
 assign [class="Hexchat"] $ws9
 assign [class="Skype"] $ws9
 assign [instance="telegram-desktop"] $ws9
@@ -164,7 +164,7 @@ for_window [class="[Ss]potify"] move container to workspace $ws10
 
 for_window [class="[Yy]ad"] floating enable, border normal
 for_window [window_role="bubble"] floating enable
-for_window [window_type="dialog"] floating enable
+for_window [window_type="[Dd]ialog"] floating enable
 for_window [window_type="menu"] floating enable
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
