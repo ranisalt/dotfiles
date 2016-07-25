@@ -154,11 +154,13 @@ client.focused_inactive #2d2d2d #2d2d2d #dedede #2d2d2d
 client.unfocused        #2d2d2d #2d2d2d #dedede #2d2d2d
 client.urgent           #333333 #333333 #d64937 #333333
 
+assign [class="Eclipse" instance="eclipse"] $ws1
 assign [class="jetbrains" instance="sun-awt-X11-XFramePeer"] $ws1
 assign [class="Firefox" instance="Navigator"] $ws2
 assign [class="Hexchat"] $ws9
 assign [class="Skype"] $ws9
 assign [class="Telegram" instance="Telegram"] $ws9
+assign [class="Slack" window_role="browser-window"] $ws9
 assign [instance="www.netflix.com"] $ws10
 for_window [class="[Ss]potify"] move container to workspace $ws10
 
@@ -171,7 +173,7 @@ for_window [window_role="task_dialog"] floating enable
 for_window [window_role="[Pp]references"] floating enable
 for_window [instance="www.netflix.com"] floating disable
 
-new_window none
+new_window pixel 1
 gaps inner 10
 
 exec_always --no-startup-id sh ~/.fehbg

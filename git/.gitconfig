@@ -28,7 +28,7 @@
     helper = cache
 
 [help]
-    autocorrect = true
+    autocorrect = 1
 
 [filter "lfs"]
     clean = git-lfs clean -- %f
