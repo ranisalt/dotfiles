@@ -1,7 +1,5 @@
 set -gx BROWSER "/usr/bin/firefox-developer"
 set -gx CCACHE_SLOPPINESS "pch_defines,time_macros"
-set -gx CC "ccache gcc"
-set -gx CXX "ccache g++"
 set -gx EDITOR "nvim"
 set -gx PATH $HOME/.nodenv/bin $HOME/.local/bin $PATH
 set -gx TERMINAL "urxvt"
