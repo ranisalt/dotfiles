@@ -49,7 +49,7 @@ URxvt*.color13: dress
 URxvt*.color14: saltwatertaffy
 URxvt*.color15: snow
 
-URxvt*.letterSpace: -1
+URxvt*.letterSpace: -2
 URxvt*.lineSpace: -1
 
 URxvt*.depth: 32
@@ -59,7 +59,7 @@ URxvt*.scrollTtyKeypress: true
 URxvt*.scrollTtyOutput: false
 URxvt*.scrollWithBuffer: false
 
-URxvt*.font: xft:Fira Code:size=10,xft:PowerlineSymbols:size=10
+URxvt*.font: xft:Fira Mono for Powerline:size=10
 
 URxvt*.perl-ext-common: default,resize-font,tabbedex
 URxvt*.resize-font.bigger: C-Up
