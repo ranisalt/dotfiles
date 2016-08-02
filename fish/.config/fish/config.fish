@@ -1,6 +1,7 @@
 set fisher_home ~/.local/share/fisherman
 set fisher_config ~/.config/fisherman
 
+set -gx BROWSER "/usr/bin/firefox-developer"
 set -gx CCACHE_SLOPPINESS "pch_defines,time_macros"
 set -gx CC "ccache gcc"
 set -gx CXX "ccache g++"
