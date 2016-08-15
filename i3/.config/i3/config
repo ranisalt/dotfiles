@@ -158,7 +158,7 @@ assign [class="jetbrains" instance="sun-awt-X11-XFramePeer"] $ws1
 assign [class="Firefox" instance="Navigator"] $ws2
 assign [class="Hexchat"] $ws9
 assign [class="Skype"] $ws9
-assign [instance="telegram-desktop"] $ws9
+assign [class="Telegram" instance="Telegram"] $ws9
 assign [instance="www.netflix.com"] $ws10
 for_window [class="[Ss]potify"] move container to workspace $ws10
 
