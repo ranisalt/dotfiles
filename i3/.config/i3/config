@@ -21,9 +21,9 @@ set $ws8 "8: VIII "
 set $ws9 "9: &#xf086; "
 set $ws10 "10: &#xf001; "
 
-bindsym --release $mod+Return exec urxvt
+bindsym --release $mod+Return exec --no-startup-id ~/.local/bin/tabbed -r 2 -c ~/.local/bin/st -w ""
 bindsym --release $mod+w exec --no-startup-id firefox-developer
-bindsym --release $mod+e exec --no-startup-id urxvt -e ranger
+bindsym --release $mod+e exec --no-startup-id ~/.local/bin/st -e ranger
 bindsym --release $mod+t exec --no-startup-id facemark
 bindsym --release Print exec --no-startup-id maim -s "$HOME/Pictures/Screenshots/$(date +%F-%T).png"
 bindsym --release Shift+Print exec --no-startup-id maim "$HOME/Pictures/Screenshots/$(date +%F-%T).png"
