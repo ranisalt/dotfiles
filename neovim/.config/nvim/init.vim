@@ -27,6 +27,7 @@ endif
 
 call plug#begin()
 " extensions
+Plug 'jiangmiao/auto-pairs'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'editorconfig/editorconfig-vim'
 Plug 'Konfekt/FastFold'
@@ -41,6 +42,7 @@ Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'moll/vim-node', { 'for': 'javascript' }
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-vinegar'
 
 " colorschemes
 Plug 'altercation/vim-colors-solarized'
