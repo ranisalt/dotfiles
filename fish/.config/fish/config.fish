@@ -9,3 +9,8 @@ set -g theme_display_ruby no
 
 set -gx PATH $HOME/.config/composer/vendor/bin $HOME/.nodenv/bin $HOME/.local/bin $PATH
 status --is-interactive; and . (nodenv init -|psub)
+
+# start X at login
+if status --is-login; and test -z "$DISPLAY" -a "$XDG_VTNR" -eq "1"
+    exec startx -- -keeptty
+end
