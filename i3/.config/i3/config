@@ -159,6 +159,7 @@ assign [class="Skype"] $ws9
 assign [class="Telegram" instance="Telegram"] $ws9
 assign [class="Slack" window_role="browser-window"] $ws9
 assign [instance="www.netflix.com"] $ws10
+for_window [title="Butter"] move container to workspace $ws10
 for_window [class="[Ss]potify"] move container to workspace $ws10
 
 for_window [class="[Yy]ad"] border normal, floating enable
