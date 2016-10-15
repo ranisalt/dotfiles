@@ -66,8 +66,6 @@ nnoremap <space> za
 map <C-t> :tabnew<cr>
 map <C-o> :tabedit
 map <C-w> :tabclose<cr>
-map <C-a> :tabprevious<cr>
-map <C-d> :tabnext<cr>
 
 " Treat long lines as break lines (useful when moving around in them)
 map j gj
