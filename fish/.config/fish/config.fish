@@ -7,5 +7,5 @@ set -g theme_date_format "+%R"
 set -g theme_display_hg no
 set -g theme_display_ruby no
 
-set -gx PATH $HOME/.nodenv/bin $HOME/.local/bin $PATH
+set -gx PATH $HOME/.config/composer/vendor/bin $HOME/.nodenv/bin $HOME/.local/bin $PATH
 status --is-interactive; and . (nodenv init -|psub)
