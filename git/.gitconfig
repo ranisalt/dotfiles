@@ -2,6 +2,7 @@
     amend = commit --amend --reuse-message=HEAD
     branches = branch -a
     co = checkout
+    contribs = shortlog --summary --numbered
     jedi = push --force
     ls = ls-tree -rt --name-only HEAD
     remotes = remote -v
