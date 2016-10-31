@@ -40,6 +40,7 @@ Plug 'tpope/vim-eunuch'
 Plug 'dag/vim-fish'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
+Plug 'nathanaelkane/vim-indent-guides'
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'moll/vim-node', { 'for': 'javascript' }
 Plug 'tpope/vim-repeat'
@@ -51,8 +52,8 @@ Plug 'tpope/vim-vinegar'
 Plug 'altercation/vim-colors-solarized'
 call plug#end()
 
-" reindent file
-map <silent> <C-i> gg=G'
+syntax enable
+
 nnoremap <silent> <Tab> <NOP>
 
 " silently quit if no changes
@@ -61,14 +62,19 @@ map <silent> q :q<cr>
 " open nerdtree navigation
 map <C-e> :NERDTreeToggle<cr>
 
+" open ctrlp search
+map <C-p> :CtrlP<cr>
+
 " deoplete autocompletion
 inoremap <silent><expr> <C-space> pumvisible() ? "\<C-n>" : deoplete#mappings#manual_complete()
 nnoremap <space> za
 
 " tab manipulation
-map <C-t> :tabnew<cr>
-map <C-o> :tabedit
-map <C-w> :tabclose<cr>
+map <Leader-t> :tabnew<cr>
+map <Leader-o> :tabedit
+map <Leader-w> :tabclose<cr>
+map <Leader-a> :tabprevious<cr>
+map <Leader-d> :tabnext<cr>
 
 " Treat long lines as break lines (useful when moving around in them)
 map j gj
@@ -110,6 +116,8 @@ let g:badwolf_css_props_highlight=1
 let g:badwolf_darkgutter=1
 let g:badwolf_tabline=0
 let g:deoplete#enable_at_startup=1
+let g:indent_guides_auto_colors=0
+let g:indent_guides_guide_size=1
 let g:neomake_cpp_enabled_makers=['gcc']
 let g:neomake_javascript_enabled_makers=['xo']
 
@@ -125,6 +133,10 @@ au BufReadPost *
       \   exe "normal! g`\"" |
       \ endif
 
+au BufReadPost * IndentGuidesEnable
+
 colorscheme solarized
+highlight IndentGuidesEven ctermbg=black
+highlight IndentGuidesOdd ctermbg=black
 
 " vim:set ft=vim et sw=2:
