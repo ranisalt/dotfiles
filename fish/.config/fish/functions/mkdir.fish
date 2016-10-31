@@ -1,3 +1,3 @@
 function mkdir
-	command mkdir -pv $argv
+	command mkdir -p $argv;
 end
