@@ -28,18 +28,21 @@ endif
 call plug#begin()
 " extensions
 Plug 'jiangmiao/auto-pairs'
+Plug 'ctrlpvim/ctrlp.vim', { 'on': 'CtrlP' }
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'editorconfig/editorconfig-vim'
 Plug 'Konfekt/FastFold'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'benekastah/neomake'
 Plug 'bling/vim-airline'
+Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-eunuch'
 Plug 'dag/vim-fish'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'moll/vim-node', { 'for': 'javascript' }
+Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-vinegar'
@@ -99,6 +102,7 @@ let g:neomake_javascript_xo_maker={
       \ '%W%f: line %l\, col %c\, Warning - %m'
       \ }
 
+let g:airline_inactive_collapse = 0
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#tab_nr_type=1
@@ -122,7 +126,5 @@ au BufReadPost *
       \ endif
 
 colorscheme solarized
-highlight NonText ctermbg=none
-highlight Normal ctermbg=none
 
 " vim:set ft=vim et sw=2:
