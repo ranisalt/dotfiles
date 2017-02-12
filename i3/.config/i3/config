@@ -18,13 +18,13 @@ set $ws8 "8: VIII "
 set $ws9 "9: &#xf086; "
 set $ws10 "10: &#xf001; "
 
-bindsym --release $mod+Return exec --no-startup-id ~/.local/bin/tabbed -r 2 -c ~/.local/bin/st -w ""
+bindsym --release $mod+Return exec --no-startup-id urxvt
 bindsym --release $mod+w exec --no-startup-id firefox-developer
-bindsym --release $mod+e exec --no-startup-id ~/.local/bin/st -e ranger
+bindsym --release $mod+e exec --no-startup-id urxvt -e ranger
 bindsym --release $mod+t exec --no-startup-id facemark
-bindsym --release Print exec --no-startup-id maim -s "$HOME/Pictures/Screenshots/$(date +%F-%T).png"
-bindsym --release Shift+Print exec --no-startup-id maim "$HOME/Pictures/Screenshots/$(date +%F-%T).png"
-bindsym --release Ctrl+Print exec --no-startup-id maim -i $(xdotool getactivewindow) "$HOME/Pictures/Screenshots/$(date +%F-%T).png"
+bindsym --release Print exec --no-startup-id screenshot -c -s
+bindsym --release Shift+Print exec --no-startup-id screenshot -c
+bindsym --release Ctrl+Print exec --no-startup-id screenshot -p -i $(xdotool getactivewindow)
 
 bindsym --release $mod+l exec lockr
 bindsym --release $mod+Shift+l exec --no-startup-id exitx
@@ -132,7 +132,7 @@ bar {
   bindsym button5 nop
 
   colors {
-    set $bg #2c102a
+    set $bg #1a1a20
     set $fg #f9f9f9
     background $bg
     statusline $fg
@@ -154,10 +154,10 @@ client.urgent           #333333 #333333 #d64937 #333333
 assign [class="Eclipse" instance="eclipse"] $ws1
 assign [class="jetbrains" instance="sun-awt-X11-XFramePeer"] $ws1
 assign [class="Firefox" instance="Navigator"] $ws2
-assign [class="Hexchat"] $ws9
-assign [class="Skype"] $ws9
-assign [class="Telegram" instance="Telegram"] $ws9
+assign [class="discord" window_role="browser-window"] $ws9
 assign [class="Slack" window_role="browser-window"] $ws9
+assign [class="skypeforlinux" window_role="browser-window"] $ws9
+assign [class="Telegram" instance="Telegram"] $ws9
 assign [instance="www.netflix.com"] $ws10
 for_window [title="Butter"] move container to workspace $ws10
 for_window [class="[Ss]potify"] move container to workspace $ws10
@@ -169,11 +169,10 @@ for_window [window_type="menu"] floating enable
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
 for_window [window_role="[Pp]references"] floating enable
-for_window [instance="www.netflix.com"] floating disable
 
 new_window pixel 1
 gaps inner 10
 
-exec_always --no-startup-id sh ~/.fehbg
+exec_always --no-startup-id nitrogen --restore
 exec --no-startup-id auto-xflux
 exec --no-startup-id compton
