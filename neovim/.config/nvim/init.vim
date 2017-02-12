@@ -29,7 +29,6 @@ call plug#begin()
 " extensions
 Plug 'jiangmiao/auto-pairs'
 Plug 'ctrlpvim/ctrlp.vim', { 'on': 'CtrlP' }
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'editorconfig/editorconfig-vim'
 Plug 'Konfekt/FastFold'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
@@ -52,9 +51,8 @@ Plug 'tpope/vim-vinegar'
 Plug 'altercation/vim-colors-solarized'
 call plug#end()
 
-syntax enable
-
 nnoremap <silent> <Tab> <NOP>
+inoremap <S-Tab> <C-d>
 
 " silently quit if no changes
 map <silent> q :q<cr>
@@ -65,8 +63,6 @@ map <C-e> :NERDTreeToggle<cr>
 " open ctrlp search
 map <C-p> :CtrlP<cr>
 
-" deoplete autocompletion
-inoremap <silent><expr> <C-space> pumvisible() ? "\<C-n>" : deoplete#mappings#manual_complete()
 nnoremap <space> za
 
 " tab manipulation
@@ -135,8 +131,8 @@ au BufReadPost *
 
 au BufReadPost * IndentGuidesEnable
 
-colorscheme solarized
-highlight IndentGuidesEven ctermbg=black
-highlight IndentGuidesOdd ctermbg=black
+colors solarized
+hi IndentGuidesEven ctermbg=black
+hi IndentGuidesOdd ctermbg=black
 
 " vim:set ft=vim et sw=2:
