@@ -65,7 +65,6 @@ call plug#end()
 let mapleader = ","
 
 nnoremap <silent> <Tab> <NOP>
-inoremap <S-Tab> <C-d>
 
 " silently quit if no changes
 map <silent> q :q<cr>
