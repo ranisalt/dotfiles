@@ -26,30 +26,43 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 
 call plug#begin()
+" defaults
+Plug 'tpope/vim-sensible'
+
 " extensions
-Plug 'jiangmiao/auto-pairs'
 Plug 'ctrlpvim/ctrlp.vim', { 'on': 'CtrlP' }
 Plug 'editorconfig/editorconfig-vim'
 Plug 'Konfekt/FastFold'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'benekastah/neomake'
+Plug 'godlygeek/tabular'
 Plug 'bling/vim-airline'
 Plug 'tpope/vim-commentary'
+Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-eunuch'
-Plug 'dag/vim-fish'
+Plug 'dag/vim-fish', { 'for': 'fish' }
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+Plug 'terryma/vim-multiple-cursors'
 Plug 'moll/vim-node', { 'for': 'javascript' }
 Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-sleuth'
+Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-vinegar'
+
+" textobj
+Plug 'kana/vim-textobj-user'
+Plug 'poetic/vim-textobj-javascript', { 'for': 'javascript' }
+Plug 'bps/vim-textobj-python', { 'for': 'python' }
 
 " colorschemes
 Plug 'altercation/vim-colors-solarized'
 call plug#end()
+
+let mapleader = ","
 
 nnoremap <silent> <Tab> <NOP>
 inoremap <S-Tab> <C-d>
@@ -66,11 +79,11 @@ map <C-p> :CtrlP<cr>
 nnoremap <space> za
 
 " tab manipulation
-map <Leader-t> :tabnew<cr>
-map <Leader-o> :tabedit
-map <Leader-w> :tabclose<cr>
-map <Leader-a> :tabprevious<cr>
-map <Leader-d> :tabnext<cr>
+map <leader>t :tabnew<cr>
+map <leader>o :tabedit
+map <leader>w :tabclose<cr>
+map <leader>a :tabprevious<cr>
+map <leader>d :tabnext<cr>
 
 " Treat long lines as break lines (useful when moving around in them)
 map j gj
