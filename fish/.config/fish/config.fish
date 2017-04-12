@@ -4,7 +4,7 @@ set -g VIRTUAL_ENV_DISABLE_PROMPT "yes"
 set -g theme_color_scheme solarized
 set -g theme_date_format "+%R"
 
-set -gx PATH $HOME/.config/composer/vendor/bin $HOME/.nodenv/bin $HOME/.local/bin $PATH
+set -gx PATH $HOME/.nodenv/bin $HOME/.local/bin $PATH
 status --is-interactive; and . (nodenv init -|psub)
 
 # start X at login
