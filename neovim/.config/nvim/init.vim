@@ -128,6 +128,7 @@ let g:indent_guides_auto_colors=0
 let g:indent_guides_guide_size=1
 let g:neomake_cpp_enabled_makers=['gcc']
 let g:neomake_javascript_enabled_makers=['xo']
+let g:solarized_termcolors=256
 
 " remove trailing whitespace on save
 au BufWritePre * :%s/\s\+$//e
