@@ -70,10 +70,10 @@ nnoremap <silent> <Tab> <NOP>
 map <silent> q :q<cr>
 
 " open nerdtree navigation
-map <C-e> :NERDTreeToggle<cr>
+map <leader>e :NERDTreeToggle<cr>
 
 " open ctrlp search
-map <C-p> :CtrlP<cr>
+map <leader>p :CtrlP<cr>
 
 nnoremap <space> za
 
