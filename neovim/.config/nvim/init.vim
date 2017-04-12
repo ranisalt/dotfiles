@@ -30,6 +30,7 @@ call plug#begin()
 Plug 'tpope/vim-sensible'
 
 " extensions
+Plug 'mileszs/ack.vim'
 Plug 'ctrlpvim/ctrlp.vim', { 'on': 'CtrlP' }
 Plug 'editorconfig/editorconfig-vim'
 Plug 'Konfekt/FastFold'
@@ -75,6 +76,13 @@ map <leader>e :NERDTreeToggle<cr>
 " open ctrlp search
 map <leader>p :CtrlP<cr>
 
+if executable('ag')
+  set grepprg=ag\ --nogroup\ --nocolor
+  let g:ackprg = 'ag --nocolor --nogroup --smart-case --vimgrep'
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+  let g:ctrlp_use_caching = 0
+endif
+
 nnoremap <space> za
 
 " tab manipulation
@@ -116,6 +124,7 @@ let g:neomake_javascript_xo_maker={
       \ '%W%f: line %l\, col %c\, Warning - %m'
       \ }
 
+let g:ag_working_path_mode='r'
 let g:airline_inactive_collapse = 0
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled=1
