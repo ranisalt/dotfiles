@@ -70,10 +70,9 @@ call plug#end()
 
 let mapleader = ","
 
-nnoremap <silent> <Tab> <NOP>
-
-" silently quit if no changes
-map <silent> q :q<cr>
+" move code blocks easier
+vnoremap < <gv
+vnoremap > >gv
 
 " open nerdtree navigation
 map <leader>e :NERDTreeToggle<cr>
