@@ -32,12 +32,14 @@ Plug 'tpope/vim-sensible'
 
 " extensions
 Plug 'mileszs/ack.vim'
+Plug 'dawikur/algorithm-mnemonics.vim'
 Plug 'ctrlpvim/ctrlp.vim', { 'on': 'CtrlP' }
 Plug 'editorconfig/editorconfig-vim'
 Plug 'Konfekt/FastFold'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'benekastah/neomake'
 Plug 'godlygeek/tabular'
+Plug 'SirVer/ultisnips'
 Plug 'bling/vim-airline'
 Plug 'tpope/vim-commentary'
 Plug 'easymotion/vim-easymotion'
@@ -54,6 +56,8 @@ Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-vinegar'
+Plug 'wakatime/vim-wakatime'
+Plug 'wannesm/wmgraphviz.vim'
 
 " textobj
 Plug 'kana/vim-textobj-user'
@@ -139,6 +143,7 @@ let g:indent_guides_guide_size=1
 let g:neomake_cpp_enabled_makers=['gcc']
 let g:neomake_javascript_enabled_makers=['xo']
 let g:solarized_termcolors=256
+let g:UltiSnipsExpandTrigger="<tab>"
 
 " remove trailing whitespace on save
 au BufWritePre * :%s/\s\+$//e
