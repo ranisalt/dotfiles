@@ -137,7 +137,7 @@ let g:deoplete#enable_at_startup=1
 let g:indent_guides_auto_colors=0
 let g:indent_guides_guide_size=1
 let g:neomake_cpp_enabled_makers=['gcc']
-let g:neomake_javascript_enabled_makers=['xo']
+let g:neomake_javascript_enabled_makers=['standard']
 let g:solarized_termcolors=256
 let g:UltiSnipsExpandTrigger="<tab>"
 
