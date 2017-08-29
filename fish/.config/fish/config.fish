@@ -1,4 +1,5 @@
 set -gx CCACHE_SLOPPINESS "pch_defines,time_macros"
+set -g SUDO_EDITOR "nvim"
 set -g VIRTUAL_ENV_DISABLE_PROMPT "yes"
 
 set -g theme_color_scheme solarized
