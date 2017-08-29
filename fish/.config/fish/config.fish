@@ -4,10 +4,14 @@ set -g VIRTUAL_ENV_DISABLE_PROMPT "yes"
 set -g theme_color_scheme solarized
 set -g theme_date_format "+%R"
 
-set -gx PATH $HOME/.nodenv/bin $HOME/.local/bin $PATH
-status --is-interactive; and . (nodenv init -|psub)
-
 # start X at login
-if status --is-login; and test -z "$DISPLAY" -a "$XDG_VTNR" -eq "1"
-    exec startx -- -keeptty
+if status --is-login
+    set -x PATH $HOME/.local/bin $HOME/.nodenv/bin $HOME/.pyenv/bin $PATH
+
+    status --is-interactive; and source (nodenv init -|psub)
+    status --is-interactive; and source (pyenv init -|psub)
+
+    if test -z "$DISPLAY" -a "$XDG_VTNR" -eq 1
+        exec startx -- -keeptty
+    end
 end
