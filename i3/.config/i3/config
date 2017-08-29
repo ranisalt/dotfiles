@@ -46,7 +46,7 @@ bindsym XF86TouchpadToggle exec --no-startup-id touchpad-toggle
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+r exec ~/.local/bin/launcher run
+bindsym $mod+r exec launcher run
 
 # change focus
 bindsym $mod+Left focus left
