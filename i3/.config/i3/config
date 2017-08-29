@@ -133,15 +133,15 @@ bar {
   bindsym button5 nop
 
   colors {
-    set $bg #1a1a20
-    set $fg #f9f9f9
+    set $bg #2c102a
+    set $fg #c9aaaf
     background $bg
     statusline $fg
 
     # colors that match background
     focused_workspace $bg $bg $fg
-    active_workspace $bg $bg #fcdbc8c0
-    inactive_workspace $bg $bg #fcdbc880
+    active_workspace $bg $bg #c9aaafc0
+    inactive_workspace $bg $bg #c9aaaf80
     urgent_workspace $bg $bg #fd573b
   }
 }
