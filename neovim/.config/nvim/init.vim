@@ -9,11 +9,12 @@ set foldmethod=manual
 set foldlevel=8
 set ignorecase
 set magic
+set mouse=a
 set noshowmode " airline already shows me
 set number
+set relativenumber
 set smartindent
 set shiftwidth=4
-set showcmd
 set showmatch
 set softtabstop=4
 set tabstop=4
