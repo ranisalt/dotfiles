@@ -146,6 +146,7 @@ au BufWritePre * :%s/\s\+$//e
 
 " execute neomake on open/write
 au BufReadPost,BufWritePost * Neomake
+au BufWritePost *.tex :silent !rubber --unsafe --pdf %
 
 " Return to last edit position when opening files (You want this!)
 au BufReadPost *
