@@ -7,16 +7,16 @@ focus_follows_mouse no
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-set $ws1 "1: &#xf121; "
-set $ws2 "2: &#xf269; "
+set $ws1 "1:  "
+set $ws2 "2:  "
 set $ws3 "3: III "
 set $ws4 "4: IV "
 set $ws5 "5: V "
-set $ws6 "6: VI "
+set $ws6 "6:  "
 set $ws7 "7: VII "
 set $ws8 "8: VIII "
-set $ws9 "9: &#xf086; "
-set $ws10 "10: &#xf001; "
+set $ws9 "9:  "
+set $ws10 "10:  "
 
 bindsym --release $mod+Return exec --no-startup-id tilix
 bindsym --release $mod+w exec --no-startup-id firefox-developer
