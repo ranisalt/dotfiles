@@ -178,6 +178,4 @@ new_window pixel 1
 gaps inner 10
 
 exec_always --no-startup-id nitrogen --restore
-exec --no-startup-id auto-xflux
 exec --no-startup-id compton
-exec --no-startup-id pasystray
