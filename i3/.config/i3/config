@@ -154,7 +154,10 @@ client.urgent           #333333 #333333 #d64937 #333333
 
 assign [class="Eclipse" instance="eclipse"] $ws1
 assign [class="jetbrains" instance="sun-awt-X11-XFramePeer"] $ws1
-assign [class="Firefox" instance="Navigator"] $ws2
+assign [class="Chromium" instance="chromium"] $ws2
+assign [class="TLauncher" instance="sun-awt-X11-XFramePeer"] $ws3
+assign [class="Minecraft"] $ws3
+assign [class="Steam" instance="Steam"] $ws6
 assign [class="discord" window_role="browser-window"] $ws9
 assign [class="Slack" window_role="browser-window"] $ws9
 assign [class="skypeforlinux" window_role="browser-window"] $ws9
