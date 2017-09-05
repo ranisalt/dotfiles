@@ -3,8 +3,10 @@ set -x SUDO_ASKPASS "$HOME/.local/bin/askpass"
 set -x SUDO_EDITOR "nvim"
 set VIRTUAL_ENV_DISABLE_PROMPT "yes"
 
-set -g theme_color_scheme solarized
-set -g theme_date_format "+%R"
+set fish_prompt_pwd_dir_length 1
+set theme_date_format "+%R"
+set theme_project_dir_length $fish_prompt_pwd_dir_length
+set theme_show_exit_status "yes"
 
 # start X at login
 if status --is-login
