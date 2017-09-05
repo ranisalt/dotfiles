@@ -122,6 +122,9 @@ mode "resize" {
 
 bindsym $mod+Escape mode "resize"
 
+set_from_resource $bg i3wm.color0 #2c102a
+set_from_resource $fg i3wm.color7 #c9aaaf
+
 bar {
   strip_workspace_numbers yes
 
@@ -133,8 +136,6 @@ bar {
   bindsym button5 nop
 
   colors {
-    set $bg #2c102a
-    set $fg #c9aaaf
     background $bg
     statusline $fg
 
@@ -146,11 +147,11 @@ bar {
   }
 }
 
-# class                 border  backgr  text    indicator
-client.focused          #333333 #333333 #f9f9f9 #333333
-client.focused_inactive #2d2d2d #2d2d2d #dedede #2d2d2d
-client.unfocused        #2d2d2d #2d2d2d #dedede #2d2d2d
-client.urgent           #333333 #333333 #d64937 #333333
+# class                 border  bg  tx  indicator
+client.focused          #333333 $bg $fg #333333
+client.focused_inactive #2d2d2d $bg $fg #2d2d2d
+client.unfocused        #2d2d2d $bg $fg #2d2d2d
+client.urgent           #333333 $bg $fg #333333
 
 assign [class="Eclipse" instance="eclipse"] $ws1
 assign [class="jetbrains" instance="sun-awt-X11-XFramePeer"] $ws1
