@@ -27,7 +27,7 @@ bindsym --release Print exec --no-startup-id screenshot -c -s
 bindsym --release Shift+Print exec --no-startup-id screenshot -c
 bindsym --release Ctrl+Print exec --no-startup-id screenshot -p -i $(xdotool getactivewindow)
 
-bindsym --release $mod+l exec --no-startup-id lockr
+bindsym --release $mod+l exec --no-startup-id loginctl lock-session
 bindsym --release $mod+Shift+l exec --no-startup-id exitx
 
 #XF86 bindings
