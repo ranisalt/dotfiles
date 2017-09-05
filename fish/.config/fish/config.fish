@@ -1,6 +1,7 @@
-set -gx CCACHE_SLOPPINESS "pch_defines,time_macros"
-set -g SUDO_EDITOR "nvim"
-set -g VIRTUAL_ENV_DISABLE_PROMPT "yes"
+set -x CCACHE_SLOPPINESS "pch_defines,time_macros"
+set -x SUDO_ASKPASS "$HOME/.local/bin/askpass"
+set -x SUDO_EDITOR "nvim"
+set VIRTUAL_ENV_DISABLE_PROMPT "yes"
 
 set -g theme_color_scheme solarized
 set -g theme_date_format "+%R"
