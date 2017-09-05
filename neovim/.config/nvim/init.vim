@@ -65,7 +65,7 @@ Plug 'poetic/vim-textobj-javascript', { 'for': 'javascript' }
 Plug 'bps/vim-textobj-python', { 'for': 'python' }
 
 " colorschemes
-Plug 'altercation/vim-colors-solarized'
+Plug 'dylanaraps/wal.vim'
 call plug#end()
 
 let mapleader = ","
@@ -138,7 +138,6 @@ let g:indent_guides_auto_colors=0
 let g:indent_guides_guide_size=1
 let g:neomake_cpp_enabled_makers=['gcc']
 let g:neomake_javascript_enabled_makers=['standard']
-let g:solarized_termcolors=256
 let g:UltiSnipsExpandTrigger="<tab>"
 
 " remove trailing whitespace on save
@@ -156,8 +155,9 @@ au BufReadPost *
 
 au BufReadPost * IndentGuidesEnable
 
-colors solarized
+colors wal
 hi IndentGuidesEven ctermbg=black
 hi IndentGuidesOdd ctermbg=black
+hi Normal ctermbg=NONE guibg=NONE
 
 " vim:set ft=vim et sw=2:

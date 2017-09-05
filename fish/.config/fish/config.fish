@@ -19,3 +19,5 @@ if status --is-login
         exec startx -- -keeptty
     end
 end
+
+wal -r
