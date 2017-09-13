@@ -129,7 +129,7 @@ bar {
   strip_workspace_numbers yes
 
   status_command i3blocks
-  position bottom
+  position top
 
   # disable scrolling on bar
   bindsym button4 nop
