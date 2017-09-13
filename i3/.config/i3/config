@@ -130,6 +130,7 @@ bar {
 
   status_command i3blocks
   position top
+  tray_output primary
 
   # disable scrolling on bar
   bindsym button4 nop
