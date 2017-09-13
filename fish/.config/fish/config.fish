@@ -20,4 +20,4 @@ if status --is-login
     end
 end
 
-wal -r
+status --is-interactive; and wal -r
