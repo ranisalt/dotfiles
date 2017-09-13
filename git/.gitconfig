@@ -23,7 +23,7 @@
     newNormal = green bold
     oldHighlight = red bold 52
     oldNormal = red bold
-    pager = diff-so-fancy | less -FRX --tabs=1,5
+    pager = diff-so-fancy | less --tabs=4 -RFX
 
 [credential]
     helper = cache
