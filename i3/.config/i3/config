@@ -162,7 +162,7 @@ assign [class="Steam" instance="Steam"] $ws6
 assign [class="discord" window_role="browser-window"] $ws9
 assign [class="Slack" window_role="browser-window"] $ws9
 assign [class="skypeforlinux" window_role="browser-window"] $ws9
-assign [class="Telegram" instance="Telegram"] $ws9
+assign [class="TelegramDesktop" instance="telegram-desktop"] $ws9
 assign [instance="www.netflix.com"] $ws10
 for_window [title="Butter"] move container to workspace $ws10
 for_window [class="[Ss]potify"] move container to workspace $ws10
