@@ -56,7 +56,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-surround'
-Plug 'wannesm/wmgraphviz.vim'
+Plug 'wannesm/wmgraphviz.vim', { 'for': 'dot' }
 
 " textobj
 Plug 'kana/vim-textobj-user'
