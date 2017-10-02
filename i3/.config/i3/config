@@ -1,5 +1,5 @@
 set $mod Mod4
-font pango:xkcd,FontAwesome 10
+font pango:xkcd,FontAwesome 9
 
 # Prevent mouse moving to focus on wrong window
 focus_follows_mouse no
