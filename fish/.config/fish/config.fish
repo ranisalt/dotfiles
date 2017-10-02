@@ -1,6 +1,7 @@
 set -x CCACHE_SLOPPINESS "pch_defines,time_macros"
 set -x SUDO_ASKPASS "$HOME/.local/bin/askpass"
 set -x SUDO_EDITOR "nvim"
+set -x XDG_CONFIG_HOME "$HOME/.config"
 set VIRTUAL_ENV_DISABLE_PROMPT "yes"
 
 set fish_prompt_pwd_dir_length 1
