@@ -15,9 +15,8 @@ if status --is-login
 
     # Intel Parallel Studio XE
     set -x PATH "$HOME/intel/bin" $PATH
-    set -x PATH "$HOME/intel/compilers_and_libraries_2017.4.196/linux/mpi/intel64/bin" $PATH
-    set -x PATH "$HOME/intel/vtune_amplifier_xe_2017.4.0.517083/bin64" $PATH
-    set -x VTUNE_AMPLIFIER_XE_2017_DIR "$HOME/intel/vtune_amplifier_xe_2017.4.0.517083"
+    set -x PATH "$HOME/intel/vtune_amplifier/bin64" $PATH
+    set -x VTUNE_AMPLIFIER_XE_2018_DIR "$HOME/intel/vtune_amplifier"
 
     status --is-interactive; and source (nodenv init -|psub)
     status --is-interactive; and source (pyenv init -|psub)
