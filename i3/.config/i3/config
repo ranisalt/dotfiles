@@ -155,20 +155,15 @@ client.focused_inactive #2d2d2d $bg $fg #2d2d2d
 client.unfocused        #2d2d2d $bg $fg #2d2d2d
 client.urgent           #333333 $bg $fg #333333
 
-assign [class="Eclipse" instance="eclipse"] $ws1
 assign [class="jetbrains" instance="sun-awt-X11-XFramePeer"] $ws1
 assign [class="Firefox" instance="Navigator"] $ws2
 assign [class="TLauncher" instance="sun-awt-X11-XFramePeer"] $ws3
 assign [class="Minecraft"] $ws3
 assign [class="Steam" instance="Steam"] $ws6
-assign [class="discord" window_role="browser-window"] $ws9
-assign [class="Slack" window_role="browser-window"] $ws9
-assign [class="skypeforlinux" window_role="browser-window"] $ws9
 assign [class="TelegramDesktop" instance="telegram-desktop"] $ws9
 for_window [title="Butter"] move container to workspace $ws10
 for_window [class="[Ss]potify"] move container to workspace $ws10
 
-for_window [class="[Yy]ad"] border normal, floating enable
 for_window [window_role="bubble"] floating enable
 for_window [window_type="[Dd]ialog"] floating enable
 for_window [window_type="menu"] floating enable
