@@ -42,6 +42,7 @@ Plug 'godlygeek/tabular'
 Plug 'SirVer/ultisnips'
 Plug 'bling/vim-airline'
 Plug 'tpope/vim-commentary'
+Plug 'junegunn/vim-easy-align'
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-eunuch'
 Plug 'dag/vim-fish', { 'for': 'fish' }
@@ -120,6 +121,9 @@ vnoremap <silent> <Left> <NOP>
 vnoremap <silent> <Down> <NOP>
 vnoremap <silent> <Up> <NOP>
 vnoremap <silent> <Right> <NOP>
+
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
 
 cmap w!! w !sudo tee > /dev/null %
 
