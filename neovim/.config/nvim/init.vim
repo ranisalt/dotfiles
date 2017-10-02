@@ -66,6 +66,7 @@ Plug 'bps/vim-textobj-python', { 'for': 'python' }
 
 " colorschemes
 Plug 'dylanaraps/wal.vim'
+Plug 'sjl/badwolf'
 call plug#end()
 
 let mapleader = ","
@@ -155,9 +156,10 @@ au BufReadPost *
 
 au BufReadPost * IndentGuidesEnable
 
-colors wal
+colors badwolf
 hi IndentGuidesEven ctermbg=black
 hi IndentGuidesOdd ctermbg=black
+hi NonText ctermbg=NONE guibg=NONE
 hi Normal ctermbg=NONE guibg=NONE
 
 " vim:set ft=vim et sw=2:
