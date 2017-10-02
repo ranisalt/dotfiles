@@ -56,8 +56,6 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-vinegar'
-Plug 'wakatime/vim-wakatime'
 Plug 'wannesm/wmgraphviz.vim'
 
 " textobj
