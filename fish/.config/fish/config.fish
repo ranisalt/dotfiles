@@ -18,6 +18,8 @@ if status --is-login
     set -x PATH "$HOME/intel/vtune_amplifier/bin64" $PATH
     set -x VTUNE_AMPLIFIER_XE_2018_DIR "$HOME/intel/vtune_amplifier"
 
+    systemctl --user import-environment PATH
+
     if test -z "$DISPLAY" -a "$XDG_VTNR" -eq 1
         exec startx -- -keeptty
     end
