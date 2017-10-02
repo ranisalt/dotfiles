@@ -58,6 +58,10 @@ Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-surround'
 Plug 'wannesm/wmgraphviz.vim', { 'for': 'dot' }
 
+" deoplete
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'zchee/deoplete-jedi', { 'for': 'python' }
+
 " textobj
 Plug 'kana/vim-textobj-user'
 Plug 'poetic/vim-textobj-javascript', { 'for': 'javascript' }
