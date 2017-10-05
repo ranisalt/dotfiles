@@ -9,7 +9,11 @@ set theme_date_format "+%R"
 set theme_project_dir_length $fish_prompt_pwd_dir_length
 set theme_show_exit_status "yes"
 
-# start X at login
+# keyboard
+set -x XKB_DEFAULT_LAYOUT "br"
+set -x XKB_DEFAULT_OPTIONS "ctrl:swapcaps"
+set -x XKB_DEFAULT_VARIANT "abnt2"
+
 if status --is-login
     set -x PATH $HOME/.local/bin $HOME/.nodenv/bin $HOME/.pyenv/bin /usr/local/bin $PATH
 
@@ -22,6 +26,15 @@ if status --is-login
 
     if test -z "$DISPLAY" -a "$XDG_VTNR" -eq 1
         exec startx -- -keeptty
+    end
+
+    if test -z "$DISPLAY" -a "$XDG_VTNR" -eq 2
+        # set -x _JAVA_AWT_WM_NONREPARENTING 1
+        # set -x GDK_BACKEND "wayland"
+        # set -x QT_DISABLE_WINDOWDECORATION 1
+        # set -x QT_QPA_PLATFORM "wayland-egl"
+        # set -x SDL_VIDEODRIVER "wayland"
+        exec sway
     end
 end
 
