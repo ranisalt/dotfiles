@@ -16,11 +16,14 @@ set -x XKB_DEFAULT_OPTIONS "ctrl:swapcaps"
 set -x XKB_DEFAULT_VARIANT "abnt2"
 
 if status --is-login
-    set -x PATH $HOME/.local/bin $HOME/.nodenv/bin $HOME/.pyenv/bin /usr/local/bin $PATH
+    set -x PATH $HOME/.local/bin /usr/local/bin $PATH
 
     # Go
     set -x GOPATH (go env GOPATH)
     set -x PATH "$GOPATH/bin" $PATH
+
+    # Node
+    set -x NVM_DIR "$HOME/.nvm"
 
     # Intel Parallel Studio XE
     set -x PATH "$HOME/intel/bin" $PATH
