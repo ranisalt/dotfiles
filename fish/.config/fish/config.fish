@@ -1,3 +1,4 @@
+set -x BROWSER "firefox"
 set -x CCACHE_SLOPPINESS "pch_defines,time_macros"
 set -x SUDO_ASKPASS "$HOME/.local/bin/askpass"
 set -x SUDO_EDITOR "nvim"
