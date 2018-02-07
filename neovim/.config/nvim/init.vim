@@ -5,7 +5,7 @@ set colorcolumn=80
 set cursorline
 set expandtab
 set fileencoding=utf8
-set foldmethod=manual
+set foldmethod=syntax
 set foldlevel=8
 set ignorecase
 set magic
@@ -34,7 +34,7 @@ Plug 'tpope/vim-sensible'
 Plug 'mileszs/ack.vim'
 Plug 'dawikur/algorithm-mnemonics.vim'
 Plug 'ctrlpvim/ctrlp.vim', { 'on': 'CtrlP' }
-Plug 'editorconfig/editorconfig-vim'
+" Plug 'editorconfig/editorconfig-vim'
 Plug 'Konfekt/FastFold'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'benekastah/neomake'
@@ -50,6 +50,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+Plug 'mxw/vim-jsx', { 'for': 'javascript' }
 Plug 'terryma/vim-multiple-cursors'
 Plug 'moll/vim-node', { 'for': 'javascript' }
 Plug 'tpope/vim-repeat'
@@ -60,7 +61,22 @@ Plug 'wannesm/wmgraphviz.vim', { 'for': 'dot' }
 
 " deoplete
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/neoinclude.vim'
+Plug 'zchee/deoplete-clang', { 'for': 'cpp' }
 Plug 'zchee/deoplete-jedi', { 'for': 'python' }
+Plug 'zchee/deoplete-go', { 'do': 'make', 'for': 'go' }
+
+" gocode
+Plug 'nsf/gocode', { 'do': '~/.config/nvim/plugged/gocode/vim/symlink.sh', 'for': 'go', 'rtp': 'nvim' }
+Plug 'fatih/vim-go', { 'for': 'go' }
+
+" elixir
+Plug 'elixir-editors/vim-elixir', { 'for': 'elixir' }
+
+" go
+Plug 'zchee/deoplete-go', { 'do': 'make', 'for': 'go' }
+Plug 'nsf/gocode', { 'do': '~/.config/nvim/plugged/gocode/vim/symlink.sh', 'for': 'go', 'rtp': 'nvim' }
+Plug 'fatih/vim-go', { 'for': 'go' }
 
 " textobj
 Plug 'kana/vim-textobj-user'
@@ -68,7 +84,6 @@ Plug 'poetic/vim-textobj-javascript', { 'for': 'javascript' }
 Plug 'bps/vim-textobj-python', { 'for': 'python' }
 
 " colorschemes
-Plug 'dylanaraps/wal.vim'
 Plug 'sjl/badwolf'
 call plug#end()
 
@@ -127,13 +142,7 @@ vnoremap <silent> <Right> <NOP>
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
-cmap w!! w !sudo tee > /dev/null %
-
-let g:neomake_javascript_xo_maker={
-      \ 'args': ['--reporter=compact'],
-      \ 'errorformat': '%E%f: line %l\, col %c\, Error - %m,' .
-      \ '%W%f: line %l\, col %c\, Warning - %m'
-      \ }
+" cmap w!! w !sudo tee > /dev/null %
 
 let g:ag_working_path_mode='r'
 let g:airline_inactive_collapse = 0
@@ -141,9 +150,14 @@ let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#tab_nr_type=1
 let g:deoplete#enable_at_startup=1
+let g:deoplete#sources#clang#clang_header='/usr/lib/clang'
+let g:deoplete#sources#clang#libclang_path='/usr/lib/libclang.so'
+let g:deoplete#sources#go#gocode_binary=$GOPATH.'/bin/gocode'
+let g:EditorConfig_exclude_patterns=['fugitive://.*']
 let g:indent_guides_auto_colors=0
 let g:indent_guides_guide_size=1
-let g:neomake_cpp_enabled_makers=['gcc']
+let g:jsx_ext_required=0
+let g:neomake_cpp_enabled_makers=['clang']
 let g:neomake_javascript_enabled_makers=['standard']
 let g:UltiSnipsExpandTrigger="<tab>"
 
@@ -151,7 +165,7 @@ let g:UltiSnipsExpandTrigger="<tab>"
 au BufWritePre * :%s/\s\+$//e
 
 " execute neomake on open/write
-au BufReadPost,BufWritePost * Neomake
+" au BufReadPost,BufWritePost * Neomake
 au BufWritePost *.tex :silent !rubber --unsafe --pdf %
 
 " Return to last edit position when opening files (You want this!)
@@ -161,6 +175,11 @@ au BufReadPost *
       \ endif
 
 au BufReadPost * IndentGuidesEnable
+
+augroup filetypedetect
+  au BufRead,BufNewFile *.ex set filetype=elixir
+  au BufRead,BufNewFile *.exs set filetype=elixir
+augroup END
 
 colors badwolf
 hi IndentGuidesEven ctermbg=black
