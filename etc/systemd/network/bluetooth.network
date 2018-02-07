@@ -1,0 +1,9 @@
+[Match]
+Name=bnep*
+
+[Network]
+DHCP=yes
+IPForward=kernel
+
+[DHCP]
+RouteMetric=20

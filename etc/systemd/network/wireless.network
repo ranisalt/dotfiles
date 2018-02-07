@@ -1,0 +1,10 @@
+[Match]
+Name=wlp*
+
+[Network]
+DHCP=yes
+IPForward=kernel
+IPv6PrivacyExtensions=kernel
+
+[DHCP]
+RouteMetric=20
