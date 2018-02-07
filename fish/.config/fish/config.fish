@@ -46,4 +46,3 @@ if status --is-login
     end
 end
 
-status --is-interactive; and wal -r
