@@ -4,6 +4,3 @@
 [submodule "fonts/.local/share/fonts/powerline"]
 	path = fonts/.local/share/fonts/powerline
 	url = git@github.com:powerline/fonts.git
-[submodule "fonts/.local/share/fonts/firacode"]
-	path = fonts/.local/share/fonts/firacode
-	url = git@github.com:tonsky/FiraCode.git
