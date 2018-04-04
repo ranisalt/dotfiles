@@ -1,3 +1,4 @@
+# i3 config file (v4)
 set $mod Mod4
 font pango:xkcd,FontAwesome 9
 
