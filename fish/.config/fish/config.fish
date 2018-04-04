@@ -4,9 +4,9 @@ set -x SUDO_EDITOR "nvim"
 set -x XDG_CONFIG_HOME "$HOME/.config"
 
 # keyboard
-set -x XKB_DEFAULT_LAYOUT "br"
-set -x XKB_DEFAULT_OPTIONS "ctrl:swapcaps"
-set -x XKB_DEFAULT_VARIANT "abnt2"
+# set -x XKB_DEFAULT_LAYOUT "br"
+# set -x XKB_DEFAULT_OPTIONS "ctrl:swapcaps"
+# set -x XKB_DEFAULT_VARIANT "abnt2"
 
 if status --is-login
     set -x PATH $HOME/.local/bin /usr/local/bin $PATH
