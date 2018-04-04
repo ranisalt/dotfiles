@@ -3,12 +3,14 @@
     branches = branch -a
     co = checkout
     contribs = shortlog --summary --numbered
+    download = clone --depth 1 --single-branch
     jedi = push --force
     ls = ls-tree -rt --name-only HEAD
     remotes = remote -v
     st = status -sb
     tags = tag -l
     tree = log --abbrev-commit --all --decorate --graph --oneline
+    unshallow = !git fetch --unshallow && git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*" && git fetch && :
 
 [color "diff-highlight"]
 [color]
@@ -43,3 +45,5 @@
     email = ranisalt@gmail.com
     name = Ranieri Althoff
     signingkey = 5B5C826F4CC77499
+[url "git@github.com:"]
+	insteadOf = https://github.com/
