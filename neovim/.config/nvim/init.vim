@@ -1,172 +1,43 @@
 set autochdir
 set background=dark
 set clipboard=unnamedplus
+set fileencoding=utf8
+set noshowmode " airline already shows me
+set path+=**
+set ttimeoutlen=0
+
+" highlight and navigation
 set colorcolumn=80
 set cursorline
-set expandtab
-set fileencoding=utf8
-set foldmethod=syntax
-set foldlevel=8
-set ignorecase
-set magic
 set mouse=a
-set noshowmode " airline already shows me
 set number
 set relativenumber
-set smartindent
+
+" indent and syntax
+set expandtab
+set foldmethod=syntax
+set foldlevel=8
 set shiftwidth=4
-set showmatch
+set smartindent
 set softtabstop=4
 set tabstop=4
 
-" ensure vim-plug is installed and autoloaded
-if empty(glob('~/.config/nvim/autoload/plug.vim'))
-  silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall | source $MYVIMRC
-endif
+" search
+set ignorecase
+set magic
+set showmatch
+set smartcase
 
-call plug#begin()
-" defaults
-Plug 'tpope/vim-sensible'
-
-" extensions
-Plug 'mileszs/ack.vim'
-Plug 'dawikur/algorithm-mnemonics.vim'
-Plug 'ctrlpvim/ctrlp.vim', { 'on': 'CtrlP' }
-" Plug 'editorconfig/editorconfig-vim'
-Plug 'Konfekt/FastFold'
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'benekastah/neomake'
-Plug 'godlygeek/tabular'
-Plug 'SirVer/ultisnips'
-Plug 'bling/vim-airline'
-Plug 'tpope/vim-commentary'
-Plug 'junegunn/vim-easy-align'
-Plug 'easymotion/vim-easymotion'
-Plug 'tpope/vim-eunuch'
-Plug 'dag/vim-fish', { 'for': 'fish' }
-Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
-Plug 'nathanaelkane/vim-indent-guides'
-Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
-Plug 'mxw/vim-jsx', { 'for': 'javascript' }
-Plug 'terryma/vim-multiple-cursors'
-Plug 'moll/vim-node', { 'for': 'javascript' }
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-sleuth'
-Plug 'tpope/vim-speeddating'
-Plug 'tpope/vim-surround'
-Plug 'wannesm/wmgraphviz.vim', { 'for': 'dot' }
-
-" deoplete
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'Shougo/neoinclude.vim'
-Plug 'zchee/deoplete-clang', { 'for': 'cpp' }
-Plug 'zchee/deoplete-jedi', { 'for': 'python' }
-Plug 'zchee/deoplete-go', { 'do': 'make', 'for': 'go' }
-
-" gocode
-Plug 'nsf/gocode', { 'do': '~/.config/nvim/plugged/gocode/vim/symlink.sh', 'for': 'go', 'rtp': 'nvim' }
-Plug 'fatih/vim-go', { 'for': 'go' }
-
-" elixir
-Plug 'elixir-editors/vim-elixir', { 'for': 'elixir' }
-
-" go
-Plug 'zchee/deoplete-go', { 'do': 'make', 'for': 'go' }
-Plug 'nsf/gocode', { 'do': '~/.config/nvim/plugged/gocode/vim/symlink.sh', 'for': 'go', 'rtp': 'nvim' }
-Plug 'fatih/vim-go', { 'for': 'go' }
-
-" textobj
-Plug 'kana/vim-textobj-user'
-Plug 'poetic/vim-textobj-javascript', { 'for': 'javascript' }
-Plug 'bps/vim-textobj-python', { 'for': 'python' }
-
-" colorschemes
-Plug 'sjl/badwolf'
-call plug#end()
-
-let mapleader = ","
-
-" move code blocks easier
-vnoremap < <gv
-vnoremap > >gv
-
-" open nerdtree navigation
-map <leader>e :NERDTreeToggle<cr>
-
-" open ctrlp search
-map <leader>p :CtrlP<cr>
-
-if executable('ag')
-  set grepprg=ag\ --nogroup\ --nocolor
-  let g:ackprg = 'ag --nocolor --nogroup --smart-case --vimgrep'
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-  let g:ctrlp_use_caching = 0
-endif
-
-nnoremap <space> za
-
-" tab manipulation
-map <leader>t :tabnew<cr>
-map <leader>o :tabedit
-map <leader>w :tabclose<cr>
-map <leader>a :tabprevious<cr>
-map <leader>d :tabnext<cr>
-
-" Treat long lines as break lines (useful when moving around in them)
-map j gj
-map k gk
-
-" split navigation
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
-
-" turn off arrows
-noremap <silent> <Left> <NOP>
-noremap <silent> <Down> <NOP>
-noremap <silent> <Up> <NOP>
-noremap <silent> <Right> <NOP>
-inoremap <silent> <Left> <NOP>
-inoremap <silent> <Down> <NOP>
-inoremap <silent> <Up> <NOP>
-inoremap <silent> <Right> <NOP>
-vnoremap <silent> <Left> <NOP>
-vnoremap <silent> <Down> <NOP>
-vnoremap <silent> <Up> <NOP>
-vnoremap <silent> <Right> <NOP>
-
-xmap ga <Plug>(EasyAlign)
-nmap ga <Plug>(EasyAlign)
-
-" cmap w!! w !sudo tee > /dev/null %
-
-let g:ag_working_path_mode='r'
-let g:airline_inactive_collapse = 0
-let g:airline_powerline_fonts=1
-let g:airline#extensions#tabline#enabled=1
-let g:airline#extensions#tabline#tab_nr_type=1
-let g:deoplete#enable_at_startup=1
-let g:deoplete#sources#clang#clang_header='/usr/lib/clang'
-let g:deoplete#sources#clang#libclang_path='/usr/lib/libclang.so'
-let g:deoplete#sources#go#gocode_binary=$GOPATH.'/bin/gocode'
-let g:EditorConfig_exclude_patterns=['fugitive://.*']
-let g:indent_guides_auto_colors=0
-let g:indent_guides_guide_size=1
-let g:jsx_ext_required=0
-let g:neomake_cpp_enabled_makers=['clang']
-let g:neomake_javascript_enabled_makers=['standard']
-let g:UltiSnipsExpandTrigger="<tab>"
+runtime plugins.vim
+runtime plugins-setup.vim
+runtime keymaps.vim
 
 " remove trailing whitespace on save
 au BufWritePre * :%s/\s\+$//e
 
 " execute neomake on open/write
 " au BufReadPost,BufWritePost * Neomake
-au BufWritePost *.tex :silent !rubber --unsafe --pdf %
+" au BufWritePost *.tex :silent !rubber --unsafe --pdf %
 
 " Return to last edit position when opening files (You want this!)
 au BufReadPost *
@@ -176,10 +47,12 @@ au BufReadPost *
 
 au BufReadPost * IndentGuidesEnable
 
-augroup filetypedetect
-  au BufRead,BufNewFile *.ex set filetype=elixir
-  au BufRead,BufNewFile *.exs set filetype=elixir
-augroup END
+" au FileType python nnoremap <Leader>= :0,$!yapf<CR>
+
+" augroup filetypedetect
+"   au BufRead,BufNewFile *.ex set filetype=elixir
+"   au BufRead,BufNewFile *.exs set filetype=elixir
+" augroup END
 
 colors badwolf
 hi IndentGuidesEven ctermbg=black
