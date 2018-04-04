@@ -19,7 +19,7 @@ set $ws8 "8: VIII "
 set $ws9 "9:  "
 set $ws10 "10:  "
 
-bindsym --release $mod+Return exec --no-startup-id termite
+bindsym --release $mod+Return exec --no-startup-id kitty
 bindsym --release $mod+w exec --no-startup-id firefox
 bindsym --release $mod+e exec --no-startup-id pcmanfm
 bindsym --release $mod+t exec --no-startup-id facemark
