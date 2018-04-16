@@ -34,4 +34,4 @@ let g:netrw_list_hide=netrw_gitignore#Hide()
 let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 
 " python-mode
-let g:pymode_python='python3'
+" let g:pymode_python='python3'

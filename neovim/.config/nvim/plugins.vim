@@ -47,7 +47,7 @@ Plug 'tpope/vim-surround'  " ysiw to add delimiters, cs to change, S visual
 " Plug 'poetic/vim-textobj-javascript', { 'for': 'javascript' }
 
 Plug 'zchee/deoplete-jedi', { 'for': 'python' }
-Plug 'python-mode/python-mode', { 'for': 'python' }
+" Plug 'python-mode/python-mode', { 'for': 'python' }
 " Plug 'bps/vim-textobj-python', { 'for': 'python' }
 
 " COLORSCHEMES
