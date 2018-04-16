@@ -127,29 +127,6 @@ bindsym $mod+Escape mode "resize"
 set_from_resource $bg i3wm.color0 #2c102a
 set_from_resource $fg i3wm.color7 #c9aaaf
 
-bar {
-  strip_workspace_numbers yes
-
-  status_command i3blocks
-  position top
-  tray_output primary
-
-  # disable scrolling on bar
-  bindsym button4 nop
-  bindsym button5 nop
-
-  colors {
-    background $bg
-    statusline $fg
-
-    # colors that match background
-    focused_workspace $bg $bg $fg
-    active_workspace $bg $bg #c9aaafc0
-    inactive_workspace $bg $bg #c9aaaf80
-    urgent_workspace $bg $bg #fd573b
-  }
-}
-
 # class                 border  bg  tx  indicator
 client.focused          #333333 $bg $fg #333333
 client.focused_inactive #2d2d2d $bg $fg #2d2d2d
