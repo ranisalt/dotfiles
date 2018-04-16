@@ -110,6 +110,18 @@ bindsym $mod+x scratchpad show
 bindsym $mod+Shift+z reload
 bindsym $mod+Shift+x restart
 
+set $pixelcolor "pixelcolor: [h]ex [r]gb"
+mode $pixelcolor {
+  bindsym h exec --no-startup-id "pixelcolor -h; i3-msg mode default"
+  bindsym r exec --no-startup-id "pixelcolor -r; i3-msg mode default"
+
+  # back to normal: Enter or Escape
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+}
+
+bindsym $mod+c mode $pixelcolor
+
 # resize window (you can also use the mouse for that)
 mode "resize" {
   bindsym Left resize shrink width 10 px or 5 ppt
