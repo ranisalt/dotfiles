@@ -139,8 +139,8 @@ assign [class="TLauncher" instance="sun-awt-X11-XFramePeer"] $ws3
 assign [class="Minecraft"] $ws3
 assign [class="Steam" instance="Steam"] $ws6
 assign [class="discord" instance="discord"] $ws9
-assign [class="TelegramDesktop" instance="Telegram"] $ws9
-for_window [title="Butter"] move container to workspace $ws10
+assign [class="TelegramDesktop" instance="telegram-desktop"] $ws9
+assign [class="Popcorn-Time"] $ws10
 for_window [class="[Ss]potify"] move container to workspace $ws10
 
 for_window [window_role="bubble"] floating enable
