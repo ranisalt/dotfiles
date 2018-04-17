@@ -132,19 +132,29 @@ type = internal/temperature
 ; Default: 0
 thermal-zone = 0
 
+; Threshold temperature to display warning label (in degrees celsius)
+; Default: 80
+warn-temperature = 87
+
 ; Available tags:
 ;   <label> (default)
 ;   <ramp>
 format = <ramp> <label>
 
+; Available tags:
+;   <label-warn> (default)
+;   <ramp>
+format-warn =  <label-warn>
+
 ; Requires the <ramp> tag
 ; The icon selection will range from 0 to `warn-temperature`
 ; with the current temperature as index.
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
-ramp-3 = 
-ramp-4 = 
+ramp-0 = ?
+ramp-1 = 
+ramp-2 = 
+ramp-3 = 
+ramp-4 = 
+ramp-5 = 
 ramp-padding = 1
 
 [module/wifi]
