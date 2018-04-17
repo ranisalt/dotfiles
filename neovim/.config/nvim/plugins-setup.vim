@@ -1,7 +1,7 @@
 " airline
 let g:airline_inactive_collapse=0
 let g:airline_powerline_fonts=1
-" let g:aitline_theme='badwolf'
+let g:airline_theme='badwolf'
 let g:airline#extensions#ale#enabled=1
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#tab_nr_type=1
