@@ -18,7 +18,8 @@ Plug 'editorconfig/editorconfig-vim'
 " Plug 'chr4/nginx.vim'
 Plug 'godlygeek/tabular', { 'on': 'Tab' }
 " Plug 'SirVer/ultisnips'
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/vim-easy-align'
 " Plug 'easymotion/vim-easymotion'
 Plug 'dag/vim-fish', { 'for': 'fish' }
