@@ -52,6 +52,31 @@ inherit = section/base
 monitor = ${env:MONITOR:LVDS-1}
 
 [settings]
+; The throttle settings lets the eventloop swallow up til X events
+; if they happen within Y millisecond after first event was received.
+; This is done to prevent flood of update event.
+;
+; For example if 5 modules emit an update event at the same time, we really
+; just care about the last one. But if we wait too long for events to swallow
+; the bar would appear sluggish so we continue if timeout
+; expires or limit is reached.
+throttle-output = 5
+throttle-output-for = 10
+
+; Time in milliseconds that the input handler will wait between processing events
+throttle-input-for = 30
+
+; Reload upon receiving XCB_RANDR_SCREEN_CHANGE_NOTIFY events
+screenchange-reload = true
+
+; Compositing operators
+; @see: https://www.cairographics.org/manual/cairo-cairo-t.html#cairo-operator-t
+compositing-background = over
+compositing-foreground = over
+compositing-overline = over
+compositing-underline = over
+compositing-border = over
+
 ; Define fallback values used by all module formats
 ;format-foreground =
 ;format-background =
@@ -205,6 +230,9 @@ ramp-volume-padding = 1
 [module/battery]
 type = internal/battery
 
+; This is useful in case the battery never reports 100% charge
+full-at = 99
+
 ; Use the following command to list batteries and adapters:
 ; $ ls -1 /sys/class/power_supply/
 battery = BAT0
@@ -220,7 +248,7 @@ time-format = %H:%M
 ;   <bar-capacity>
 ;   <ramp-capacity>
 ;   <animation-charging>
-format-charging = <animation-charging> <label-charging>
+format-charging = <ramp-capacity> <label-charging>
 
 ; Available tags:
 ;   <label-discharging> (default)
@@ -259,10 +287,14 @@ label-discharging = %percentage%% (%time%)
 ;ramp-capacity-8 = 
 ;ramp-capacity-9 = 
 ramp-capacity-0 = 
+ramp-capacity-0-foreground = #f00
 ramp-capacity-1 = 
+ramp-capacity-1-foreground = #ff0
 ramp-capacity-2 = 
 ramp-capacity-3 = 
+ramp-capacity-3-foreground = #0f0
 ramp-capacity-4 = 
+ramp-capacity-4-foreground = #0f0
 ramp-capacity-padding = 1
 
 ; Only applies if <animation-charging> is used
@@ -273,11 +305,4 @@ ramp-capacity-padding = 1
 ;animation-charging-4 = 
 ;animation-charging-5 = 
 ;animation-charging-6 = 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-3 = 
-animation-charging-4 = 
-animation-charging-padding = 1
 ; Framerate in milliseconds
-animation-charging-framerate = 500
