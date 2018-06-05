@@ -1,6 +1,6 @@
 # i3 config file (v4)
 set $mod Mod4
-font pango:xkcd,Nerd Font 9
+font pango:Cantarell,Nerd Font 10
 
 # Prevent mouse moving to focus on wrong window
 focus_follows_mouse no
