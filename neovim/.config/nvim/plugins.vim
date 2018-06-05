@@ -34,7 +34,7 @@ Plug 'tpope/vim-repeat'  " make vim-commentary and vim-surround work with .
 Plug 'tpope/vim-surround'  " ysiw to add delimiters, cs to change, S visual
 
 """ LANGUAGE SPECIFICS
-" Plug 'zchee/deoplete-clang', { 'for': 'cpp' }
+Plug 'zchee/deoplete-clang', { 'for': 'cpp' }
 
 " Plug 'elixir-editors/vim-elixir', { 'for': 'elixir' }
 
@@ -48,8 +48,10 @@ Plug 'tpope/vim-surround'  " ysiw to add delimiters, cs to change, S visual
 " Plug 'poetic/vim-textobj-javascript', { 'for': 'javascript' }
 
 Plug 'zchee/deoplete-jedi', { 'for': 'python' }
-" Plug 'python-mode/python-mode', { 'for': 'python' }
+Plug 'python-mode/python-mode', { 'branch': 'develop', 'for': 'python' }
 " Plug 'bps/vim-textobj-python', { 'for': 'python' }
+
+Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
 
 " COLORSCHEMES
 Plug 'sjl/badwolf'

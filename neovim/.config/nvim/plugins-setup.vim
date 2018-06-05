@@ -8,8 +8,8 @@ let g:airline#extensions#tabline#tab_nr_type=1
 
 " deoplete
 let g:deoplete#enable_at_startup=1
-" let g:deoplete#sources#clang#clang_header='/usr/lib/clang'
-" let g:deoplete#sources#clang#libclang_path='/usr/lib/libclang.so'
+let g:deoplete#sources#clang#clang_header='/usr/lib/clang'
+let g:deoplete#sources#clang#libclang_path='/usr/lib/libclang.so'
 " let g:deoplete#sources#go#gocode_binary=$GOPATH.'/bin/gocode'
 
 " editorconfig
@@ -25,6 +25,7 @@ let g:indent_guides_guide_size=1
 " neomake
 let g:neomake_cpp_enabled_makers=['clang']
 let g:neomake_javascript_enabled_makers=['standard']
+let g:neomake_typescript_enabled_makers=['tsc']
 
 " netrw (file browser)
 let g:netrw_banner=0        " disable annoying banner
@@ -32,3 +33,6 @@ let g:netrw_altv=1          " open splits to the right
 let g:netrw_liststyle=3     " tree view
 let g:netrw_list_hide=netrw_gitignore#Hide()
 let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
+
+" python mode
+let g:pymode_python = 'python3'
