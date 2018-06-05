@@ -1,5 +1,5 @@
 [colors]
-background = ${xrdb:color0:#000}
+background = #ee000000
 foreground = ${xrdb:color7:#fff}
 unfocused = ${xrdb:color5:#ddd}
 urgent = ${xrdb:color4:#ddf}
