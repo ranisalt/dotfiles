@@ -165,10 +165,4 @@ for_window [class="Firefox" instance="Toplevel"] floating enable
 
 new_window pixel 1
 
-exec_always --no-startup-id launch-polybar
-exec_always --no-startup-id nitrogen --restore
-
-exec --no-startup-id compton
-exec --no-startup-id restore-desktop
-exec --no-startup-id systemctl --user start redshift
-exec --no-startup-id xss-lock -- lockr
+exec --no-startup-id dex -ae i3

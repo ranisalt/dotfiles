@@ -1,5 +1,6 @@
-gtk-theme-name="Arc Dark"
-gtk-font-name="Noto Sans UI 10"
+gtk-theme-name="Arc-Darker-solid"
+gtk-icon-theme-name="Arc"
+gtk-font-name="Cantarell 10"
 gtk-xft-antialias=1
 gtk-xft-hinting=1
 gtk-xft-hintstyle="hintfull"
