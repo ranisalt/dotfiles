@@ -14,6 +14,7 @@ Plug 'tpope/vim-sensible'
 Plug 'ctrlpvim/ctrlp.vim', { 'on': 'CtrlP' }
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'editorconfig/editorconfig-vim'
+Plug 'mattn/emmet-vim'
 " Plug 'benekastah/neomake'
 " Plug 'chr4/nginx.vim'
 Plug 'godlygeek/tabular', { 'on': 'Tab' }
