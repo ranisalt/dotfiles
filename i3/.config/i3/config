@@ -162,7 +162,9 @@ for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
 for_window [window_role="[Pp]references"] floating enable
 for_window [class="Firefox" instance="Toplevel"] floating enable
+for_window [class="[Pp]olybar"] border none
 
-new_window pixel 1
+default_border pixel 1
+hide_edge_borders smart
 
 exec --no-startup-id dex -ae i3
