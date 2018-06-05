@@ -16,6 +16,7 @@ map <Leader>e :edit .<CR>
 map j gj
 map k gk
 
+map <Leader>q :q<CR>
 
 """ NORMAL MODE
 
@@ -24,7 +25,6 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-
 
 """ VISUAL MODE
 
