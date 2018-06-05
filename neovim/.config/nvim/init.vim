@@ -49,10 +49,12 @@ au BufReadPost * IndentGuidesEnable
 
 " au FileType python nnoremap <Leader>= :0,$!yapf<CR>
 
-" augroup filetypedetect
+augroup filetypedetect
 "   au BufRead,BufNewFile *.ex set filetype=elixir
 "   au BufRead,BufNewFile *.exs set filetype=elixir
-" augroup END
+  au BufRead,BufNewFile *.mjs set filetype=javascript
+  au BufRead,BufNewFile *.ts set filetype=typescript
+augroup END
 
 colors badwolf
 hi IndentGuidesEven ctermbg=black
