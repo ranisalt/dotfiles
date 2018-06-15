@@ -24,6 +24,8 @@ foreground = ${colors.foreground}
 ; See the Fonts wiki page for more details
 font-0 = sans-serif:pixelsize=10
 font-1 = Nerd Font:pixelsize=12
+font-2 = Noto Sans Symbols:pixelsize=12
+font-3 = Noto Sans Symbols2:pixelsize=12
 
 ; Modules are added to one of the available blocks
 ;   modules-left = cpu ram
