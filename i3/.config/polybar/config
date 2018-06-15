@@ -33,7 +33,7 @@ font-3 = Noto Sans Symbols2:pixelsize=12
 ;   modules-right = ipc clock
 modules-left = i3
 modules-center = date
-modules-right = temperature wifi volume battery
+modules-right = weather temperature wifi volume battery
 
 ; Position of the system tray window
 ; If empty or undefined, tray support will be disabled
@@ -149,6 +149,18 @@ time = %H:%M
 time-alt = %H:%M:%S
 
 label = %date% %time%
+
+[module/weather]
+type = custom/script
+
+; Available tokens:
+;   %counter%
+; Command to be executed (using "/usr/bin/env sh -c [command]");
+exec = ~/.local/bin/polybar/weather.sh
+
+; Seconds to sleep between updates
+; Default: 2 (0 if `tail = true`)
+interval = 90
 
 [module/temperature]
 type = internal/temperature
