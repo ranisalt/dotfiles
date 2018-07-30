@@ -136,14 +136,17 @@ mode "resize" {
 
 bindsym $mod+Escape mode "resize"
 
-set_from_resource $bg i3wm.color0 #2c102a
-set_from_resource $fg i3wm.color7 #c9aaaf
+set_from_resource $black i3wm.color0 #1d2021
+set_from_resource $red i3wm.color1 #cc241d
+set_from_resource $blue i3wm.color4 #458588
+set_from_resource $gray i3wm.color8 #928374
+set_from_resource $white i3wm.color15 #ebdbb2
 
-# class                 border  bg  tx  indicator
-client.focused          #333333 $bg $fg #333333
-client.focused_inactive #2d2d2d $bg $fg #2d2d2d
-client.unfocused        #2d2d2d $bg $fg #2d2d2d
-client.urgent           #333333 $bg $fg #333333
+# class                 border  bg      tx      indicator
+client.focused          $blue   $blue   $black  $black
+client.unfocused        $black  $black  $gray   $black
+client.focused_inactive $black  $black  $gray   $black
+client.urgent           $red    $red    $white  $black
 
 assign [class="jetbrains" instance="sun-awt-X11-XFramePeer"] $ws1
 assign [class="Firefox" instance="Navigator"] $ws2
