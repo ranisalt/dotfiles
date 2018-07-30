@@ -51,8 +51,8 @@ au BufReadPost * IndentGuidesEnable
 " au FileType python nnoremap <Leader>= :0,$!yapf<CR>
 
 augroup filetypedetect
-"   au BufRead,BufNewFile *.ex set filetype=elixir
-"   au BufRead,BufNewFile *.exs set filetype=elixir
+  au BufRead,BufNewFile *.ex set filetype=elixir
+  au BufRead,BufNewFile *.exs set filetype=elixir
   au BufRead,BufNewFile *.mjs set filetype=javascript
   au BufRead,BufNewFile *.ts set filetype=typescript
 augroup END
