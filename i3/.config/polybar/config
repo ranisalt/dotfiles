@@ -33,7 +33,7 @@ font-3 = Noto Sans Symbols2:pixelsize=12
 ;   modules-right = ipc clock
 modules-left = i3
 modules-center = date
-modules-right = weather temperature wifi volume battery
+modules-right = weather temperature wifi volume
 
 ; Position of the system tray window
 ; If empty or undefined, tray support will be disabled
