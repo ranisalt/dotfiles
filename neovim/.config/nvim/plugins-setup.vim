@@ -26,6 +26,9 @@ let g:indent_guides_guide_size=1
 " jsx
 " let g:jsx_ext_required=0
 
+" latex-suite
+let g:tex_flavor='latex'
+
 " neomake
 let g:neomake_cpp_enabled_makers=['clang']
 let g:neomake_javascript_enabled_makers=['standard']
