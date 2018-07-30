@@ -12,6 +12,7 @@ set cursorline
 set mouse=a
 set number
 set relativenumber
+set termguicolors
 
 " indent and syntax
 set expandtab
@@ -56,7 +57,7 @@ augroup filetypedetect
   au BufRead,BufNewFile *.ts set filetype=typescript
 augroup END
 
-colors badwolf
+colors gruvbox
 hi IndentGuidesEven ctermbg=black
 hi IndentGuidesOdd ctermbg=black
 hi NonText ctermbg=NONE guibg=NONE

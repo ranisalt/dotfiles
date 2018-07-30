@@ -55,5 +55,5 @@ Plug 'python-mode/python-mode', { 'branch': 'develop', 'for': 'python' }
 Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
 
 " COLORSCHEMES
-Plug 'sjl/badwolf'
+Plug 'morhetz/gruvbox'
 call plug#end()
