@@ -29,6 +29,7 @@ bindsym --release Print exec --no-startup-id screenshot -c -s
 bindsym --release Shift+Print exec --no-startup-id screenshot -c
 bindsym --release Ctrl+Print exec --no-startup-id screenshot -p -i $(xdotool getactivewindow)
 
+bindsym --release $mod+k exec --no-startup-id wpa_gui
 bindsym --release $mod+l exec --no-startup-id loginctl lock-session
 bindsym --release $mod+Shift+l exec --no-startup-id exitx
 
@@ -69,7 +70,7 @@ bindsym $mod+h split h
 bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
-bindsym F11 fullscreen
+bindsym $mod+f fullscreen toggle
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -107,8 +108,8 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 bindsym $mod+z move scratchpad
 bindsym $mod+x scratchpad show
 
-bindsym $mod+Shift+z reload
-bindsym $mod+Shift+x restart
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
 
 set $pixelcolor "pixelcolor: [h]ex [r]gb"
 mode $pixelcolor {
