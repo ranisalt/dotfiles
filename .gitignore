@@ -1,5 +1,6 @@
 fish/.config/fish/completions/
 fish/.config/fish/fishfile
 neovim/.config/nvim/.init.vim-rplugin~
+neovim/.config/nvim/.netrwhist
 neovim/.config/nvim/autoload/
 neovim/.config/nvim/plugged/
