@@ -1,8 +1,22 @@
 [colors]
 background = #ee000000
-foreground = ${xrdb:color7:#fff}
-unfocused = ${xrdb:color5:#ddd}
-urgent = ${xrdb:color4:#ddf}
+foreground = ${xrdb:foreground:#ebdbb2}
+black = ${xrdb:color0:#282828}
+darkred = ${xrdb:color1:#cc241d}
+darkgreen = ${xrdb:color2:#98971a}
+darkyellow = ${xrdb:color3:#d79921}
+darkblue = ${xrdb:color4:#458588}
+darkmagenta = ${xrdb:color5:#b16286}
+darkcyan = ${xrdb:color6:#689d6a}
+lightgray = ${xrdb:color7:#a89984}
+darkgray = ${xrdb:color8:#928374}
+red = ${xrdb:color9:#fb4934}
+green = ${xrdb:color10:#b8bb26}
+yellow = ${xrdb:color11:#fabd2f}
+blue = ${xrdb:color12:#83a598}
+magenta = ${xrdb:color13:#d3869b}
+cyan = ${xrdb:color14:#8ec07c}
+white = ${xrdb:color15:#ebdbb2}
 
 [section/base]
 ; Prefer fixed center position for the `modules-center` block
@@ -111,7 +125,7 @@ strip-wsnumbers = true
 ; Sort the workspaces by index instead of the default
 ; sorting that groups the workspaces by output
 ; Default: false
-index-sort = true
+;index-sort = true
 
 ; Create scroll handlers used to cycle workspaces
 ; Default: true
@@ -132,11 +146,11 @@ label-padding = 2
 ; Default: %icon%  %name%
 label-focused-foreground = ${colors.foreground}
 label-focused-padding = ${self.label-padding}
-label-unfocused-foreground = ${colors.unfocused}
+label-unfocused-foreground = ${colors.darkgray}
 label-unfocused-padding = ${self.label-padding}
-label-urgent-foreground = ${colors.urgent}
+label-urgent-foreground = ${colors.red}
 label-urgent-padding = ${self.label-padding}
-label-visible-foreground = ${self.label-focused-foreground}
+label-visible-foreground = ${colors.darkgray}
 label-visible-padding = ${self.label-padding}
 
 [module/date]
