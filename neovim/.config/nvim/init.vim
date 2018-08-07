@@ -2,14 +2,15 @@ set autochdir
 set background=dark
 set clipboard=unnamedplus
 set fileencoding=utf8
+set mouse=a
 set noshowmode " airline already shows me
 set path+=**
+set title
 set ttimeoutlen=0
 
 " highlight and navigation
 set colorcolumn=80
 set cursorline
-set mouse=a
 set number
 set relativenumber
 set termguicolors
@@ -62,5 +63,11 @@ hi IndentGuidesEven ctermbg=black
 hi IndentGuidesOdd ctermbg=black
 hi NonText ctermbg=NONE guibg=NONE
 hi Normal ctermbg=NONE guibg=NONE
+
+if has('persistent_undo')
+  let undodir = '~/.config/nvim/undodir'
+  call system('mkdir ' . undodir)
+  set undofile
+endif
 
 " vim:set ft=vim et sw=2:
