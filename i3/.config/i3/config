@@ -171,4 +171,4 @@ for_window [class="[Pp]olybar"] border none
 default_border pixel 1
 hide_edge_borders smart
 
-exec --no-startup-id systemctl --user start graphical-session.target
+exec --no-startup-id systemctl --user start polybar.service
