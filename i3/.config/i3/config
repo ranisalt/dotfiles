@@ -157,7 +157,7 @@ assign [class="Steam" instance="Steam"] $ws6
 assign [class="discord" instance="discord"] $ws9
 assign [class="TelegramDesktop" instance="telegram-desktop"] $ws9
 assign [class="Popcorn-Time"] $ws10
-for_window [class="[Ss]potify"] move container to workspace $ws10
+assign [class="[Ss]potify"] $ws10
 
 for_window [window_role="bubble"] floating enable
 for_window [window_type="[Dd]ialog"] floating enable
