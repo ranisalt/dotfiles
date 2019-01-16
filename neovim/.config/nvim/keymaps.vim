@@ -18,6 +18,12 @@ map k gk
 
 map <Leader>q :q<CR>
 
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+
 """ NORMAL MODE
 
 " Split navigation
