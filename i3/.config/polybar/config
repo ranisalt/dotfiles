@@ -48,7 +48,7 @@ font-4 = Weather Icons:pixelsize=12
 ;   modules-right = ipc clock
 modules-left = i3
 modules-center = date
-modules-right = weather temperature vpn wifi volume battery
+modules-right = weather temperature vpn wifi-wlp2s0 wifi-wlp0s20u2 volume battery
 
 ; Position of the system tray window
 ; If empty or undefined, tray support will be disabled
@@ -223,10 +223,28 @@ interval = 1.0
 ; Command to be executed (using "/usr/bin/env sh -c [command]");
 exec = ~/.local/bin/polybar/vpn.sh
 
-[module/wifi]
+[module/wifi-wlp2s0]
 type = internal/network
 interface = wlp2s0
-;interface = wlp0s20u3
+
+; Seconds to sleep between updates
+; Default: 1
+interval = 5.0
+
+; Available tokens:
+;   %ifname%    [wireless+wired]
+;   %local_ip%  [wireless+wired]
+;   %essid%     [wireless]
+;   %signal%    [wireless]
+;   %upspeed%   [wireless+wired]
+;   %downspeed% [wireless+wired]
+;   %linkspeed% [wired]
+; Default: %ifname% %local_ip%
+label-connected =  %essid% (%signal%%)
+
+[module/wifi-wlp0s20u2]
+type = internal/network
+interface = wlp0s20u2
 
 ; Seconds to sleep between updates
 ; Default: 1
