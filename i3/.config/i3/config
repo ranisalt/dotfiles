@@ -21,6 +21,7 @@ set $ws10 "10: "
 
 bindsym --release $mod+Return exec --no-startup-id kitty -1
 bindsym --release $mod+w exec --no-startup-id firefox
+bindsym --release $mod+Shift+w exec --no-startup-id firefox --private-window
 bindsym --release $mod+e exec --no-startup-id pcmanfm-qt
 bindsym --release $mod+t exec --no-startup-id facemark
 bindsym --release $mod+p exec --no-startup-id lxrandr
