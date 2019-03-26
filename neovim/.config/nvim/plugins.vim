@@ -28,10 +28,10 @@ Plug 'tpope/vim-repeat'  " make vim-commentary and vim-surround work with .
 Plug 'tpope/vim-surround'  " ysiw to add delimiters, cs to change, S visual
 
 """ LANGUAGE SPECIFICS
-Plug 'zchee/deoplete-clang', { 'for': 'cpp' }
+" Plug 'zchee/deoplete-clang', { 'for': 'cpp' }
 " Plug 'zchee/deoplete-go', { 'do': 'make', 'for': 'go' }
-Plug 'zchee/deoplete-jedi', { 'for': 'python' }
-" Plug 'python-mode/python-mode', { 'branch': 'develop', 'for': 'python' }
+" Plug 'zchee/deoplete-jedi', { 'for': 'python' }
+Plug 'python-mode/python-mode', { 'branch': 'develop', 'for': 'python' }
 
 Plug 'ryanoasis/vim-devicons'
 
