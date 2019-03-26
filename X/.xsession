@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
-xrandr --output VGA-1 --auto --right-of LVDS-1
+xrandr --output VGA-1 --auto --left-of LVDS-1
+nitrogen --restore
 xset dpms 0 0 0
-systemctl --user start compton.service nitrogen-restore.service pcmanfm.service redshift.service xss-lock.service
+systemctl --user start pcmanfm.service
