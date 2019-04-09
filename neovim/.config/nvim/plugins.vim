@@ -10,7 +10,7 @@ call plug#begin()
 Plug 'tpope/vim-sensible'
 
 " EXTENSIONS
-" Plug 'w0rp/ale'
+Plug 'w0rp/ale'
 Plug 'ctrlpvim/ctrlp.vim', { 'on': 'CtrlP' }
 Plug 'editorconfig/editorconfig-vim'
 " Plug 'mattn/emmet-vim'
