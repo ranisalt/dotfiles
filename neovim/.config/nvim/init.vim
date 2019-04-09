@@ -1,8 +1,8 @@
 set autochdir
 set background=dark
+set backupcopy=yes
 set clipboard=unnamedplus
 set fileencoding=utf8
-set mouse=a
 set noshowmode " airline already shows me
 set path+=**
 set title
