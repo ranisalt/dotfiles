@@ -1,1 +1,0 @@
-set -x WINETRICKS_DOWNLOADER 'curl'

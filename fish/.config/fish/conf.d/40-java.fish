@@ -5,4 +5,3 @@ set -x _JAVA_OPTIONS "
     -Dswing.aatext=true
     -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel
 "
-# -Dswing.crossplatformlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel
