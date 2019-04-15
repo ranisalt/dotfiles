@@ -1,2 +1,0 @@
-set fish_prompt_pwd_dir_length 1
-set theme_display_pyenv yes
