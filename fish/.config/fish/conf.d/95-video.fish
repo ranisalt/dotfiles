@@ -3,6 +3,7 @@ set -x DXVK_HUD 1
 
 # Firefox
 set -x MOZ_USE_XINPUT2 1
+set -x MOZ_WEBRENDER 1
 
 # Qt
 set -x QT_QPA_PLATFORMTHEME 'gtk2'

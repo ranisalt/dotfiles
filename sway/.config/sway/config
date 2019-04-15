@@ -4,6 +4,60 @@
 set $mod Mod4
 # Your preferred terminal emulator
 set $term kitty
+# Your preferred application launcher
+# Note: it's recommended that you pass the final command to sway
+set $menu dmenu_path | dmenu | xargs swaymsg exec
+
+### Output configuration
+#
+# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
+output * bg /home/rsa/Pictures/Wallpapers/1920x1080/skyrim.min.jpg fill
+output VGA-1 res 1920x1080 pos 0 0
+output LVDS-1 res 1366x768 pos 1920 0
+#
+# Example configuration:
+#
+#   output HDMI-A-1 resolution 1920x1080 position 1920,0
+#
+# You can get the names of your outputs by running: swaymsg -t get_outputs
+
+### Idle configuration
+#
+# Example configuration:
+#
+# exec swayidle -w \
+#          timeout 300 'swaylock -f -c 000000' \
+#          timeout 600 'swaymsg "output * dpms off"' \
+#               resume 'swaymsg "output * dpms on"' \
+#          before-sleep 'swaylock -f -c 000000'
+#
+# This will lock your screen after 300 seconds of inactivity, then turn off
+# your displays after another 300 seconds, and turn your screens back on when
+# resumed. It will also lock your screen before your computer goes to sleep.
+
+### Input configuration
+#
+# Example configuration:
+#
+#   input "2:14:SynPS/2_Synaptics_TouchPad" {
+#       dwt enabled
+#       tap enabled
+#       natural_scroll enabled
+#       middle_emulation enabled
+#   }
+#
+# You can get the names of your inputs by running: swaymsg -t get_inputs
+# Read `man 5 sway-input` for more information about this section.
+input "1:1:AT_Translated_Set_2_keyboard" {
+  xkb_layout br
+  xkb_model abnt2
+  xkb_options ctrl:swapcaps
+}
+
+input "2:14:ETPS/2_Elantech_Touchpad" {
+  tap enabled
+}
+
 font pango:Cantarell,Nerd Font 10
 
 # Prevent mouse moving to focus on wrong window
@@ -27,16 +81,14 @@ bindsym --release $mod+Return exec --no-startup-id $term --single-instance
 bindsym --release $mod+w exec --no-startup-id firefox
 bindsym --release $mod+Shift+w exec --no-startup-id firefox --private-window
 bindsym --release $mod+e exec --no-startup-id pcmanfm-qt
-bindsym --release $mod+t exec --no-startup-id facemark
-bindsym --release $mod+p exec --no-startup-id lxrandr
-bindsym --release $mod+Shift+p exec --no-startup-id hotplug
-bindsym --release Print exec --no-startup-id screenshot -c -s
-bindsym --release Shift+Print exec --no-startup-id screenshot -c
-bindsym --release Ctrl+Print exec --no-startup-id screenshot -p -i $(xdotool getactivewindow)
-
+# bindsym --release $mod+p exec --no-startup-id lxrandr
+# bindsym --release $mod+Shift+p exec --no-startup-id hotplug
+bindsym --release Print exec --no-startup-id grim -g "$(slurp)" - | wl-copy
+bindsym --release Shift+Print exec --no-startup-id grim - | wl-copy
+bindsym --release Ctrl+Print exec --no-startup-id grim "$(sway-focusedwindow)" - | wl-copy
 bindsym --release $mod+k exec --no-startup-id wpa-cute
-bindsym --release $mod+l exec --no-startup-id lockr
-bindsym --release $mod+Shift+l exec --no-startup-id exitx
+# exit sway (logs you out of your Wayland session)
+bindsym $mod+Shift+l exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 
 #XF86 bindings
 bindsym XF86MonBrightnessUp exec --no-startup-id light -A 3
@@ -54,7 +106,7 @@ bindsym XF86TouchpadToggle exec --no-startup-id touchpad-toggle
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+r exec rofi -show run
+bindsym $mod+r exec $menu
 
 # change focus
 bindsym $mod+Left focus left
@@ -119,11 +171,11 @@ bindsym $mod+Shift+x restart
 set $pixelcolor "pixelcolor: [h]ex [r]gb"
 mode $pixelcolor {
   bindsym h exec --no-startup-id "pixelcolor -h; i3-msg mode default"
-  bindsym r exec --no-startup-id "pixelcolor -r; i3-msg mode default"
+    bindsym r exec --no-startup-id "pixelcolor -r; i3-msg mode default"
 
-  # back to normal: Enter or Escape
-  bindsym Return mode "default"
-  bindsym Escape mode "default"
+# back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
 
 bindsym $mod+c mode $pixelcolor
@@ -133,21 +185,21 @@ bindsym $mod+c mode $pixelcolor
 #
 mode "resize" {
   bindsym Left resize shrink width 10 px or 5 ppt
-  bindsym Down resize grow height 10 px or 5 ppt
-  bindsym Up resize shrink height 10 px or 5 ppt
-  bindsym Right resize grow width 10 px or 5 ppt
+    bindsym Down resize grow height 10 px or 5 ppt
+    bindsym Up resize shrink height 10 px or 5 ppt
+    bindsym Right resize grow width 10 px or 5 ppt
 
-  # back to normal: Enter or Escape
-  bindsym Return mode "default"
-  bindsym Escape mode "default"
+# back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
 bindsym $mod+Escape mode "resize"
 
 # class                 border  bg      tx      indicator
-client.focused          #689d6a #689d6a #282828 #282828
-client.focused_inactive #1d2021 #1d2021 #928374 #282828
-client.unfocused        #32302f #32302f #928374 #282828
-client.urgent           #cc241d #cc241d #ebdbb2 #282828
+client.focused          #689d6a #689d6a #282828 #282828   #000000
+client.focused_inactive #1d2021 #1d2021 #928374 #282828   #000000
+client.unfocused        #32302f #32302f #928374 #282828   #000000
+client.urgent           #cc241d #cc241d #ebdbb2 #282828   #000000
 
 assign [class="Firefox" instance="Navigator"] $ws2
 assign [class="Steam" instance="Steam"] $ws6
@@ -167,7 +219,9 @@ for_window [class="[Pp]olybar"] border none
 default_border pixel 1
 gaps inner 10
 
-workspace $ws6 gaps inner 0
+include ~/.config/sway/config.d/*
 
 exec systemctl --user import-environment
-exec systemctl --user start i3-session.target
+exec systemctl --user start sway-session.target
+
+# vim: et:sts=2:sw=2:ts=2
