@@ -1,5 +1,9 @@
-# i3 config file (v4)
+### Variables
+#
+# Logo key. Use Mod1 for Alt.
 set $mod Mod4
+# Your preferred terminal emulator
+set $term kitty
 font pango:Cantarell,Nerd Font 10
 
 # Prevent mouse moving to focus on wrong window
@@ -19,7 +23,7 @@ set $ws8 "8: VIII"
 set $ws9 "9: "
 set $ws10 "10: "
 
-bindsym --release $mod+Return exec --no-startup-id kitty -1
+bindsym --release $mod+Return exec --no-startup-id $term --single-instance
 bindsym --release $mod+w exec --no-startup-id firefox
 bindsym --release $mod+Shift+w exec --no-startup-id firefox --private-window
 bindsym --release $mod+e exec --no-startup-id pcmanfm-qt
@@ -30,7 +34,7 @@ bindsym --release Print exec --no-startup-id screenshot -c -s
 bindsym --release Shift+Print exec --no-startup-id screenshot -c
 bindsym --release Ctrl+Print exec --no-startup-id screenshot -p -i $(xdotool getactivewindow)
 
-bindsym --release $mod+k exec --no-startup-id wpa_gui
+bindsym --release $mod+k exec --no-startup-id wpa-cute
 bindsym --release $mod+l exec --no-startup-id lockr
 bindsym --release $mod+Shift+l exec --no-startup-id exitx
 
@@ -65,13 +69,13 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+h splith
 
 # split in vertical orientation
-bindsym $mod+v split v
+bindsym $mod+v splitv
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+bindsym $mod+f fullscreen
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -109,8 +113,8 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 bindsym $mod+z move scratchpad
 bindsym $mod+x scratchpad show
 
-bindsym $mod+Shift+c reload
-bindsym $mod+Shift+r restart
+bindsym $mod+Shift+z reload
+bindsym $mod+Shift+x restart
 
 set $pixelcolor "pixelcolor: [h]ex [r]gb"
 mode $pixelcolor {
@@ -124,7 +128,9 @@ mode $pixelcolor {
 
 bindsym $mod+c mode $pixelcolor
 
-# resize window (you can also use the mouse for that)
+#
+# Resizing containers:
+#
 mode "resize" {
   bindsym Left resize shrink width 10 px or 5 ppt
   bindsym Down resize grow height 10 px or 5 ppt
@@ -135,7 +141,6 @@ mode "resize" {
   bindsym Return mode "default"
   bindsym Escape mode "default"
 }
-
 bindsym $mod+Escape mode "resize"
 
 # class                 border  bg      tx      indicator
@@ -151,7 +156,7 @@ assign [class="Popcorn-Time"] $ws10
 assign [class="[Ss]potify"] $ws10
 
 for_window [window_role="bubble"] floating enable
-# for_window [window_type="dialog"] floating enable
+for_window [window_type="dialog"] floating enable
 for_window [window_type="menu"] floating enable
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
@@ -161,6 +166,8 @@ for_window [class="[Pp]olybar"] border none
 
 default_border pixel 1
 gaps inner 10
+
+workspace $ws6 gaps inner 0
 
 exec systemctl --user import-environment
 exec systemctl --user start i3-session.target
