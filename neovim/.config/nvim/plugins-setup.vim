@@ -6,11 +6,12 @@ let g:airline#extensions#ale#enabled=1
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#tab_nr_type=1
 
-" deoplete
-let g:deoplete#enable_at_startup=1
-let g:deoplete#sources#clang#clang_header='/usr/lib/clang'
-let g:deoplete#sources#clang#libclang_path='/usr/lib/libclang.so'
-let g:deoplete#sources#go#gocode_binary=$GOPATH.'/bin/gocode'
+" ale
+let g:ale_completion_enabled = 1
+" let g:ale_fixers = {
+"             \ 'javascript': ['standard'],
+"             \}
+
 
 " editorconfig
 let g:EditorConfig_exclude_patterns=['fugitive://.*']

@@ -10,8 +10,8 @@ call plug#begin()
 Plug 'tpope/vim-sensible'
 
 " EXTENSIONS
+Plug 'w0rp/ale'
 Plug 'ctrlpvim/ctrlp.vim', { 'on': 'CtrlP' }
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'editorconfig/editorconfig-vim'
 Plug 'mattn/emmet-vim'
 Plug 'godlygeek/tabular', { 'on': 'Tab' }
