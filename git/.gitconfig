@@ -44,7 +44,7 @@
 [user]
     email = ranisalt@gmail.com
     name = Ranieri Althoff
-    signingkey = 5B5C826F4CC77499
+    signingkey = 935768968312B6BC
 
 [url "git@github.com:"]
     insteadOf = https://github.com/
