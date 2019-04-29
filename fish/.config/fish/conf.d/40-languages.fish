@@ -23,7 +23,7 @@ if status --is-login
     set -x PATH "$HOME/.yarn/bin" $PATH
 end
 
-# Rust
+# Rust (Cargo)
 if status --is-login
-  set -x PATH "$HOME/.cargo/bin" $PATH
+    set -x PATH "$HOME/.cargo/bin" $PATH
 end
