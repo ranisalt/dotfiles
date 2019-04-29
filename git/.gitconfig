@@ -17,7 +17,7 @@
     ui = auto
 
 [commit]
-    gpgsign = true
+    ; gpgsign = true
 
 [core]
     editor = nvim
@@ -44,7 +44,7 @@
 [user]
     email = ranisalt@gmail.com
     name = Ranieri Althoff
-    signingkey = 935768968312B6BC
+    ; signingkey = 935768968312B6BC
 
 [url "git@github.com:"]
     insteadOf = https://github.com/
