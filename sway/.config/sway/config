@@ -83,9 +83,9 @@ bindsym --release $mod+Shift+w exec --no-startup-id firefox --private-window
 bindsym --release $mod+e exec --no-startup-id pcmanfm-qt
 # bindsym --release $mod+p exec --no-startup-id lxrandr
 # bindsym --release $mod+Shift+p exec --no-startup-id hotplug
-bindsym --release Print exec --no-startup-id grim -g "$(slurp)" - | wl-copy
-bindsym --release Shift+Print exec --no-startup-id grim - | wl-copy
-bindsym --release Ctrl+Print exec --no-startup-id grim "$(sway-focusedwindow)" - | wl-copy
+bindsym --release Print exec --no-startup-id swayshot region
+bindsym --release Shift+Print exec --no-startup-id swayshot display
+bindsym --release Ctrl+Print exec --no-startup-id swayshot window
 bindsym --release $mod+k exec --no-startup-id wpa-cute
 # exit sway (logs you out of your Wayland session)
 bindsym $mod+Shift+l exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
