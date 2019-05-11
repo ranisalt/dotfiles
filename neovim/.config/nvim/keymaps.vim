@@ -10,7 +10,7 @@ noremap <silent> <Right> <NOP>
 map <Leader>p :CtrlP<CR>
 
 " Open file browser
-map <Leader>e :edit .<CR>
+map <Leader>e :NERDTreeToggle<CR>
 
 " Treat long lines as break lines (useful when moving around in them)
 map j gj

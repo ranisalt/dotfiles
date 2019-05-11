@@ -3,6 +3,8 @@ set background=dark
 set backupcopy=yes
 set clipboard=unnamedplus
 set fileencoding=utf8
+set hidden
+set lazyredraw
 set noshowmode " airline already shows me
 set path+=**
 set title
@@ -37,20 +39,6 @@ runtime keymaps.vim
 " remove trailing whitespace on save
 au BufWritePre * :%s/\s\+$//e
 
-" execute neomake on open/write
-" au BufReadPost,BufWritePost * Neomake
-" au BufWritePost *.tex :silent !rubber --unsafe --pdf %
-
-" Return to last edit position when opening files (You want this!)
-au BufReadPost *
-      \ if line("'\"") > 0 && line("'\"") <= line("$") |
-      \   exe "normal! g`\"" |
-      \ endif
-
-au BufReadPost * IndentGuidesEnable
-
-" au FileType python nnoremap <Leader>= :0,$!yapf<CR>
-
 augroup filetypedetect
   au BufRead,BufNewFile *.ex set filetype=elixir
   au BufRead,BufNewFile *.exs set filetype=elixir
@@ -59,6 +47,7 @@ augroup filetypedetect
 augroup END
 
 colors gruvbox
+au BufReadPost * IndentGuidesEnable
 hi IndentGuidesEven ctermbg=black
 hi IndentGuidesOdd ctermbg=black
 hi NonText ctermbg=NONE guibg=NONE
