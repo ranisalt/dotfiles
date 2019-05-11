@@ -30,7 +30,7 @@
         "format": "{temperatureC}°C "
     },
     "battery": {
-        "interval": 15,
+        "interval": 5,
         "states": {
             "good": 95,
             "warning": 30,
