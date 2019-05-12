@@ -8,13 +8,18 @@ set -q XDG_CONFIG_HOME
 set -q XDG_DATA_HOME
   or set -x XDG_DATA_HOME "$HOME/.local/share"
 
-function append_path -a VALUE
-  contains "$VALUE" $PATH
-    or set -x PATH "$VALUE" $PATH
+function append -a VALUE
+  contains "$VALUE" $_PATH $PATH
+    or set -x _PATH "$VALUE" $_PATH
 end
 
-append_path "$HOME/.local/bin"
-append_path "/usr/local/bin"
+# Default programs
+set -x BROWSER "firefox"
+set -x SUDO_ASKPASS "$HOME/.local/bin/askpass"
+set -x SUDO_EDITOR "nvim"
+
+append "$HOME/.local/bin"
+append "/usr/local/bin"
 
 # CCache
 set -x CCACHE_CONFIGPATH "$XDG_CONFIG_HOME/ccache/ccache.conf"
@@ -24,7 +29,7 @@ set -x CMAKE_CXX_COMPILER_LAUNCHER ccache
 
 # Go
 set -x GOPATH (go env GOPATH)
-append_path "$GOPATH/bin"
+append "$GOPATH/bin"
 
 # GTK
 set -x GTK2_RC_FILES "$XDG_CONFIG_HOME/gtk-2.0/gtkrc"
@@ -40,7 +45,9 @@ set -x _JAVA_OPTIONS "
 
 # Javascript (Node, Yarn)
 nvm use default
-append_path "$HOME/.yarn/bin"
+append "$HOME/.yarn/bin"
 
 # Rust (Cargo)
-append_path "$HOME/.cargo/bin"
+append "$HOME/.cargo/bin"
+
+set -x PATH $_PATH $PATH
