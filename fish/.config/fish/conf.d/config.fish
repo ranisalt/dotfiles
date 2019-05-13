@@ -1,3 +1,9 @@
+# Trixie theme config
+set fish_prompt_pwd_dir_length 1
+set theme_display_pyenv yes
+
+# vi mode
+fish_vi_key_bindings
 # XDG base directories
 set -q XDG_CACHE_HOME
   or set -x XDG_CACHE_HOME "$HOME/.cache"
@@ -8,8 +14,9 @@ set -q XDG_CONFIG_HOME
 set -q XDG_DATA_HOME
   or set -x XDG_DATA_HOME "$HOME/.local/share"
 
+set _PATH $PATH
 function append -a VALUE
-  contains "$VALUE" $_PATH $PATH
+  contains -- "$VALUE" $_PATH
     or set -x _PATH "$VALUE" $_PATH
 end
 
@@ -50,4 +57,4 @@ append "$HOME/.yarn/bin"
 # Rust (Cargo)
 append "$HOME/.cargo/bin"
 
-set -x PATH $_PATH $PATH
+set -x PATH $_PATH
