@@ -28,7 +28,6 @@ let g:indent_guides_guide_size=1
 " let g:jsx_ext_required=0
 
 " latex-suite
-let g:tex_flavor='latex'
 
 " neomake
 let g:neomake_cpp_enabled_makers=['clang']
@@ -36,11 +35,6 @@ let g:neomake_javascript_enabled_makers=['standard']
 let g:neomake_typescript_enabled_makers=['tsc']
 
 " netrw (file browser)
-let g:netrw_banner=0        " disable annoying banner
-let g:netrw_altv=1          " open splits to the right
-let g:netrw_liststyle=3     " tree view
-let g:netrw_list_hide=netrw_gitignore#Hide()
-let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 
 " python mode
 let g:pymode_python = 'python3'

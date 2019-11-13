@@ -9,6 +9,7 @@ set noshowmode " airline already shows me
 set path+=**
 set title
 set ttimeoutlen=0
+set updatetime=400
 
 " highlight and navigation
 set colorcolumn=80

@@ -11,7 +11,7 @@ Plug 'tpope/vim-sensible'
 
 " EXTENSIONS
 " Plug 'mattn/emmet-vim'
-" Plug 'junegunn/vim-easy-align'
+Plug 'junegunn/vim-easy-align'
 
 " Tim Pope
 Plug 'tpope/vim-commentary'  " gc to toggle comments, gcc linewise
@@ -24,7 +24,7 @@ Plug 'tpope/vim-surround'  " ysiw to add delimiters, cs to change, S visual
 Plug 'godlygeek/tabular', { 'on': 'Tab' }
 
 " File management
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTree' }
+Plug 'scrooloose/nerdtree'
 
 " Git
 Plug 'tpope/vim-fugitive'
@@ -44,7 +44,7 @@ Plug 'justinmk/vim-sneak'
 
 " Syntax/completion
 Plug 'w0rp/ale'
-" Plug 'valloric/youcompleteme', { 'do': './install.py --clang-completer --go-completer --rust-complete--rust-completerr --ts-completer' }
+Plug 'maralla/completor.vim'
 
 """ LANGUAGE SPECIFIC
 Plug 'sheerun/vim-polyglot'
@@ -54,7 +54,6 @@ Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'mxw/vim-jsx', { 'for': 'javascript' }
 Plug 'maxmellon/vim-jsx-pretty', { 'for': 'javascript' }
-Plug 'python-mode/python-mode', { 'branch': 'develop', 'for': 'python' }
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 Plug 'lervag/vimtex', { 'for': 'tex' }
 Plug 'valloric/matchtagalways' ", { 'for': 'html' }

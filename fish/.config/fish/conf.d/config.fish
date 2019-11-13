@@ -1,6 +1,5 @@
 # Trixie theme config
 set fish_prompt_pwd_dir_length 1
-set theme_display_pyenv yes
 
 # vi mode
 fish_vi_key_bindings
@@ -21,7 +20,8 @@ function append -a VALUE
 end
 
 # Default programs
-set -x BROWSER "firefox"
+set -x BROWSER "firefox-developer-edition"
+set -x EDITOR "nvim"
 set -x SUDO_ASKPASS "$HOME/.local/bin/askpass"
 set -x SUDO_EDITOR "nvim"
 
@@ -31,7 +31,6 @@ append "/usr/local/bin"
 # CCache
 set -x CCACHE_CONFIGPATH "$XDG_CONFIG_HOME/ccache/ccache.conf"
 set -x CCACHE_DIR "$XDG_CACHE_HOME/ccache"
-set -x CCACHE_SLOPPINESS "pch_defines,time_macros"
 set -x CMAKE_CXX_COMPILER_LAUNCHER ccache
 
 # Go
@@ -51,10 +50,13 @@ set -x _JAVA_OPTIONS "
 "
 
 # Javascript (Node, Yarn)
-nvm use default
 append "$HOME/.yarn/bin"
 
 # Rust (Cargo)
 append "$HOME/.cargo/bin"
 
 set -x PATH $_PATH
+
+# Qt
+set -x QT_QPA_PLATFORM wayland
+set -x QT_WAYLAND_DISABLE_WINDOWDECORATION 1
