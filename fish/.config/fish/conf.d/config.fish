@@ -48,5 +48,4 @@ set -x PATH $_PATH
 set -x MOZ_ENABLE_WAYLAND 1
 set -x QT_QPA_PLATFORM wayland-egl
 
-set -x MANGOHUD 1
 set -x RADV_PERFTEST aco
