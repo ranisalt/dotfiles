@@ -1,5 +1,3 @@
-starship init fish | source
-
 # XDG base directories
 set -q XDG_CACHE_HOME
   or set -x XDG_CACHE_HOME "$HOME/.cache"
@@ -23,9 +21,9 @@ function append -a VALUE
 end
 
 # Default programs
-set -x BROWSER "chromium"
-set -x EDITOR "nvim"
-set -x SUDO_ASKPASS "$HOME/.local/bin/askpass"
+#set -x BROWSER "flatpak --user run org.mozilla.firefox"
+set -x EDITOR "vim"
+set -x SUDO_ASKPASS "systemd-ask-password"
 set -x SUDO_EDITOR "$EDITOR"
 
 # CCache
@@ -42,9 +40,12 @@ set -x GTK2_RC_FILES "$XDG_CONFIG_HOME/gtk-2.0/gtkrc"
 # Javascript (Node, Yarn)
 append "$HOME/.yarn/bin"
 
+# Rust (cargo)
+append "$HOME/.cargo/bin"
+
 set -x PATH $_PATH
 
 # Qt/Wayland
-set -x MOZ_ENABLE_WAYLAND 1
-
 set -x RADV_PERFTEST aco
+
+starship init fish | source
