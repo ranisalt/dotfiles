@@ -1,0 +1,65 @@
+" General
+set number	" Show line numbers
+set relativenumber
+set showbreak=+++ 	" Wrap-broken line prefix
+set showmatch	" Highlight matching brace
+set noshowmode
+ 
+set hlsearch	" Highlight all search results
+set smartcase	" Enable smart-case search
+set ignorecase	" Always case-insensitive
+set incsearch	" Searches for strings incrementally
+ 
+set autoindent	" Auto-indent new lines
+set shiftwidth=2	" Number of auto-indent spaces
+set smartindent	" Enable smart-indent
+set smarttab	" Enable smart-tabs
+set softtabstop=2	" Number of spaces per Tab
+ 
+" Advanced
+set ruler	" Show row and column ruler information
+
+set autochdir	" Change working directory to open buffer
+ 
+set undolevels=1000	" Number of undo levels
+set backspace=indent,eol,start	" Backspace behaviour
+
+" Don't redraw while executing macros (good performance config)
+set lazyredraw
+
+" Enable filetype plugins
+filetype indent on
+filetype plugin on
+syntax on
+
+" With a map leader it's possible to do extra key combinations
+" like <leader>w saves the current file
+let mapleader = ","
+
+" Theme
+packadd gruvbox
+colorscheme gruvbox
+set background=dark    " Setting dark mode
+hi Normal guibg=NONE ctermbg=NONE
+
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_guide_size = 1
+
+" Shortcuts
+" Disable highlight when <leader><cr> is pressed
+map <silent> <leader><cr> :noh<cr>
+
+" Smart way to move between windows
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+
+" Extensions
+
+" CtrlP
+let g:ctrlp_map = '<leader>p'
+
+" gruvbox
+let g:gruvbox_contrast_dark = 'hard'
+
