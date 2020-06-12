@@ -17,5 +17,8 @@ disabled = true
 [nodejs]
 disabled = true
 
+[php]
+disabled = true
+
 [line_break]
 disabled = true

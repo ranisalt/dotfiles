@@ -38,14 +38,14 @@ append "$HOME/go/bin"
 set -x GTK2_RC_FILES "$XDG_CONFIG_HOME/gtk-2.0/gtkrc"
 
 # Javascript (Node, Yarn)
+set -x NODE_REPL_HISTORY "$XDG_DATA_HOME/node_repl_history"
 append "$HOME/.yarn/bin"
 
 # Rust (cargo)
-append "$HOME/.cargo/bin"
+set -x CARGO_HOME "$XDG_DATA_HOME/cargo"
+set -x RUSTUP_HOME "$XDG_DATA_HOME/rustup"
+append "$CARGO_HOME/cargo/bin"
 
 set -x PATH $_PATH
-
-# Qt/Wayland
-set -x RADV_PERFTEST aco
 
 starship init fish | source
