@@ -184,20 +184,19 @@ focus_follows_mouse no
 gaps inner 10
 
 # set primary gruvbox colorscheme colors
-set $bg #282828
-set $red #cc241d
-set $green #98971a
-set $yellow #d79921
-set $blue #458588
-set $purple #b16286
-set $aqua #689d68
-set $gray #a89984
-set $darkgray #1d2021
-set $white #ebdbb2
+set $bg #2e3440
+set $red #bf616a
+set $green #a3be8c
+set $yellow #ebcb8b
+set $blue #81a1c1
+set $purple #b48ead
+set $aqua #88c0d0
+set $gray #3b4252
+set $white #d8dee9
 
 # blue gruvbox
 # class                 border|backgr|text|indicator|child_border
-client.focused          $blue $blue $darkgray $purple $darkgray
-client.focused_inactive $darkgray $darkgray $yellow $purple $darkgray
-client.unfocused        $darkgray $darkgray $yellow $purple $darkgray
+client.focused          $blue $blue $gray $purple $gray
+client.focused_inactive $gray $gray $yellow $purple $gray
+client.unfocused        $gray $gray $yellow $purple $gray
 client.urgent           $red $red $white $red $red

@@ -1,40 +1,34 @@
-[submodule "bin/.local/bin"]
-	path = bin/.local/bin
-	url = git@github.com:ranisalt/a-fistful-of-scripts.git
 [submodule "fonts/.local/share/fonts/powerline"]
 	path = fonts/.local/share/fonts/powerline
 	url = git@github.com:powerline/fonts.git
-[submodule "vim/.vim/pack/scrooloose/start/nerdtree"]
+[submodule "vim/.vim/pack/local/start/nerdtree"]
 	path = vim/.vim/pack/local/start/nerdtree
 	url = git@github.com:scrooloose/nerdtree.git
-[submodule "vim/.vim/pack/tpope/start/surround"]
+[submodule "vim/.vim/pack/local/start/surround"]
 	path = vim/.vim/pack/local/start/surround
 	url = git@github.com:tpope/vim-surround.git
-[submodule "vim/.vim/pack/tpope/start/sensible"]
+[submodule "vim/.vim/pack/local/start/sensible"]
 	path = vim/.vim/pack/local/start/sensible
 	url = git@github.com:tpope/vim-sensible.git
-[submodule "vim/.vim/pack/tpope/start/repeat"]
+[submodule "vim/.vim/pack/local/start/repeat"]
 	path = vim/.vim/pack/local/start/repeat
 	url = git@github.com:tpope/vim-repeat.git
-[submodule "vim/.vim/pack/tpope/start/commentary"]
+[submodule "vim/.vim/pack/local/start/commentary"]
 	path = vim/.vim/pack/local/start/commentary
 	url = git@github.com:tpope/vim-commentary.git
-[submodule "vim/.vim/pack/morhetz/start/gruvbox"]
-	path = vim/.vim/pack/local/opt/gruvbox
-	url = git@github.com:morhetz/gruvbox.git
-[submodule "vim/.vim/pack/ctrlpvim/start/ctrlp"]
+[submodule "vim/.vim/pack/local/start/ctrlp"]
 	path = vim/.vim/pack/local/start/ctrlp
 	url = git@github.com:ctrlpvim/ctrlp.vim
-[submodule "vim/.vim/pack/terryma/start/multiple-cursors"]
+[submodule "vim/.vim/pack/local/start/multiple-cursors"]
 	path = vim/.vim/pack/local/start/multiple-cursors
 	url = git@github.com:terryma/vim-multiple-cursors.git
-[submodule "vim/.vim/pack/pangloss/opt/javascript"]
+[submodule "vim/.vim/pack/local/opt/javascript"]
 	path = vim/.vim/pack/local/opt/javascript
 	url = git@github.com:pangloss/vim-javascript.git
-[submodule "vim/.vim/pack/leafgarland/opt/typescript"]
+[submodule "vim/.vim/pack/local/opt/typescript"]
 	path = vim/.vim/pack/local/opt/typescript
 	url = git@github.com:leafgarland/typescript-vim.git
-[submodule "vim/.vim/pack/editorconfig/start/editorconfig"]
+[submodule "vim/.vim/pack/local/start/editorconfig"]
 	path = vim/.vim/pack/local/start/editorconfig
 	url = git@github.com:editorconfig/editorconfig-vim.git
 [submodule "vim/.vim/pack/local/start/lightline"]
@@ -43,3 +37,6 @@
 [submodule "vim/.vim/pack/local/start/devicons"]
 	path = vim/.vim/pack/local/start/devicons
 	url = git@github.com:ryanoasis/vim-devicons.git
+[submodule "vim/.vim/pack/local/opt/nord"]
+	path = vim/.vim/pack/local/opt/nord
+	url = git@github.com:arcticicestudio/nord-vim.git

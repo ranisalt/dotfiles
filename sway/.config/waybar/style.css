@@ -8,9 +8,9 @@
 }
 
 window#waybar {
-    background-color: rgba(43, 48, 59, 0.5);
-    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
-    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-bottom: 3px solid #3b4252;
+    color: #d8dee9;
     transition-property: background-color;
     transition-duration: .5s;
 }
@@ -29,11 +29,11 @@ window#waybar.solo {
 */
 
 window#waybar.termite {
-    background-color: #3F3F3F;
+    /* background-color: #3F3F3F; */
 }
 
 window#waybar.chromium {
-    background-color: #000000;
+    /* background-color: #000000; */
     border: none;
 }
 
@@ -85,12 +85,12 @@ window#waybar.chromium {
 }
 
 #clock {
-    background-color: #64727D;
+    /* background-color: #64727D; */
 }
 
 #battery {
-    background-color: #ffffff;
-    color: #000000;
+    /* background-color: #ffffff; */
+    /* color: #000000; */
 }
 
 #battery.charging {
@@ -120,20 +120,20 @@ label:focus {
 }
 
 #cpu {
-    background-color: #2ecc71;
-    color: #000000;
+    /* background-color: #2ecc71; */
+    /* color: #000000; */
 }
 
 #memory {
-    background-color: #9b59b6;
+    /* background-color: #9b59b6; */
 }
 
 #backlight {
-    background-color: #90b1b1;
+    /* background-color: #90b1b1; */
 }
 
 #network {
-    background-color: #2980b9;
+    /* background-color: #2980b9; */
 }
 
 #network.disconnected {
@@ -141,8 +141,8 @@ label:focus {
 }
 
 #pulseaudio {
-    background-color: #f1c40f;
-    color: #000000;
+    /* background-color: #f1c40f; */
+    /* color: #000000; */
 }
 
 #pulseaudio.muted {
@@ -151,21 +151,21 @@ label:focus {
 }
 
 #custom-media {
-    background-color: #66cc99;
-    color: #2a5c45;
+    /* background-color: #66cc99; */
+    /* color: #2a5c45; */
     min-width: 100px;
 }
 
 #custom-media.custom-spotify {
-    background-color: #66cc99;
+    /* background-color: #66cc99; */
 }
 
 #custom-media.custom-vlc {
-    background-color: #ffa000;
+    /* background-color: #ffa000; */
 }
 
 #temperature {
-    background-color: #f0932b;
+    /* background-color: #f0932b; */
 }
 
 #temperature.critical {
@@ -173,11 +173,11 @@ label:focus {
 }
 
 #tray {
-    background-color: #2980b9;
+    /* background-color: #2980b9; */
 }
 
 #idle_inhibitor {
-    background-color: #2d3436;
+    /* background-color: #2d3436; */
 }
 
 #idle_inhibitor.activated {
@@ -186,8 +186,8 @@ label:focus {
 }
 
 #mpd {
-    background-color: #66cc99;
-    color: #2a5c45;
+    /* background-color: #66cc99; */
+    /* color: #2a5c45; */
 }
 
 #mpd.disconnected {

@@ -37,9 +37,8 @@ syntax on
 let mapleader = ","
 
 " Theme
-packadd gruvbox
-colorscheme gruvbox
-set background=dark    " Setting dark mode
+packadd nord
+colorscheme nord
 hi Normal guibg=NONE ctermbg=NONE
 
 let g:indent_guides_enable_on_vim_startup = 1
@@ -59,7 +58,4 @@ map <C-l> <C-W>l
 
 " CtrlP
 let g:ctrlp_map = '<leader>p'
-
-" gruvbox
-let g:gruvbox_contrast_dark = 'hard'
 
