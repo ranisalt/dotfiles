@@ -10,7 +10,7 @@ set $left k
 set $right l
 
 set $term alacritty
-set $menu rofi -modi drun -show drun | xargs swaymsg exec --
+set $menu wofi -i -S drun | xargs swaymsg exec --
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -26,26 +26,30 @@ input type:keyboard {
 }
 
 # Use pactl to adjust volume in PulseAudio.
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10%
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +10%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -10%
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
 
-bindsym Print exec --no-startup-id grimshot save screen
-bindsym Alt+Print exec --no-startup-id grimshot save win
-bindsym Ctrl+Print exec --no-startup-id grimshot save area
-bindsym Shift+Print exec --no-startup-id grimshot copy screen
-bindsym Shift+Alt+Print exec --no-startup-id grimshot copy win
-bindsym Shift+Ctrl+Print exec --no-startup-id grimshot copy area
+bindsym Print exec ~/.local/bin/grimshot save screen
+bindsym Alt+Print exec ~/.local/bin/grimshot save win
+bindsym Ctrl+Print exec ~/.local/bin/grimshot save area
+bindsym Shift+Print exec ~/.local/bin/grimshot copy screen
+bindsym Shift+Alt+Print exec ~/.local/bin/grimshot copy win
+bindsym Shift+Ctrl+Print exec ~/.local/bin/grimshot copy area
 
 # start a terminal
 bindsym $mod+Return exec $term
 
 # kill focused window
 bindsym $mod+Shift+q kill
+bindsym Ctrl+q exec false # fuck firefox
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id $menu
+bindsym $mod+d exec $menu
 
 # change focus
 bindsym $mod+$left focus left
@@ -146,7 +150,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'"
+bindsym $mod+Shift+e exec wlogout
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -200,3 +204,13 @@ client.focused          $blue $blue $gray $purple $gray
 client.focused_inactive $gray $gray $yellow $purple $gray
 client.unfocused        $gray $gray $yellow $purple $gray
 client.urgent           $red $red $white $red $red
+
+for_window [window_role="bubble"] floating enable
+for_window [window_type="dialog"] floating enable
+for_window [window_type="menu"] floating enable
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="task_dialog"] floating enable
+for_window [window_role="[Pp]references"] floating enable
+for_window [class="Firefox" instance="Toplevel"] floating enable
+
+exec systemctl --user start gammastep.service
