@@ -16,9 +16,10 @@ set $menu wofi -i -S drun | xargs swaymsg exec --
 # is used in the bar {} block below.
 font pango:sans 10
 
-output * background ~/.local/share/backgrounds/2020-05-31-20-58-03-wallpaper-2422202.min.jpg fill
-output LVDS-1 resolution 1366x768 position 0,0
-output HDMI-A-1 resolution 1920x1080 position 1366,0
+output * subpixel rgb
+output DVI-D-1 res 1920x1080 pos 0,0 bg ~/.config/background1.jpg fill
+output HDMI-A-1 res 1920x1080@60Hz pos 1920,0 bg ~/.config/background2.jpg fill
+
 input type:touchpad {
   tap enabled
 }
