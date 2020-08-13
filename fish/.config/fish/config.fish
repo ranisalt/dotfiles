@@ -13,7 +13,6 @@ set -q XDG_DATA_DIRS
   and set -x XDG_DATA_DIRS "$XDG_DATA_DIRS:$FLATPAK_DATA_DIRS"
   or set -x XDG_DATA_DIRS "$FLATPAK_DATA_DIRS"
 
-
 set _PATH "$HOME/.local/bin" "/usr/local/bin" $PATH
 function append -a VALUE
   contains -- "$VALUE" $_PATH
@@ -21,7 +20,6 @@ function append -a VALUE
 end
 
 # Default programs
-#set -x BROWSER "flatpak --user run org.mozilla.firefox"
 set -x EDITOR "vim"
 set -x SUDO_ASKPASS "systemd-ask-password"
 set -x SUDO_EDITOR "$EDITOR"
@@ -48,4 +46,7 @@ append "$CARGO_HOME/cargo/bin"
 
 set -x PATH $_PATH
 
+set -x QT_QPA_PLATFORM wayland
+
 starship init fish | source
+dircolors -c "$XDG_CONFIG_HOME/dir_colors" | source
