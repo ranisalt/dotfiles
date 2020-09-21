@@ -46,7 +46,5 @@ append "$CARGO_HOME/cargo/bin"
 
 set -x PATH $_PATH
 
-set -x QT_QPA_PLATFORM wayland
-
 starship init fish | source
 dircolors -c "$XDG_CONFIG_HOME/dir_colors" | source
