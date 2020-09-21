@@ -1,3 +1,4 @@
+# Defined in /tmp/fish.8C6ENv/la.fish @ line 2
 function la
-	ll --almost-all $argv
+	ll -a $argv;
 end
