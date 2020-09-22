@@ -16,11 +16,8 @@
 [color]
     ui = auto
 
-[commit]
-    ; gpgsign = true
-
 [core]
-    editor = nvim
+    editor = vim
     newHighlight = green bold 22
     newNormal = green bold
     oldHighlight = red bold 52
@@ -38,13 +35,13 @@
     required = true
     smudge = git-lfs smudge -- %f
 
+[pull]
+    ff = only
+
 [push]
     default = simple
 
 [user]
     email = ranisalt@gmail.com
     name = Ranieri Althoff
-    ; signingkey = 935768968312B6BC
 
-; [url "git@github.com:"]
-;     insteadOf = https://github.com/
