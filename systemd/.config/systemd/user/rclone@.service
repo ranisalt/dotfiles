@@ -1,0 +1,14 @@
+[Unit]
+Description=rclone
+ConditionPathIsDirectory=%h/%i
+After=systemd-tmpfiles-setup.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/rclone mount %i:/ %h/%i
+ExecStop=/usr/bin/fusermount -u %h/%i
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=default.target
