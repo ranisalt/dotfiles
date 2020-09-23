@@ -1,0 +1,5 @@
+[Session Bus Policy]
+org.freedesktop.Notifications=talk
+
+[Environment]
+MOZ_ENABLE_WAYLAND=1
