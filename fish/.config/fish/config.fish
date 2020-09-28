@@ -37,14 +37,18 @@ set -x GTK2_RC_FILES "$XDG_CONFIG_HOME/gtk-2.0/gtkrc"
 
 # Javascript (Node, Yarn)
 set -x NODE_REPL_HISTORY "$XDG_DATA_HOME/node_repl_history"
+set -x NVM_DIR "$XDG_CONFIG_HOME/nvm"
 append "$HOME/.yarn/bin"
 
 # Rust (cargo)
 set -x CARGO_HOME "$XDG_DATA_HOME/cargo"
+type -q sccache
+  and set -x RUSTC_WRAPPER sccache
 set -x RUSTUP_HOME "$XDG_DATA_HOME/rustup"
-append "$CARGO_HOME/cargo/bin"
+append "$CARGO_HOME/bin"
 
 set -x PATH $_PATH
 
-starship init fish | source
+type -q starship
+  and starship init fish | source
 dircolors -c "$XDG_CONFIG_HOME/dir_colors" | source
