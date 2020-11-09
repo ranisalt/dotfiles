@@ -40,3 +40,6 @@
 [submodule "vim/.vim/pack/local/opt/nord"]
 	path = vim/.vim/pack/local/opt/nord
 	url = git@github.com:arcticicestudio/nord-vim.git
+[submodule "vim/.vim/pack/local/start/jedi"]
+	path = vim/.vim/pack/local/start/jedi
+	url = git@github.com:davidhalter/jedi-vim.git
