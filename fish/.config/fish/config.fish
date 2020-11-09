@@ -13,10 +13,10 @@ set -q XDG_DATA_DIRS
   and set -x XDG_DATA_DIRS "$XDG_DATA_DIRS:$FLATPAK_DATA_DIRS"
   or set -x XDG_DATA_DIRS "$FLATPAK_DATA_DIRS"
 
-set _PATH "$HOME/.local/bin" "/usr/local/bin" $PATH
+set PATH "$HOME/.local/bin" "/usr/local/bin" $PATH
 function append -a VALUE
-  contains -- "$VALUE" $_PATH
-    or set -p _PATH "$VALUE"
+  contains -- "$VALUE" $PATH
+    or set -p PATH "$VALUE"
 end
 
 # Default programs
@@ -42,13 +42,12 @@ append "$HOME/.yarn/bin"
 
 # Rust (cargo)
 set -x CARGO_HOME "$XDG_DATA_HOME/cargo"
+append "$CARGO_HOME/bin"
 type -q sccache
   and set -x RUSTC_WRAPPER sccache
 set -x RUSTUP_HOME "$XDG_DATA_HOME/rustup"
-append "$CARGO_HOME/bin"
-
-set -x PATH $_PATH
 
 type -q starship
   and starship init fish | source
-dircolors -c "$XDG_CONFIG_HOME/dir_colors" | source
+test -f "$XDG_CONFIG_HOME/dir_colors"
+  and dircolors -c "$XDG_CONFIG_HOME/dir_colors" | source
