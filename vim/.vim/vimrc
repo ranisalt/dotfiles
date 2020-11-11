@@ -28,8 +28,6 @@ set backspace=indent,eol,start	" Backspace behaviour
 set lazyredraw
 
 " Enable filetype plugins
-filetype indent on
-filetype plugin on
 syntax on
 
 " With a map leader it's possible to do extra key combinations
@@ -40,7 +38,11 @@ let mapleader = ","
 packadd nord
 colorscheme nord
 hi Normal guibg=NONE ctermbg=NONE
+hi NonText ctermbg=NONE guibg=NONE
+hi IndentGuidesEven ctermbg=black
+hi IndentGuidesOdd ctermbg=black
 
+let g:indent_guides_auto_colors = 0
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_guide_size = 1
 
@@ -48,14 +50,30 @@ let g:indent_guides_guide_size = 1
 " Disable highlight when <leader><cr> is pressed
 map <silent> <leader><cr> :noh<cr>
 
+" Turn off arrows
+noremap <silent> <Left> <NOP>
+noremap <silent> <Down> <NOP>
+noremap <silent> <Up> <NOP>
+noremap <silent> <Right> <NOP>
+
 " Smart way to move between windows
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
+" Treat long lines as break lines (useful when moving around in them)
+map j gj
+map k gk
+
+" Keep selection when moving code blocks
+vnoremap < <gv
+vnoremap > >gv
+
+" Open file browser
+map <Leader>e :NERDTreeToggle<CR>
+
 " Extensions
 
 " CtrlP
 let g:ctrlp_map = '<leader>p'
-
