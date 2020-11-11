@@ -1,45 +1,69 @@
 [submodule "fonts/.local/share/fonts/powerline"]
 	path = fonts/.local/share/fonts/powerline
-	url = git@github.com:powerline/fonts.git
+	url = https://github.com/powerline/fonts
 [submodule "vim/.vim/pack/local/start/nerdtree"]
 	path = vim/.vim/pack/local/start/nerdtree
-	url = git@github.com:scrooloose/nerdtree.git
+	url = https://github.com/scrooloose/nerdtree
 [submodule "vim/.vim/pack/local/start/surround"]
 	path = vim/.vim/pack/local/start/surround
-	url = git@github.com:tpope/vim-surround.git
+	url = https://github.com/tpope/vim-surround
 [submodule "vim/.vim/pack/local/start/sensible"]
 	path = vim/.vim/pack/local/start/sensible
-	url = git@github.com:tpope/vim-sensible.git
+	url = https://github.com/tpope/vim-sensible
 [submodule "vim/.vim/pack/local/start/repeat"]
 	path = vim/.vim/pack/local/start/repeat
-	url = git@github.com:tpope/vim-repeat.git
+	url = https://github.com/tpope/vim-repeat
 [submodule "vim/.vim/pack/local/start/commentary"]
 	path = vim/.vim/pack/local/start/commentary
-	url = git@github.com:tpope/vim-commentary.git
+	url = https://github.com/tpope/vim-commentary
 [submodule "vim/.vim/pack/local/start/ctrlp"]
 	path = vim/.vim/pack/local/start/ctrlp
-	url = git@github.com:ctrlpvim/ctrlp.vim
+	url = https://github.com/ctrlpvim/ctrlp.vim
 [submodule "vim/.vim/pack/local/start/multiple-cursors"]
 	path = vim/.vim/pack/local/start/multiple-cursors
-	url = git@github.com:terryma/vim-multiple-cursors.git
-[submodule "vim/.vim/pack/local/opt/javascript"]
-	path = vim/.vim/pack/local/opt/javascript
-	url = git@github.com:pangloss/vim-javascript.git
-[submodule "vim/.vim/pack/local/opt/typescript"]
-	path = vim/.vim/pack/local/opt/typescript
-	url = git@github.com:leafgarland/typescript-vim.git
+	url = https://github.com/terryma/vim-multiple-cursors
+[submodule "vim/.vim/pack/local/start/javascript"]
+	path = vim/.vim/pack/local/start/javascript
+	url = https://github.com/pangloss/vim-javascript
+[submodule "vim/.vim/pack/local/start/typescript"]
+	path = vim/.vim/pack/local/start/typescript
+	url = https://github.com/leafgarland/typescript-vim
 [submodule "vim/.vim/pack/local/start/editorconfig"]
 	path = vim/.vim/pack/local/start/editorconfig
-	url = git@github.com:editorconfig/editorconfig-vim.git
+	url = https://github.com/editorconfig/editorconfig-vim
 [submodule "vim/.vim/pack/local/start/lightline"]
 	path = vim/.vim/pack/local/start/lightline
-	url = git@github.com:itchyny/lightline.vim.git
+	url = https://github.com/itchyny/lightline.vim
 [submodule "vim/.vim/pack/local/start/devicons"]
 	path = vim/.vim/pack/local/start/devicons
-	url = git@github.com:ryanoasis/vim-devicons.git
-[submodule "vim/.vim/pack/local/opt/nord"]
-	path = vim/.vim/pack/local/opt/nord
-	url = git@github.com:arcticicestudio/nord-vim.git
+	url = https://github.com/ryanoasis/vim-devicons
+[submodule "vim/.vim/pack/local/start/nord"]
+	path = vim/.vim/pack/local/start/nord
+	url = https://github.com/arcticicestudio/nord-vim
 [submodule "vim/.vim/pack/local/start/jedi"]
 	path = vim/.vim/pack/local/start/jedi
-	url = git@github.com:davidhalter/jedi-vim.git
+	url = https://github.com/davidhalter/jedi-vim
+[submodule "vim/.vim/pack/local/start/lastplace"]
+	path = vim/.vim/pack/local/start/lastplace
+	url = https://github.com/farmergreg/vim-lastplace
+[submodule "vim/.vim/pack/local/start/indent-guides"]
+	path = vim/.vim/pack/local/start/indent-guides
+	url = https://github.com/nathanaelkane/vim-indent-guides
+[submodule "vim/.vim/pack/local/start/gitgutter"]
+	path = vim/.vim/pack/local/start/gitgutter
+	url = https://github.com/airblade/vim-gitgutter
+[submodule "vim/.vim/pack/local/start/fugitive"]
+	path = vim/.vim/pack/local/start/fugitive
+	url = https://github.com/tpope/vim-fugitive
+[submodule "vim/.vim/pack/local/start/jsx-typescript"]
+	path = vim/.vim/pack/local/start/jsx-typescript
+	url = https://github.com/peitalin/vim-jsx-typescript
+[submodule "vim/.vim/pack/local/start/go"]
+	path = vim/.vim/pack/local/start/go
+	url = https://github.com/fatih/vim-go
+[submodule "vim/.vim/pack/local/start/jsx-pretty"]
+	path = vim/.vim/pack/local/start/jsx-pretty
+	url = https://github.com/maxmellon/vim-jsx-pretty
+[submodule "vim/.vim/pack/local/start/javascript-libraries-syntax"]
+	path = vim/.vim/pack/local/start/javascript-libraries-syntax
+	url = https://github.com/othree/javascript-libraries-syntax.vim
