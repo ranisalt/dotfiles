@@ -1,5 +1,9 @@
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
 [Match]
-Name=enp*
+Name=en*
+Name=eth*
 
 [Network]
 DHCP=yes
@@ -7,4 +11,4 @@ IPForward=kernel
 IPv6PrivacyExtensions=kernel
 
 [DHCP]
-RouteMetric=10
+RouteMetric=512
