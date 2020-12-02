@@ -25,9 +25,7 @@ set -x SUDO_ASKPASS "systemd-ask-password"
 set -x SUDO_EDITOR "$EDITOR"
 
 # CCache
-set -x CCACHE_CONFIGPATH "$XDG_CONFIG_HOME/ccache/ccache.conf"
-set -x CCACHE_DIR "$XDG_CACHE_HOME/ccache"
-set -x CMAKE_CXX_COMPILER_LAUNCHER ccache
+set -x CMAKE_CXX_COMPILER_LAUNCHER sccache
 
 # Go
 append "$HOME/go/bin"
