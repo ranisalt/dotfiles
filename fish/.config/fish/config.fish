@@ -45,6 +45,9 @@ type -q sccache
   and set -x RUSTC_WRAPPER sccache
 set -x RUSTUP_HOME "$XDG_DATA_HOME/rustup"
 
+# vim
+set -x VIMINIT 'if !has("nvim") | let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc" | so $MYVIMRC | endif'
+
 type -q starship
   and starship init fish | source
 test -f "$XDG_CONFIG_HOME/dir_colors"
