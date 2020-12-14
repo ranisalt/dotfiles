@@ -6,6 +6,7 @@
     download = clone --depth 1 --single-branch
     jedi = push --force
     ls = ls-tree -rt --name-only HEAD
+    process = git-lfs filter-process
     remotes = remote -v
     st = status -sb
     tags = tag -l
