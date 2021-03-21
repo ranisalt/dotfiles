@@ -46,3 +46,7 @@
     email = ranisalt@gmail.com
     name = Ranieri Althoff
 
+[rerere]
+	enabled = true
+[init]
+	defaultBranch = main

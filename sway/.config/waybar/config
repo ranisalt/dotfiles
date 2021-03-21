@@ -6,7 +6,7 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/window", "sway/mode"],
     "modules-center": ["clock"],
-    "modules-right": ["pulseaudio", "network", "cpu", "memory", "temperature", "tray"],
+    "modules-right": ["pulseaudio", "network", "cpu", "memory", "temperature", "battery", "tray"],
     // Modules configuration
     // "sway/workspaces": {
     //     "disable-scroll": true,
@@ -54,7 +54,7 @@
     },
     "battery": {
         "states": {
-            // "good": 95,
+            "good": 95,
             "warning": 30,
             "critical": 15
         },

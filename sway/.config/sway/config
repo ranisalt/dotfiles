@@ -17,8 +17,9 @@ set $menu wofi -i -S drun | xargs swaymsg exec --
 font pango:sans 10
 
 output * subpixel rgb
-output DVI-D-1 res 1920x1080 pos 0,0 bg ~/.config/background1.jpg fill
-output HDMI-A-1 res 1920x1080@60Hz pos 1920,0 bg ~/.config/background2.jpg fill
+output eDP-1 adaptive_sync on bg ~/Pictures/Wallpapers/wallpaper-2422202.min.jpg fill
+# output DVI-D-1 res 1920x1080 pos 0,0 bg ~/.config/background1.jpg fill
+# output HDMI-A-1 res 1920x1080@60Hz pos 1920,0 bg ~/.config/background2.jpg fill
 
 input type:touchpad {
   tap enabled
