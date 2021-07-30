@@ -6,7 +6,6 @@
     download = clone --depth 1 --single-branch
     jedi = push --force
     ls = ls-tree -rt --name-only HEAD
-    process = git-lfs filter-process
     remotes = remote -v
     st = status -sb
     tags = tag -l
@@ -33,6 +32,7 @@
 
 [filter "lfs"]
     clean = git-lfs clean -- %f
+    process = git-lfs filter-process
     required = true
     smudge = git-lfs smudge -- %f
 
