@@ -41,11 +41,11 @@
 	path = vim/.local/share/vim/pack/local/opt/nord
 	url = git@github.com:arcticicestudio/nord-vim.git
 [submodule "vim/.local/share/vim/pack/local/start/jedi"]
-	path = vim/.local/share/vim/pack/local/start/jedi
+	path = vim/.local/share/vim/pack/local/opt/jedi
 	url = git@github.com:davidhalter/jedi-vim.git
 [submodule "vim/.local/share/vim/pack/local/start/lastplace"]
 	path = vim/.local/share/vim/pack/local/start/lastplace
-	url = https://github.com/farmergreg/vim-lastplace
+	url = git@github.com:farmergreg/vim-lastplace.git
 [submodule "vim/.local/share/vim/pack/local/start/indent-guides"]
 	path = vim/.local/share/vim/pack/local/start/indent-guides
 	url = https://github.com/nathanaelkane/vim-indent-guides
@@ -54,7 +54,7 @@
 	url = https://github.com/airblade/vim-gitgutter
 [submodule "vim/.local/share/vim/pack/local/start/fugitive"]
 	path = vim/.local/share/vim/pack/local/start/fugitive
-	url = https://github.com/tpope/vim-fugitive
+	url = git@github.com:tpope/vim-fugitive.git
 [submodule "vim/.local/share/vim/pack/local/start/jsx-typescript"]
 	path = vim/.local/share/vim/pack/local/start/jsx-typescript
 	url = https://github.com/peitalin/vim-jsx-typescript
@@ -67,3 +67,21 @@
 [submodule "vim/.local/share/vim/pack/local/start/javascript-libraries-syntax"]
 	path = vim/.local/share/vim/pack/local/start/javascript-libraries-syntax
 	url = https://github.com/othree/javascript-libraries-syntax.vim
+[submodule "vim/.vim/pack/local/start/gitgutter"]
+	path = vim/.local/share/vim/pack/local/opt/gitgutter
+	url = git@github.com:airblade/vim-gitgutter.git
+[submodule "vim/.local/share/vim/pack/local/opt/go"]
+	path = vim/.local/share/vim/pack/local/opt/go
+	url = git@github.com:fatih/vim-go.git
+[submodule "vim/.local/share/vim/pack/local/opt/indent-guides"]
+	path = vim/.local/share/vim/pack/local/opt/indent-guides
+	url = git@github.com:nathanaelkane/vim-indent-guides.git
+[submodule "vim/.local/share/vim/pack/local/opt/javascript-libraries-syntax"]
+	path = vim/.local/share/vim/pack/local/opt/javascript-libraries-syntax
+	url = git@github.com:othree/javascript-libraries-syntax.vim.git
+[submodule "vim/.local/share/vim/pack/local/opt/jsx-pretty"]
+	path = vim/.local/share/vim/pack/local/opt/jsx-pretty
+	url = git@github.com:MaxMEllon/vim-jsx-pretty.git
+[submodule "vim/.local/share/vim/pack/local/opt/jsx-typescript"]
+	path = vim/.local/share/vim/pack/local/opt/jsx-typescript
+	url = git@github.com:peitalin/vim-jsx-typescript.git
