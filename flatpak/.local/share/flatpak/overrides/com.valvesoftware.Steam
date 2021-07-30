@@ -1,8 +1,5 @@
 [Context]
-filesystems=/mnt/cdrom;/var/games;
-
-[Session Bus Policy]
-org.freedesktop.Notifications=talk
+filesystems=/var/games;
 
 [Environment]
 __VK_LAYER_NV_optimus=NVIDIA_only

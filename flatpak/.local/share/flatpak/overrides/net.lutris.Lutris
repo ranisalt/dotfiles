@@ -1,2 +1,2 @@
 [Context]
-filesystems=/var/games;!~/Games;
+filesystems=/var/games;/var/games/lutris;!~/Games;
