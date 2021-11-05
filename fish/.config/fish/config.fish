@@ -33,9 +33,6 @@ set -x ANDROID_HOME "$HOME/Library/Android/sdk"
 append "$ANDROID_HOME/tools"
 append "$ANDROID_HOME/platform-tools"
 
-# Go
-prepend "$HOME/go/bin"
-
 # GTK
 set -x GTK2_RC_FILES "$XDG_CONFIG_HOME/gtk-2.0/gtkrc"
 
