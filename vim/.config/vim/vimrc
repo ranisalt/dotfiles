@@ -27,6 +27,11 @@ set backspace=indent,eol,start	" Backspace behaviour
 " Don't redraw while executing macros (good performance config)
 set lazyredraw
 
+set pastetoggle=<F2>
+
+" Press F3 to toggle highlighting on/off, and show current value.
+:noremap <F3> :set hlsearch! hlsearch?<CR>
+
 " Enable filetype plugins
 syntax on
 
@@ -62,6 +67,9 @@ hi Normal guibg=NONE ctermbg=NONE
 hi NonText ctermbg=NONE guibg=NONE
 hi IndentGuidesEven ctermbg=black
 hi IndentGuidesOdd ctermbg=black
+hi Comment cterm=italic
+set t_Co=256
+set background=dark
 
 let g:indent_guides_auto_colors = 0
 let g:indent_guides_enable_on_vim_startup = 1
@@ -98,3 +106,10 @@ map <Leader>e :NERDTreeToggle<CR>
 
 " CtrlP
 let g:ctrlp_map = '<leader>p'
+
+autocmd BufEnter *.in set ai sw=2 ts=2 sta et fo=croql
+autocmd BufEnter *.sh set ai sw=2 ts=2 sta et fo=croql
+autocmd BufEnter PKGBUILD set ai sw=2 ts=2 sta et fo=croql
+autocmd BufEnter *.install set ai sw=2 ts=2 sta et fo=croql
+autocmd BufRead,BufNewFile *.conf setf dosini
+autocmd BufRead,BufNewFile PKGBUILD setf PKGBUILD
