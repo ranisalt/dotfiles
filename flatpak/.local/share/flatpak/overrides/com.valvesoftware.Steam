@@ -1,8 +1,10 @@
 [Context]
-filesystems=/var/games;
+filesystems=/var/games/steam;
 
 [Environment]
+PROTON_HIDE_NVIDIA_GPU=0
 __VK_LAYER_NV_optimus=NVIDIA_only
 __GLX_VENDOR_LIBRARY_NAME=nvidia
-STEAM_LINUX_RUNTIME_VERBOSE=1
+PROTON_ENABLE_NVAPI=1
+MANGOHUD=1
 __NV_PRIME_RENDER_OFFLOAD=1
