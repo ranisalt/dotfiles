@@ -53,8 +53,12 @@ set -x GTK2_RC_FILES "$XDG_CONFIG_HOME/gtk-2.0/gtkrc"
 
 # Javascript (Node, Yarn)
 set -x NODE_REPL_HISTORY "$XDG_DATA_HOME/node_repl_history"
-set -x NVM_DIR "$XDG_CONFIG_HOME/nvm"
+set -x ASDF_DATA_DIR "$XDG_CONFIG_HOME/asdf"
+set -x ASDF_CONFIG_FILE "$ASDF_DIR/asdfrc"
+set -x ASDF_NPM_DEFAULT_PACKAGES_FILE "$ASDF_DIR/default-npm-packages"
 prepend "$HOME/.yarn/bin"
+
+source (brew --prefix asdf)/libexec/asdf.fish
 
 # Rust (cargo)
 set -x CARGO_HOME "$XDG_DATA_HOME/cargo"
