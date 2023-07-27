@@ -14,8 +14,10 @@ type -q starship
 test -f "$XDG_CONFIG_HOME/dir_colors"
   and dircolors -c "$XDG_CONFIG_HOME/dir_colors" | source
 
-type -q sccache
-  and set -x CMAKE_CXX_COMPILER_LAUNCHER sccache
-  and set -x RUSTC_WRAPPER sccache
-
-source /opt/asdf-vm/asdf.fish
+if [ -z "$FLATPAK_ID" ]
+  contains "$PATH" "$HOME/.local/bin"
+    or set -x PATH "$HOME/.local/bin" $PATH
+else
+  contains "$PATH" "$HOME/.var/app/$FLATPAK_ID/bin"
+    or set -x PATH "$HOME/.var/app/$FLATPAK_ID/bin" $PATH
+end
