@@ -1,6 +1,7 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
 # Don't print a new line at the start of the prompt
 add_newline = false
-# command_timeout = 3000
 right_format = """$time"""
 
 [directory]
@@ -10,20 +11,8 @@ fish_style_pwd_dir_length = 1
 [package]
 disabled = true
 
-[golang]
-disabled = true
-
-[java]
-disabled = true
-
-[nodejs]
-disabled = true
-
-[php]
-disabled = true
-
-[ruby]
-disabled = true
+[status]
+disabled = false
 
 [time]
 format = "[$time]($style)"
