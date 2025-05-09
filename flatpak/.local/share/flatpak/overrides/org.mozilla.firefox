@@ -1,10 +1,7 @@
-[Context]
-filesystems=xdg-run/psd;/usr/share/doc;
-
-[Session Bus Policy]
-org.freedesktop.Notifications=talk
-
 [Environment]
 MOZ_USE_XINPUT2=1
 EGL_PLATFORM=wayland
 MOZ_ENABLE_WAYLAND=1
+
+[Session Bus Policy]
+org.freedesktop.Notifications=talk
