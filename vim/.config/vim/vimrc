@@ -61,8 +61,6 @@ endif
 let mapleader = ","
 
 " Theme
-packadd nord
-colorscheme nord
 hi Normal guibg=NONE ctermbg=NONE
 hi NonText ctermbg=NONE guibg=NONE
 hi IndentGuidesEven ctermbg=black
