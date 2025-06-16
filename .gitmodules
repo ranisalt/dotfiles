@@ -49,3 +49,6 @@
 [submodule "vim/.local/share/vim/pack/local/opt/indent-guides"]
 	path = vim/.local/share/vim/pack/local/opt/indent-guides
 	url = git@github.com:nathanaelkane/vim-indent-guides.git
+[submodule "vim/.local/share/vim/pack/local/opt/elixir"]
+	path = vim/.local/share/vim/pack/local/opt/elixir
+	url = https://github.com/elixir-editors/vim-elixir.git
