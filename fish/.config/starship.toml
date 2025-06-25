@@ -1,8 +1,6 @@
 # Get editor completions based on the config schema
 "$schema" = "https://starship.rs/config-schema.json"
 
-# Don't print a new line at the start of the prompt
-add_newline = false
 right_format = """$time"""
 
 [directory]
@@ -19,6 +17,3 @@ disabled = false
 format = "[$time]($style)"
 time_format = "%R"
 disabled = false
-
-[line_break]
-disabled = true
